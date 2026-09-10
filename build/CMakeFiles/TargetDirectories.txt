@@ -1,0 +1,3 @@
+C:/Users/woutk/source/repos/C++/C++ UI/build/CMakeFiles/UIApp.dir
+C:/Users/woutk/source/repos/C++/C++ UI/build/CMakeFiles/edit_cache.dir
+C:/Users/woutk/source/repos/C++/C++ UI/build/CMakeFiles/rebuild_cache.dir
