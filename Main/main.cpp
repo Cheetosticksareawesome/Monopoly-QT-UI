@@ -1,4 +1,8 @@
+
 #include <iostream>
+
+#include <QApplication>
+#include <QMainWindow>
 
 int main()
 {

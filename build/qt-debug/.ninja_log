@@ -1,0 +1,8 @@
+# ninja log v6
+144	188	8108331406108637	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	44de1d2df60d9fba
+11	152	8108340314770938	UIApp_autogen/mocs_compilation.cpp	f0c7fd16017d53c3
+11	152	8108340314770938	UIApp_autogen/timestamp	f0c7fd16017d53c3
+11	152	8108340314770938	C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/UIApp_autogen/timestamp	f0c7fd16017d53c3
+11	152	8108340314770938	C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	f0c7fd16017d53c3
+153	4115	8108340316198445	CMakeFiles/UIApp.dir/Main/main.cpp.obj	80569741452f5de8
+4117	4213	8108340355918921	UIApp.exe	56c156bef46e92d7

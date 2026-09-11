@@ -1,0 +1,26 @@
+{
+    "version":  4,
+    "configurePresets":  [
+                             {
+                                 "name":  "qt-debug",
+                                 "displayName":  "Qt Desktop Debug",
+                                 "generator":  "Ninja",
+                                 "binaryDir":  "${sourceDir}/build/qt-debug",
+                                 "cacheVariables":  {
+                                                        "CMAKE_BUILD_TYPE":  "Debug",
+                                                        "CMAKE_CXX_COMPILER":  "C:/Qt/Tools/mingw1310_64/bin/g++.exe",
+                                                        "CMAKE_MAKE_PROGRAM":  "C:/Qt/Tools/Ninja/ninja.exe",
+                                                        "CMAKE_PREFIX_PATH":  "C:/Qt/6.11.2/mingw_64"
+                                                    },
+                                 "environment":  {
+                                                     "PATH":  "C:/Qt/Tools/mingw1310_64/bin;C:/Qt/6.11.2/mingw_64/bin;$penv{PATH}"
+                                                 }
+                             }
+                         ],
+    "buildPresets":  [
+                         {
+                             "name":  "qt-debug",
+                             "configurePreset":  "qt-debug"
+                         }
+                     ]
+}
