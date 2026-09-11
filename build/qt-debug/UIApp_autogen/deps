@@ -217,4 +217,5 @@ UIApp_autogen/timestamp: \
 	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake \
 	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake \
 	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake \
+	C:/Users/woutk/source/repos/C++/C++\ UI/Main/MainUI.ui \
 	C:/mingw/mingw64/bin/cmake.exe

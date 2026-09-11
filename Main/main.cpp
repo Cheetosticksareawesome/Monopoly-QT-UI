@@ -4,9 +4,25 @@
 #include <QApplication>
 #include <QMainWindow>
 
-int main()
-{
-    std::cout << "Hello UI-App!" << std::endl;
+#include "ui_MainUI.h"
 
-    return 0;
+int main(int argc, char *argv[])
+{
+    QApplication app{argc, argv};
+
+    QMainWindow window{};
+
+    Ui::MainWindow ui{};
+
+    ui.setupUi(&window);
+
+    auto onButtonClicked = [&ui]()
+    {
+        ui.label->setText("Clicked!");
+    };
+    QObject::connect(ui.pushButton, &QPushButton::clicked, &window, onButtonClicked);
+
+    window.show();
+
+    return app.exec();
 }
