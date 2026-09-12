@@ -1,8 +1,23 @@
 # ninja log v6
-43	214	8108808124559948	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
-216	263	8108808126210296	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	f8927649d46a9868
-43	214	8108808124559948	UIApp_autogen/timestamp	2d6012252bfb1921
-4378	4522	8108808167889865	UIApp.exe	734f4f1e95ce68a
-43	214	8108808124559948	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/timestamp	2d6012252bfb1921
-43	214	8108808124559948	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
-220	4378	8108808126210296	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	92baf8f43a01abb7
+31	178	8109338262207416	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
+31	178	8109338262207416	UIApp_autogen/timestamp	2d6012252bfb1921
+179	383	8109338263756052	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	94d4f04b12bbce4d
+3134	3521	8109338293319228	UIApp.exe	4a0ebe186a8fd9ae
+31	178	8109338262207416	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/timestamp	2d6012252bfb1921
+31	178	8109338262207416	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
+194	380	8109338263910049	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	c6fce81e14493f65
+182	3134	8109338263793350	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	aff22614b7f7b7a8
+190	381	8109338263879537	CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj	ff9b30685591ea56
+186	721	8109338263839619	CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj	748d8e42ced00b8
+29	54	8109338862318513	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/cmake.verify_globs	129480238a057f8a
+61	227	8109338862651827	UIApp_autogen/timestamp	2d6012252bfb1921
+61	227	8109338862651827	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
+61	227	8109338862651827	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/timestamp	2d6012252bfb1921
+61	227	8109338862651827	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
+228	298	8109338864305529	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	b7d6cab28acb3898
+232	305	8109338864332047	CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj	1d9fe322eaa5296d
+236	305	8109338864332047	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	e7fc37bdb72b24fd
+246	600	8109338864494966	CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj	3a93cb2e24f5b99
+241	2514	8109338864450039	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	6d7e8fd38894787a
+2514	2613	8109338887180882	UIApp.exe	7489bfac1ec0e4f4
+12	32	8109339463044179	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/cmake.verify_globs	129480238a057f8a

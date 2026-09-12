@@ -1,4 +1,5 @@
 {
-  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
-  "cmake.useCMakePresets": "always"
+    "C_Cpp.default.configurationProvider":  "",
+    "cmake.useCMakePresets":  "always",
+    "C_Cpp.default.compileCommands":  "${workspaceFolder}/build/qt-debug/compile_commands.json"
 }

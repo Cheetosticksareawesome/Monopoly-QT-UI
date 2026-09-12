@@ -5,6 +5,6 @@
 struct Player
 {
     std::string Name;
-    int Money;
-    int Position;
+    int Money{0};
+    int Position{0};
 };
