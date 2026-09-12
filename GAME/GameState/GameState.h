@@ -11,3 +11,5 @@ struct GameState
     int CurrentPlayerIndex{0};
     Board board;
 };
+
+void MoveCurrentPlayer(GameState& game, int steps);

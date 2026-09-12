@@ -18,6 +18,7 @@
 			"target_link_libraries",
 			"set_target_properties",
 			"find_package",
+			"__find_dependency_common",
 			"find_dependency",
 			"_qt_internal_find_qt_dependencies",
 			"target_include_directories",
@@ -32,7 +33,7 @@
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6/Qt6Config.cmake",
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
-			"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+			"C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake",
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
 			"C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
@@ -112,89 +113,113 @@
 				"parent" : 12
 			},
 			{
-				"command" : 6,
+				"command" : 7,
 				"file" : 9,
 				"line" : 51,
 				"parent" : 13
 			},
 			{
-				"command" : 5,
+				"command" : 6,
 				"file" : 8,
 				"line" : 142,
 				"parent" : 14
 			},
 			{
-				"command" : 4,
+				"command" : 5,
 				"file" : 7,
-				"line" : 76,
+				"line" : 125,
 				"parent" : 15
 			},
 			{
-				"file" : 6,
+				"command" : 4,
+				"file" : 7,
+				"line" : 93,
 				"parent" : 16
+			},
+			{
+				"file" : 6,
+				"parent" : 17
 			},
 			{
 				"command" : 1,
 				"file" : 6,
 				"line" : 57,
-				"parent" : 17
+				"parent" : 18
 			},
 			{
 				"file" : 5,
-				"parent" : 18
+				"parent" : 19
 			},
 			{
 				"command" : 3,
 				"file" : 5,
 				"line" : 61,
-				"parent" : 19
+				"parent" : 20
 			},
 			{
-				"command" : 5,
+				"command" : 6,
 				"file" : 8,
 				"line" : 142,
 				"parent" : 14
 			},
 			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 125,
+				"parent" : 22
+			},
+			{
 				"command" : 4,
 				"file" : 7,
-				"line" : 76,
-				"parent" : 21
+				"line" : 93,
+				"parent" : 23
 			},
 			{
 				"file" : 11,
-				"parent" : 22
+				"parent" : 24
 			},
 			{
 				"command" : 1,
 				"file" : 11,
 				"line" : 55,
-				"parent" : 23
+				"parent" : 25
 			},
 			{
 				"file" : 10,
-				"parent" : 24
+				"parent" : 26
 			},
 			{
 				"command" : 3,
 				"file" : 10,
 				"line" : 61,
-				"parent" : 25
+				"parent" : 27
 			},
 			{
-				"command" : 7,
+				"command" : 8,
 				"file" : 0,
 				"line" : 34,
 				"parent" : 2
 			},
 			{
-				"command" : 8,
+				"command" : 9,
 				"file" : 0,
 				"line" : 19,
 				"parent" : 2
 			}
 		]
 	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"compileDependencies" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Qt6::Widgets::@6890427a1f51a3e7e1df"
+		}
+	],
 	"compileGroups" : 
 	[
 		{
@@ -254,27 +279,27 @@
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/include"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Main"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Player"
 				},
 				{
-					"backtrace" : 27,
+					"backtrace" : 29,
 					"path" : "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/QT UI"
 				},
 				{
@@ -308,7 +333,7 @@
 			{
 				"backtraces" : 
 				[
-					28,
+					30,
 					4,
 					4
 				],
@@ -344,10 +369,6 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
 				"backtrace" : 4,
 				"fragment" : "C:\\Qt\\6.11.2\\mingw_64\\lib\\libQt6Widgets.a",
 				"role" : "libraries"
@@ -363,32 +384,32 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 20,
+				"backtrace" : 21,
 				"fragment" : "-lmpr",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 20,
+				"backtrace" : 21,
 				"fragment" : "-luserenv",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 26,
+				"backtrace" : 28,
 				"fragment" : "-ld3d11",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 26,
+				"backtrace" : 28,
 				"fragment" : "-ldxgi",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 26,
+				"backtrace" : 28,
 				"fragment" : "-ldxguid",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 26,
+				"backtrace" : 28,
 				"fragment" : "-ld3d12",
 				"role" : "libraries"
 			},
@@ -399,8 +420,31 @@
 		],
 		"language" : "CXX"
 	},
+	"linkLibraries" : 
+	[
+		{
+			"backtrace" : 4,
+			"id" : "Qt6::Widgets::@6890427a1f51a3e7e1df"
+		}
+	],
 	"name" : "UIApp",
 	"nameOnDisk" : "UIApp.exe",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "UIApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "UIApp_autogen::@6890427a1f51a3e7e1df"
+		}
+	],
 	"paths" : 
 	{
 		"build" : ".",

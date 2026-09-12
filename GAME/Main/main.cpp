@@ -8,6 +8,7 @@
 
 #include "Player.h"
 #include "GameState.h"
+#include "Dice.h"
 
 int main(int argc, char *argv[])
 {
@@ -34,7 +35,8 @@ int main(int argc, char *argv[])
     //reference:
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
-    CurrentPlayer.Position += 3; //RollDice method here (rand int 1-12)
+    int roll = RollDice();
+    MoveCurrentPlayer(game, roll);
 
     std::cout << CurrentPlayer.Name << " is at " << game.board.Spaces[CurrentPlayer.Position].Name;
 
