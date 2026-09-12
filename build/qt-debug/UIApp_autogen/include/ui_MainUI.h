@@ -33,7 +33,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(859, 632);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         pushButton = new QPushButton(centralwidget);
@@ -41,7 +41,7 @@ public:
         pushButton->setGeometry(QRect(270, 230, 101, 41));
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(260, 110, 131, 71));
+        label->setGeometry(QRect(280, 120, 131, 71));
         QFont font;
         font.setPointSize(15);
         label->setFont(font);
@@ -49,7 +49,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 33));
+        menubar->setGeometry(QRect(0, 0, 859, 33));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -63,8 +63,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "click me", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Not clicked yet", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Roll Dice!", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "Roll Dice!", nullptr));
     } // retranslateUi
 
 };

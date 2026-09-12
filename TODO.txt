@@ -1,0 +1,382 @@
+﻿MONOPOLY IN C++ / QT - SMALL-STEP TODO
+Created: 12-09-2026
+
+HOW WE WILL WORK
+- The user writes application code and chooses the design.
+- The assistant handles CMake and reviews the user's attempts.
+- No code examples unless the user explicitly asks for code.
+- Explain unfamiliar concepts and why they are needed before using them.
+- Give one manageable task at a time, then inspect the saved attempt.
+- Do not mistake frustration or uncertainty for permission to take over.
+- This list is a route, not homework to finish in one sitting.
+- Revisit the design together when experience suggests a simpler approach.
+- Preserve completed tasks: move them to DONE with a date and evidence.
+- Source inspection, successful compilation, and runtime checks are different.
+- Do not mark a task tested merely because its code exists.
+- Testing was deferred by the user earlier. Check their readiness before
+  starting the manual checks below; do not silently mark them complete.
+- Build checks for assistant CMake changes remain the assistant's job.
+- Work on one milestone at a time; later sections are optional future work.
+
+FIRST VERSION
+Two humans share one computer. Start with a small practice board, visible
+tokens, dice, turns, buying, and rent. This is deliberately a simplified
+Monopoly-style prototype. Full rules come later. No LAN or bots initially.
+Game data and rules should work without depending on Qt widgets.
+
+RESUME HERE
+First task: remove the leftover lowercase player struct from Player.cpp.
+Player.h already defines Player with Name, Money, and Position.
+Keep the Player.h include in Player.cpp.
+Review that small edit together before moving to the next task.
+
+DONE:
+[x] Choose C++ for the project.
+[x] Choose Qt Widgets and its drag-and-drop Designer.
+[x] Install Qt and its matching MinGW compiler.
+[x] Configure a C++20 Qt Widgets target with CMake.
+[x] Keep substantive CMake configuration under CMake/.
+[x] Connect VS Code's C++ editor configuration to CMake.
+[x] Build and run the earlier window with a button and label.
+    Evidence: user reported that the window worked.
+[x] Connect the earlier button to a label-changing lambda.
+    Evidence: user reported the click worked.
+    Historical milestone: main.cpp has since been simplified for the rewrite.
+[x] Choose same-computer multiplayer for the first game.
+[x] Create GAME/Board, GAME/Player, GAME/GameState, GAME/Main, GAME/QT UI.
+[x] Move the main source and Designer form into the GAME tree.
+[x] Update CMake source paths and Designer search paths.
+    Evidence: assistant configure/build passed before the latest main.cpp edit.
+[x] Create Player.h with an inclusion guard and the string include.
+[x] Define Player with Name, Money, and Position in Player.h.
+    Evidence: source inspection on 12-09-2026; values are not initialized yet.
+[x] Include Player.h from Player.cpp.
+[x] Change the Designer button's visible text to Roll Dice!
+    Evidence: saved MainUI.ui inspection.
+
+TODO:
+
+01 - FINISH THE CURRENT STARTING POINT
+[ ] Remove the leftover lowercase player struct from Player.cpp.
+[ ] Explain why Player.h is the shared definition and Player.cpp includes it.
+[ ] Explain why Player and player are different names in C++.
+[ ] Repair the unfinished greeting output statement in main.cpp.
+[ ] Give Money a deliberate initial value rather than leaving it uninitialized.
+[ ] Give Position a deliberate initial value.
+[ ] Decide whether starting money belongs in game setup or in Player defaults.
+[ ] Agree that board positions start at index zero.
+[ ] Create one temporary Player in main for learning.
+[ ] Give that player a name, starting money, and starting position.
+[ ] Inspect those three values together.
+[ ] When ready, build and check that temporary player setup.
+[ ] Rename the empty GAME/GameState/board.h to GameState.h.
+[ ] Add an inclusion guard to GameState.h.
+[ ] Add an inclusion guard to GAME/Board/board.h.
+[ ] Keep filename capitalization consistent in includes.
+[ ] Assistant: add source files to CMake as their implementations are introduced.
+[ ] Remove the temporary player demonstration when real game setup replaces it.
+
+02 - REPRESENT ONE BOARD SPACE
+[ ] Explain the difference between a space description and a player's position.
+[ ] Choose a name for the type representing one space.
+[ ] Add a display name to that type.
+[ ] Discuss an enum as a named choice between space kinds.
+[ ] Define just Go, Property, and Rest kinds for the practice board.
+[ ] Give each space a kind.
+[ ] Give property spaces a purchase price.
+[ ] Give property spaces a simple fixed rent for the prototype.
+[ ] Initialize fields that do not apply to non-property spaces sensibly.
+[ ] Represent a space with no owner.
+[ ] Explain why an owner should identify a player rather than copy the player.
+[ ] Choose how player indices and the no-owner value are represented.
+[ ] Create one Go space.
+[ ] Create one property space.
+[ ] Review how their data differs.
+
+03 - BUILD A SMALL PRACTICE BOARD
+[ ] Choose a small number of spaces together, such as eight.
+[ ] Choose names for those spaces.
+[ ] Put Go at position zero.
+[ ] Place a few properties among the other spaces.
+[ ] Add at least one Rest space.
+[ ] Store the spaces in one ordered collection.
+[ ] Explain why collection order determines movement order.
+[ ] Obtain the board length from the collection.
+[ ] Read a space's name using its position.
+[ ] Keep board data independent of labels and buttons.
+[ ] Decide where the initial board data is created.
+[ ] Assistant: add board.cpp and its include directory to CMake when needed.
+[ ] Review every starting owner, price, and rent.
+[ ] When ready, inspect the first and last board spaces during a run.
+
+04 - START A GAME WITH TWO PLAYERS
+[ ] Define the GameState type.
+[ ] Give it a collection of players.
+[ ] Decide how GameState holds the board.
+[ ] Add the current player's index.
+[ ] Create two players with distinct names.
+[ ] Give both the agreed starting money.
+[ ] Place both on Go.
+[ ] Set the first player's turn.
+[ ] Access the current player through the current-player index.
+[ ] Explain reference versus copy when modifying the current player.
+[ ] Create a fresh-game initialization operation.
+[ ] Keep initialization independent of Qt.
+[ ] Assistant: add GameState.cpp and Player.cpp to the build when needed.
+[ ] When ready, verify both players' initial data.
+
+05 - RESTORE THE WINDOW WITH CLEAR RESPONSIBILITIES
+[ ] Revisit QApplication and why it must exist before the window.
+[ ] Restore application startup in main.cpp.
+[ ] Restore the QMainWindow object.
+[ ] Restore the generated form object and form setup.
+[ ] Restore showing the window.
+[ ] Restore the event loop.
+[ ] Review what each startup line does in the user's own words.
+[ ] Set the Designer window title to Monopoly Prototype.
+[ ] Give the Roll button a meaningful object name.
+[ ] Give the status label a meaningful object name.
+[ ] Update source references after changing Designer object names.
+[ ] Add a current-player label.
+[ ] Add a money label.
+[ ] Add a position label.
+[ ] Save the Designer form.
+[ ] When ready, check the restored window opens and closes.
+[ ] Create MainWindow.h for the game's window behavior.
+[ ] Create MainWindow.cpp beside it in GAME/QT UI.
+[ ] Explain class inheritance before using a custom QMainWindow class.
+[ ] Move form setup into the window class in a guided small step.
+[ ] Decide explicitly where the game state is owned.
+[ ] Explain object lifetime before moving signal connections.
+[ ] Move interface actions from main.cpp into the window class.
+[ ] Keep main.cpp focused on creating the app and window.
+[ ] Assistant: update CMake for the new window files.
+[ ] When ready, confirm the window still behaves as before.
+
+06 - FIRST VISIBLE BOARD
+[ ] Choose a simple row or grid for the practice board.
+[ ] Add one visible box or label for each space.
+[ ] Display each space's name.
+[ ] Use a Qt layout so widgets move together when resizing.
+[ ] Give each player a distinct token marker.
+[ ] Show both tokens at Go.
+[ ] Decide how to display two tokens on the same space.
+[ ] Create one interface refresh operation.
+[ ] Refresh the current player's name.
+[ ] Refresh the current player's money.
+[ ] Refresh the position display.
+[ ] Refresh the token locations from game data.
+[ ] Explain why labels display state rather than store the game state.
+[ ] When ready, resize the window and inspect readability.
+
+07 - DICE
+[ ] Explain pseudo-random numbers before choosing the dice implementation.
+[ ] Choose one random-number generator for the game.
+[ ] Initialize that generator once rather than on every roll.
+[ ] Generate one die value between one and six.
+[ ] Generate a second die value independently.
+[ ] Store both values for the current roll.
+[ ] Calculate their total.
+[ ] Keep dice generation outside the UI callback.
+[ ] Display the first die value.
+[ ] Display the second die value.
+[ ] Display the total.
+[ ] Connect the Roll button to the game roll operation.
+[ ] Revisit signals, callbacks, and lambda capture if used.
+[ ] When ready, check repeated rolls stay within the expected ranges.
+[ ] Provide a simple way to use a chosen roll during later manual checks.
+
+08 - MOVEMENT AND TURN ORDER
+[ ] Calculate the destination from current position plus the dice total.
+[ ] Wrap movement past the end back to the beginning.
+[ ] Explain the remainder operation with practice-board examples.
+[ ] Record how many times Go was passed.
+[ ] Choose a simple Go reward for the prototype.
+[ ] Award the reward correctly even on the short practice board.
+[ ] Update only the current player's position.
+[ ] Refresh the moved token.
+[ ] Show which space the player landed on.
+[ ] Add an End Turn button.
+[ ] Track whether the current player has already rolled.
+[ ] Prevent a second normal roll in the same turn.
+[ ] Advance from the first player to the second.
+[ ] Wrap from the last player back to the first.
+[ ] Reset the roll state at the start of a turn.
+[ ] Disable End Turn until the turn's required action is resolved.
+[ ] Enable Roll only when rolling is allowed.
+[ ] When ready, check movement without crossing Go.
+[ ] When ready, check movement across Go.
+[ ] When ready, check a roll longer than the practice-board length.
+[ ] When ready, check two complete rounds of turns.
+
+09 - BUY ONE PROPERTY
+[ ] Detect that the destination is a property.
+[ ] Detect that the property has no owner.
+[ ] Show its purchase price.
+[ ] Add a Buy button.
+[ ] Check that the current player can afford the price.
+[ ] Deduct the price for a successful purchase.
+[ ] Store the buyer's player index as owner.
+[ ] Refresh the displayed money.
+[ ] Display the property's owner.
+[ ] Prevent the same property from being bought twice.
+[ ] Prevent purchases outside the allowed turn action.
+[ ] Add a temporary prototype option to decline buying.
+[ ] Record that declining without auction is a simplified rule.
+[ ] Resolve the purchase decision before ending the turn.
+[ ] When ready, check an affordable purchase.
+[ ] When ready, check buying with exactly enough money.
+[ ] When ready, check an unaffordable purchase.
+[ ] When ready, check declining leaves money and ownership unchanged.
+
+10 - RENT AND FIRST PLAYABLE LOOP
+[ ] Detect landing on another player's property.
+[ ] Read the property's rent.
+[ ] Identify its owner.
+[ ] Check whether the visitor can pay.
+[ ] Transfer affordable rent from visitor to owner.
+[ ] Refresh both players' displayed balances.
+[ ] Show a short rent message.
+[ ] Do not charge rent on your own property.
+[ ] Do not charge rent on an unowned property.
+[ ] Do not charge rent twice for the same landing.
+[ ] Define a temporary rule for inability to pay.
+[ ] Mark a player eliminated under that agreed prototype rule.
+[ ] Decide what happens to their remaining money and properties.
+[ ] Skip eliminated players when advancing turns.
+[ ] Detect when only one player remains.
+[ ] Display the winner.
+[ ] Disable game actions after the game ends.
+[ ] Add a New Game action.
+[ ] Reset players for a new game.
+[ ] Reset property ownership for a new game.
+[ ] Reset turn and dice state.
+[ ] When ready, play a short complete game with two humans.
+[ ] Record confusing behavior noticed during that game.
+[ ] Fix one recorded issue at a time before expanding.
+
+11 - MAKE THE SMALL GAME COMFORTABLE
+[ ] Add an area showing both players' money.
+[ ] Highlight the current player.
+[ ] Show ownership using a small marker.
+[ ] Add a short recent-actions log.
+[ ] Describe buying and rent in plain language in the log.
+[ ] Make unavailable buttons visibly disabled.
+[ ] Explain why an action was rejected.
+[ ] Let players enter their names before a new game.
+[ ] Validate empty player names.
+[ ] Decide whether duplicate display names are allowed.
+[ ] Keep player identity separate from editable display names.
+[ ] Add a confirmation before restarting an active game.
+[ ] Make labels readable at the starting window size.
+[ ] Add a reasonable minimum window size.
+[ ] Revisit automatic text scaling only if still wanted.
+[ ] Keep game rules out of font-sizing and layout code.
+[ ] When ready, check a full game after these interface changes.
+
+12 - EXPAND TOWARD STANDARD MONOPOLY: OPTIONAL LATER
+[ ] Choose the intended edition and its rules together.
+[ ] Consult that edition's official rules before implementing edge cases.
+[ ] Write down deliberate house rules separately.
+[ ] Separate practice-board setup from full-board setup.
+[ ] List the full board's spaces in order.
+[ ] Add the full board's property prices.
+[ ] Add property groups.
+[ ] Add the required rent data.
+[ ] Lay out the board's four sides.
+[ ] Add its four corners.
+[ ] Keep token placement based on board position.
+[ ] Check movement around every corner.
+[ ] Set the chosen edition's starting money and Go reward.
+[ ] Detect doubles.
+[ ] Add the allowed extra roll for doubles.
+[ ] Count consecutive doubles.
+[ ] Apply the three-doubles rule.
+[ ] Represent being in jail separately from visiting.
+[ ] Add the Go To Jail action.
+[ ] Apply the no-Go-reward jail movement rule.
+[ ] Track jail turns.
+[ ] Implement one jail-release option at a time.
+[ ] Add tax spaces and their chosen-rule amounts.
+[ ] Model one card as data.
+[ ] Create the first small card deck.
+[ ] Shuffle the deck once when preparing the game.
+[ ] Draw a card and display its instruction.
+[ ] Implement one simple money card.
+[ ] Implement one movement card.
+[ ] Handle passing Go during card movement correctly.
+[ ] Return used cards according to the chosen rules.
+[ ] Add the second deck.
+[ ] Add remaining card actions one at a time.
+[ ] Handle held jail-release cards separately.
+[ ] Calculate rent for complete property groups.
+[ ] Add railroad ownership counts and rent.
+[ ] Add utility ownership counts and rent.
+[ ] Ensure special card rent instructions use the correct rule.
+[ ] Add an auction when a property purchase is declined.
+[ ] Support passing in an auction.
+[ ] Resolve the winning bid and payment.
+[ ] Represent houses on a property.
+[ ] Enforce complete-group ownership before building.
+[ ] Enforce even building across a group.
+[ ] Charge building costs.
+[ ] Adjust rent for houses.
+[ ] Represent a hotel.
+[ ] Track available bank buildings.
+[ ] Add building sales and their rule checks.
+[ ] Represent mortgaged properties.
+[ ] Pay the mortgage value.
+[ ] Suppress rent where the rules require it.
+[ ] Implement unmortgaging and its cost.
+[ ] Allow raising money to settle a debt.
+[ ] Handle bankruptcy to another player.
+[ ] Handle bankruptcy to the bank.
+[ ] Add a simple trade proposal.
+[ ] Let the other player accept or decline.
+[ ] Apply accepted trades consistently.
+[ ] Check the standard game's victory condition.
+[ ] Review free parking and other common house-rule assumptions.
+
+13 - RELIABILITY AND SAVING: AFTER THE GAME LOOP
+[ ] Identify rules that can be checked without opening Qt.
+[ ] When ready, add a meaningful movement check.
+[ ] When ready, add a turn-wrap check.
+[ ] When ready, add a buy-and-rent balance check.
+[ ] When ready, add a rejected-action state check.
+[ ] Check that balances and ownership change only once per action.
+[ ] Check that invalid player indices are rejected.
+[ ] Check that invalid board positions are rejected.
+[ ] Decide exactly which game data must survive saving.
+[ ] Add a save-format version.
+[ ] Save the board's changing state.
+[ ] Save player state.
+[ ] Save turn state.
+[ ] Save deck state if decks exist.
+[ ] Report save failures.
+[ ] Preserve the previous save during a failed replacement.
+[ ] Load into temporary game data first.
+[ ] Validate loaded values before replacing the active game.
+[ ] Report invalid saves clearly.
+[ ] Refresh the interface after successful loading.
+[ ] When ready, compare a saved and reloaded turn.
+
+14 - FUTURE POSSIBILITIES, NOT CURRENT REQUIREMENTS
+[ ] Revisit whether bots are wanted after local multiplayer works.
+[ ] Separate action selection from action validation.
+[ ] Start a bot with one simple buying decision.
+[ ] Let a bot take a complete legal turn.
+[ ] Make its decisions visible in the action log.
+[ ] Revisit LAN only after the local rules are dependable.
+[ ] Learn the client/server model before implementing networking.
+[ ] Let one host own the authoritative game state.
+[ ] Send player intentions rather than trusting remote balance changes.
+[ ] Validate remote actions using the existing rules.
+[ ] Synchronize the displayed state between two computers.
+[ ] Handle disconnection explicitly.
+[ ] Consider animation and sound after basic interaction is comfortable.
+
+NEXT SESSION
+Read this resume point and the latest saved Player files first.
+Help with only the next small task. Explain the reason, let the user try,
+and review their work. Do not implement the roadmap on their behalf.
+

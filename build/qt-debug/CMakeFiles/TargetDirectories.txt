@@ -1,5 +1,5 @@
-C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/CMakeFiles/UIApp.dir
-C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/CMakeFiles/edit_cache.dir
-C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/CMakeFiles/UIApp_autogen_timestamp_deps.dir
-C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/CMakeFiles/UIApp_autogen.dir
+C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/UIApp.dir
+C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/edit_cache.dir
+C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/UIApp_autogen_timestamp_deps.dir
+C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/UIApp_autogen.dir
