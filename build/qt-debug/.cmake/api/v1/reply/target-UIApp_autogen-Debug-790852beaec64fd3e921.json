@@ -14,6 +14,11 @@
 			}
 		]
 	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
 	"dependencies" : 
 	[
 		{
@@ -23,6 +28,18 @@
 	"id" : "UIApp_autogen::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
 	"name" : "UIApp_autogen",
+	"orderDependencies" : 
+	[
+		{
+			"id" : "Qt6::moc::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "UIApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		}
+	],
 	"paths" : 
 	{
 		"build" : ".",

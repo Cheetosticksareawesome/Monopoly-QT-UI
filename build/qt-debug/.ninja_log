@@ -1,15 +1,8 @@
 # ninja log v6
-16	143	8108353781775107	UIApp_autogen/timestamp	f0c7fd16017d53c3
-16	143	8108353781775107	UIApp_autogen/mocs_compilation.cpp	f0c7fd16017d53c3
-144	188	8108331406108637	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	44de1d2df60d9fba
-16	143	8108353781775107	C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/UIApp_autogen/timestamp	f0c7fd16017d53c3
-16	143	8108353781775107	C:/Users/woutk/source/repos/C++/C++ UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	f0c7fd16017d53c3
-143	2288	8108353783076634	CMakeFiles/UIApp.dir/Main/main.cpp.obj	80569741452f5de8
-2288	2406	8108353804525928	UIApp.exe	56c156bef46e92d7
-43	214	8108808124559948	UIApp_autogen/timestamp	2d6012252bfb1921
 43	214	8108808124559948	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
+216	263	8108808126210296	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	f8927649d46a9868
+43	214	8108808124559948	UIApp_autogen/timestamp	2d6012252bfb1921
+4378	4522	8108808167889865	UIApp.exe	734f4f1e95ce68a
 43	214	8108808124559948	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/timestamp	2d6012252bfb1921
 43	214	8108808124559948	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
-216	263	8108808126210296	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	f8927649d46a9868
 220	4378	8108808126210296	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	92baf8f43a01abb7
-4378	4522	8108808167889865	UIApp.exe	734f4f1e95ce68a
