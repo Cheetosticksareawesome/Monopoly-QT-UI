@@ -14,31 +14,35 @@ int main(int argc, char *argv[])
 {
     std::cout << "Hello Monopoly!" << std::endl;
 
-    GameState game{};
-    game.board = CreateBoard();
-
-    Player player_1{
-        "Player 1",
-        1500, // Money
-        0,    // Position
-    };
-
-    Player player_2{
-        "Player 2",
-        1500, // Money
-        0,    // Position
-    };
-
-    game.Players.push_back(player_1);
-    game.Players.push_back(player_2);
+    auto game = SetupGame();
 
     //reference:
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
-    int roll = RollDice();
-    MoveCurrentPlayer(game, roll);
+    std::cout << "Current turn: " << CurrentPlayer.Name << std::endl;
 
-    std::cout << CurrentPlayer.Name << " is at " << game.board.Spaces[CurrentPlayer.Position].Name;
+
+    int roll = RollDice();
+    std::cout << CurrentPlayer.Name << " Rolled " << roll << std::endl;
+
+    MovePlayer(game, roll);
+    std::cout << CurrentPlayer.Name << " landed on " << game.board.Spaces[CurrentPlayer.Position].Name << std::endl;
+
+
+    EndTurn(game);
+
+
+    Player& NextPlayer = game.Players[game.CurrentPlayerIndex];
+    roll = RollDice();
+
+    std::cout << NextPlayer.Name << " rolled " << roll << std::endl;
+
+    MovePlayer(game, roll);
+
+    std::cout << NextPlayer.Name << " landed on " << game.board.Spaces[CurrentPlayer.Position].Name << std::endl;
+
+    EndTurn(game);
+
 
     return 0;
 }

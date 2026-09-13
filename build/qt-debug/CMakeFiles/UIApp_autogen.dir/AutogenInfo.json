@@ -291,6 +291,12 @@
 			null
 		],
 		[
+			"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.h",
+			"MU",
+			"LDI2COPEBG/moc_Dice.cpp",
+			null
+		],
+		[
 			"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/GameState.h",
 			"MU",
 			"LDI2COPEBG/moc_GameState.cpp",
@@ -381,6 +387,11 @@
 	[
 		[
 			"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board/board.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.cpp",
 			"MU",
 			null
 		],

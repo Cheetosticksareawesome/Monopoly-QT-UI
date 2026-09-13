@@ -12,4 +12,7 @@ struct GameState
     Board board;
 };
 
-void MoveCurrentPlayer(GameState& game, int steps);
+GameState SetupGame();
+
+void MovePlayer(GameState &game, int steps);
+void EndTurn(GameState &game);

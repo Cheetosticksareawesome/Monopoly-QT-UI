@@ -5,6 +5,7 @@
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/*.cpp")
 set(OLD_GLOB
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board/board.cpp"
+  "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.cpp"
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/GameState.cpp"
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Main/main.cpp"
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Player/Player.cpp"
@@ -34,6 +35,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/*.h")
 set(OLD_GLOB
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board/board.h"
+  "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.h"
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/GameState.h"
   "C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Player/Player.h"
   )

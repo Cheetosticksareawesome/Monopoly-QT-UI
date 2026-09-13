@@ -6,6 +6,7 @@
 			"paths" : 
 			[
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board/board.cpp",
+				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.cpp",
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/GameState.cpp",
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Main/main.cpp",
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Player/Player.cpp"
@@ -17,6 +18,7 @@
 			"paths" : 
 			[
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Board/board.h",
+				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/Dice.h",
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/GameState/GameState.h",
 				"C:/Users/woutk/source/repos/C++/C++ QT Monopoly/GAME/Player/Player.h"
 			],
