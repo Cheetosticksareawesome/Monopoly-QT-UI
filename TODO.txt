@@ -6,7 +6,7 @@ HOW WE WILL WORK
 - The assistant handles CMake and reviews the user's attempts.
 - No code examples unless the user explicitly asks for code.
 - Explain unfamiliar concepts and why they are needed before using them.
-- Give one manageable task at a time, then inspect the saved attempt.
+- Give batches of familiar small tasks; use one-at-a-time guidance for unfamiliar concepts.
 - Do not mistake frustration or uncertainty for permission to take over.
 - This list is a route, not homework to finish in one sitting.
 - Revisit the design together when experience suggests a simpler approach.
@@ -17,6 +17,7 @@ HOW WE WILL WORK
   starting the manual checks below; do not silently mark them complete.
 - Build checks for assistant CMake changes remain the assistant's job.
 - Work on one milestone at a time; later sections are optional future work.
+- Prefer explanatory named helpers over long blocks in main. Offer hints before full solutions.
 
 FIRST VERSION
 Two humans share one computer. Start with a small practice board, visible
@@ -25,10 +26,34 @@ Monopoly-style prototype. Full rules come later. No LAN or bots initially.
 Game data and rules should work without depending on Qt widgets.
 
 RESUME HERE
-First task: remove the leftover lowercase player struct from Player.cpp.
-Player.h already defines Player with Name, Money, and Position.
-Keep the Player.h include in Player.cpp.
-Review that small edit together before moving to the next task.
+Updated: 13-09-2026. User is taking a break and is happy with simpler main.
+SetupGame now builds the board, asks for 1-4 players, creates numbered players
+with 1500 money at Go, and returns the game. Main calls SetupGame.
+The retry-message syntax error is fixed.
+NEXT TASK: Replace main's two copied turn blocks with one loop that runs
+game.Players.size() times, giving every configured player one turn.
+Keep setup outside the loop. Select the current-player reference INSIDE each
+iteration, roll once, print the roll, move, print the destination, then EndTurn.
+The existing NextPlayer output incorrectly uses CurrentPlayer.Position; removing
+the duplicate block and using the same per-turn reference resolves this.
+No infinite loop or additional input-validation work is the immediate task.
+
+CURRENT LIMITS / DEFERRED WORK
+- EOF or serious input failure can loop forever in SetupGame. Explicitly deferred
+  by the user to avoid expanding this task into exception handling.
+- Integer extraction accepts a leading integer in input such as 2abc; strict
+  whole-line validation is not implemented.
+- Movement assumes a nonempty board, a valid player index and positive dice rolls.
+- Main currently runs exactly two turns regardless of the configured player count.
+- Board spaces are Go, Oak street, Rest, Pine street, in that order.
+- SpaceType distinguishes Go, Rest and Property; prices, ownership and groups
+  are not implemented.
+- RollDice keeps individual rolls only as local values and returns their sum.
+  Persisting/displaying individual dice for doubles remains TODO.
+- Current program is console-only; Qt startup was removed for the rewrite.
+- No build or runtime tests were performed for this documentation update.
+- Completion below means source inspection or explanation in this conversation,
+  not independent mastery or runtime verification.
 
 DONE:
 [x] Choose C++ for the project.
@@ -54,75 +79,99 @@ DONE:
 [x] Change the Designer button's visible text to Roll Dice!
     Evidence: saved MainUI.ui inspection.
 
+
+Completed through 13-09-2026 (source inspection / guided discussion):
+[x] Remove the leftover lowercase player struct from Player.cpp.
+[x] Explain why Player.h is the shared definition and Player.cpp includes it.
+[x] Explain why Player and player are different names in C++.
+[x] Repair the unfinished greeting output statement in main.cpp.
+[x] Give Money a deliberate initial value rather than leaving it uninitialized.
+[x] Give Position a deliberate initial value.
+[x] Decide whether starting money belongs in game setup or in Player defaults.
+[x] Agree that board positions start at index zero.
+[x] Create one temporary Player in main for learning.
+[x] Give that player a name, starting money, and starting position.
+[x] Inspect those three values together.
+[x] Rename the empty GAME/GameState/board.h to GameState.h.
+[x] Add an inclusion guard to GameState.h.
+[x] Add an inclusion guard to GAME/Board/board.h.
+[x] Keep filename capitalization consistent in includes.
+[x] Assistant: add source files to CMake as their implementations are introduced.
+[x] Remove the temporary player demonstration when real game setup replaces it.
+[x] Explain the difference between a space description and a player's position.
+[x] Choose a name for the type representing one space.
+[x] Add a display name to that type.
+[x] Discuss an enum as a named choice between space kinds.
+[x] Define just Go, Property, and Rest kinds for the practice board.
+[x] Give each space a kind.
+[x] Create one Go space.
+[x] Create one property space.
+[x] Review how their data differs.
+[x] Choose a small number of spaces together, such as eight.
+[x] Choose names for those spaces.
+[x] Put Go at position zero.
+[x] Place a few properties among the other spaces.
+[x] Add at least one Rest space.
+[x] Store the spaces in one ordered collection.
+[x] Explain why collection order determines movement order.
+[x] Obtain the board length from the collection.
+[x] Read a space's name using its position.
+[x] Keep board data independent of labels and buttons.
+[x] Decide where the initial board data is created.
+[x] Assistant: add board.cpp and its include directory to CMake when needed.
+[x] Define the GameState type.
+[x] Give it a collection of players.
+[x] Decide how GameState holds the board.
+[x] Add the current player's index.
+[x] Create two players with distinct names.
+[x] Give both the agreed starting money.
+[x] Place both on Go.
+[x] Set the first player's turn.
+[x] Access the current player through the current-player index.
+[x] Explain reference versus copy when modifying the current player.
+[x] Create a fresh-game initialization operation.
+[x] Keep initialization independent of Qt.
+[x] Assistant: add GameState.cpp and Player.cpp to the build when needed.
+[x] Explain pseudo-random numbers before choosing the dice implementation.
+[x] Choose one random-number generator for the game.
+[x] Initialize that generator once rather than on every roll.
+[x] Generate one die value between one and six.
+[x] Generate a second die value independently.
+[x] Calculate their total.
+[x] Keep dice generation outside the UI callback.
+[x] Display the total.
+[x] Calculate the destination from current position plus the dice total.
+[x] Wrap movement past the end back to the beginning.
+[x] Explain the remainder operation with practice-board examples.
+[x] Update only the current player's position.
+[x] Show which space the player landed on.
+[x] Advance from the first player to the second.
+[x] Wrap from the last player back to the first.
+[x] Extract setup from main into SetupGame in GameState.cpp.
+[x] Ask for a player count and create sequentially named players with a loop.
+[x] Retry nonnumeric input using clear and ignore, and reject integers outside 1-4.
+[x] Add an invalid-input retry message.
+[x] Add named RollDie, RollDice, MovePlayer and EndTurn helpers.
+[x] Store each turn's dice total once and use it for movement and output.
+
 TODO:
 
 01 - FINISH THE CURRENT STARTING POINT
-[ ] Remove the leftover lowercase player struct from Player.cpp.
-[ ] Explain why Player.h is the shared definition and Player.cpp includes it.
-[ ] Explain why Player and player are different names in C++.
-[ ] Repair the unfinished greeting output statement in main.cpp.
-[ ] Give Money a deliberate initial value rather than leaving it uninitialized.
-[ ] Give Position a deliberate initial value.
-[ ] Decide whether starting money belongs in game setup or in Player defaults.
-[ ] Agree that board positions start at index zero.
-[ ] Create one temporary Player in main for learning.
-[ ] Give that player a name, starting money, and starting position.
-[ ] Inspect those three values together.
 [ ] When ready, build and check that temporary player setup.
-[ ] Rename the empty GAME/GameState/board.h to GameState.h.
-[ ] Add an inclusion guard to GameState.h.
-[ ] Add an inclusion guard to GAME/Board/board.h.
-[ ] Keep filename capitalization consistent in includes.
-[ ] Assistant: add source files to CMake as their implementations are introduced.
-[ ] Remove the temporary player demonstration when real game setup replaces it.
 
 02 - REPRESENT ONE BOARD SPACE
-[ ] Explain the difference between a space description and a player's position.
-[ ] Choose a name for the type representing one space.
-[ ] Add a display name to that type.
-[ ] Discuss an enum as a named choice between space kinds.
-[ ] Define just Go, Property, and Rest kinds for the practice board.
-[ ] Give each space a kind.
 [ ] Give property spaces a purchase price.
 [ ] Give property spaces a simple fixed rent for the prototype.
 [ ] Initialize fields that do not apply to non-property spaces sensibly.
 [ ] Represent a space with no owner.
 [ ] Explain why an owner should identify a player rather than copy the player.
 [ ] Choose how player indices and the no-owner value are represented.
-[ ] Create one Go space.
-[ ] Create one property space.
-[ ] Review how their data differs.
 
 03 - BUILD A SMALL PRACTICE BOARD
-[ ] Choose a small number of spaces together, such as eight.
-[ ] Choose names for those spaces.
-[ ] Put Go at position zero.
-[ ] Place a few properties among the other spaces.
-[ ] Add at least one Rest space.
-[ ] Store the spaces in one ordered collection.
-[ ] Explain why collection order determines movement order.
-[ ] Obtain the board length from the collection.
-[ ] Read a space's name using its position.
-[ ] Keep board data independent of labels and buttons.
-[ ] Decide where the initial board data is created.
-[ ] Assistant: add board.cpp and its include directory to CMake when needed.
 [ ] Review every starting owner, price, and rent.
 [ ] When ready, inspect the first and last board spaces during a run.
 
 04 - START A GAME WITH TWO PLAYERS
-[ ] Define the GameState type.
-[ ] Give it a collection of players.
-[ ] Decide how GameState holds the board.
-[ ] Add the current player's index.
-[ ] Create two players with distinct names.
-[ ] Give both the agreed starting money.
-[ ] Place both on Go.
-[ ] Set the first player's turn.
-[ ] Access the current player through the current-player index.
-[ ] Explain reference versus copy when modifying the current player.
-[ ] Create a fresh-game initialization operation.
-[ ] Keep initialization independent of Qt.
-[ ] Assistant: add GameState.cpp and Player.cpp to the build when needed.
 [ ] When ready, verify both players' initial data.
 
 05 - RESTORE THE WINDOW WITH CLEAR RESPONSIBILITIES
@@ -170,37 +219,26 @@ TODO:
 [ ] When ready, resize the window and inspect readability.
 
 07 - DICE
-[ ] Explain pseudo-random numbers before choosing the dice implementation.
-[ ] Choose one random-number generator for the game.
-[ ] Initialize that generator once rather than on every roll.
-[ ] Generate one die value between one and six.
-[ ] Generate a second die value independently.
 [ ] Store both values for the current roll.
-[ ] Calculate their total.
-[ ] Keep dice generation outside the UI callback.
 [ ] Display the first die value.
 [ ] Display the second die value.
-[ ] Display the total.
 [ ] Connect the Roll button to the game roll operation.
 [ ] Revisit signals, callbacks, and lambda capture if used.
 [ ] When ready, check repeated rolls stay within the expected ranges.
 [ ] Provide a simple way to use a chosen roll during later manual checks.
 
 08 - MOVEMENT AND TURN ORDER
-[ ] Calculate the destination from current position plus the dice total.
-[ ] Wrap movement past the end back to the beginning.
-[ ] Explain the remainder operation with practice-board examples.
+[ ] Replace duplicated turn blocks in main with one round loop for all players.
+[ ] Select the current-player reference inside each iteration.
+[ ] Use that same player reference for the destination output.
+[ ] When ready, verify one round with 1, 2, 3 and 4 configured players.
 [ ] Record how many times Go was passed.
 [ ] Choose a simple Go reward for the prototype.
 [ ] Award the reward correctly even on the short practice board.
-[ ] Update only the current player's position.
 [ ] Refresh the moved token.
-[ ] Show which space the player landed on.
 [ ] Add an End Turn button.
 [ ] Track whether the current player has already rolled.
 [ ] Prevent a second normal roll in the same turn.
-[ ] Advance from the first player to the second.
-[ ] Wrap from the last player back to the first.
 [ ] Reset the roll state at the start of a turn.
 [ ] Disable End Turn until the turn's required action is resolved.
 [ ] Enable Roll only when rolling is allowed.
@@ -376,7 +414,8 @@ TODO:
 [ ] Consider animation and sound after basic interaction is comfortable.
 
 NEXT SESSION
-Read this resume point and the latest saved Player files first.
-Help with only the next small task. Explain the reason, let the user try,
+Read the current resume point, main.cpp, and GameState files first.
+Offer the next manageable batch, explain unfamiliar parts, let the user try,
 and review their work. Do not implement the roadmap on their behalf.
+
 
