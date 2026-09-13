@@ -16,6 +16,9 @@ int main(int argc, char *argv[])
 
     auto game = SetupGame();
 
+    for(int i = 0; i < game.Players.size(); i++)
+    {
+
     //reference:
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
@@ -30,19 +33,8 @@ int main(int argc, char *argv[])
 
 
     EndTurn(game);
+    }
 
-
-    Player& NextPlayer = game.Players[game.CurrentPlayerIndex];
-    roll = RollDice();
-
-    std::cout << NextPlayer.Name << " rolled " << roll << std::endl;
-
-    MovePlayer(game, roll);
-
-    std::cout << NextPlayer.Name << " landed on " << game.board.Spaces[CurrentPlayer.Position].Name << std::endl;
-
-    EndTurn(game);
-
-
+    
     return 0;
 }
