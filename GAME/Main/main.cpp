@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 {
     std::cout << "Hello Monopoly!" << std::endl;
 
-    auto game = SetupGame();
+    GameState game = SetupGame();
 
     for(int i = 0; i < game.Players.size(); i++)
     {
