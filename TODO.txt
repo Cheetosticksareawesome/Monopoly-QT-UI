@@ -26,16 +26,21 @@ Monopoly-style prototype. Full rules come later. No LAN or bots initially.
 Game data and rules should work without depending on Qt widgets.
 
 RESUME HERE
-Updated: 13-09-2026. User is taking a break and is happy with simpler main.
-SetupGame now builds the board, asks for 1-4 players, creates numbered players
-with 1500 money at Go, and returns the game. Main calls SetupGame.
-The retry-message syntax error is fixed.
-NEXT TASK: Replace main's two copied turn blocks with one loop that runs
-game.Players.size() times, giving every configured player one turn.
-Keep setup outside the loop. Select the current-player reference INSIDE each
-iteration, roll once, print the roll, move, print the destination, then EndTurn.
-The existing NextPlayer output incorrectly uses CurrentPlayer.Position; removing
-the duplicate block and using the same per-turn reference resolves this.
+Updated: 14-09-2026. User is leaving; preserve their work and resume calmly.
+The user completed the counting for loop in GAME/Main/main.cpp.
+Setup stays before it; each iteration selects CurrentPlayer, rolls once,
+prints the roll, moves, prints that player's destination, and calls EndTurn.
+The duplicate NextPlayer block and its wrong-player destination lookup are gone.
+Source inspection supports one round for the configured player count.
+No build or runtime verification was performed for this checkpoint.
+
+NEXT SESSION: Explain briefly that the counting loop is now correct.
+If the user is ready to run it, check one round with two players first;
+the pending 1-4-player checks remain below. Do not require repetitive testing.
+Then agree on the next small game milestone before assigning implementation.
+The user prefers meaningful game progress and named helpers, not detached drills.
+Explain counting loops versus range-based loops if needed: size() is a number,
+while Players is a collection. Avoid repeating the already finished loop task.
 No infinite loop or additional input-validation work is the immediate task.
 
 CURRENT LIMITS / DEFERRED WORK
@@ -44,7 +49,7 @@ CURRENT LIMITS / DEFERRED WORK
 - Integer extraction accepts a leading integer in input such as 2abc; strict
   whole-line validation is not implemented.
 - Movement assumes a nonempty board, a valid player index and positive dice rolls.
-- Main currently runs exactly two turns regardless of the configured player count.
+- Main now runs one round for the configured player count; repeated rounds and UI turns remain future work.
 - Board spaces are Go, Oak street, Rest, Pine street, in that order.
 - SpaceType distinguishes Go, Rest and Property; prices, ownership and groups
   are not implemented.
@@ -154,6 +159,12 @@ Completed through 13-09-2026 (source inspection / guided discussion):
 [x] Add named RollDie, RollDice, MovePlayer and EndTurn helpers.
 [x] Store each turn's dice total once and use it for movement and output.
 
+Completed 14-09-2026 (source inspection only; no build/run):
+[x] Replace duplicated turn blocks in main with one round loop for all players.
+[x] Select the current-player reference inside each iteration.
+[x] Use that same player reference for the destination output.
+[x] Replace the attempted range loop over size() with a counting for loop.
+
 TODO:
 
 01 - FINISH THE CURRENT STARTING POINT
@@ -228,9 +239,6 @@ TODO:
 [ ] Provide a simple way to use a chosen roll during later manual checks.
 
 08 - MOVEMENT AND TURN ORDER
-[ ] Replace duplicated turn blocks in main with one round loop for all players.
-[ ] Select the current-player reference inside each iteration.
-[ ] Use that same player reference for the destination output.
 [ ] When ready, verify one round with 1, 2, 3 and 4 configured players.
 [ ] Record how many times Go was passed.
 [ ] Choose a simple Go reward for the prototype.
@@ -417,5 +425,6 @@ NEXT SESSION
 Read the current resume point, main.cpp, and GameState files first.
 Offer the next manageable batch, explain unfamiliar parts, let the user try,
 and review their work. Do not implement the roadmap on their behalf.
+
 
 
