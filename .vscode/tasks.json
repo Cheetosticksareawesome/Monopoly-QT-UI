@@ -1,0 +1,25 @@
+﻿{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Monopoly (CMake)",
+            "type": "process",
+            "command": "C:/Qt/Tools/CMake_64/bin/cmake.exe",
+            "args": [
+                "--build",
+                "--preset",
+                "qt-debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

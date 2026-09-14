@@ -12,10 +12,31 @@
 
 int main(int argc, char *argv[])
 {
+    //QT:
+    QApplication app(argc, argv);
+    QMainWindow window;
+    Ui::MainWindow ui;
+    ui.setupUi(&window);
+
+    ui.rollDiceButton->setEnabled(true);
+    QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [ui]()
+    {
+        int roll = RollDice();
+        ui.diceLabel->setText(QString::number(roll));
+    });
+
+    window.show();
+    //++
+
+
     std::cout << "Hello Monopoly!" << std::endl;
 
-    GameState game = SetupGame();
+    // Temporary players: console input would block Qt's event loop here.
+    GameState game{};
+    game.board = CreateBoard();
+    game.Players = {{"player_1", 1500, 0}, {"player_2", 1500, 0}};
 
+    /*
     for(int i = 0; i < game.Players.size(); i++)
     {
 
@@ -34,7 +55,8 @@ int main(int argc, char *argv[])
 
     EndTurn(game);
     }
-
+    */
     
-    return 0;
+    return app.exec();
 }
+

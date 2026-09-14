@@ -1446,28 +1446,28 @@ public:
 
         boardLayout->addWidget(boardCenter, 1, 1, 9, 9);
 
-        boardLayout->setRowStretch(0, 1);
-        boardLayout->setRowStretch(1, 1);
-        boardLayout->setRowStretch(2, 1);
-        boardLayout->setRowStretch(3, 1);
-        boardLayout->setRowStretch(4, 1);
-        boardLayout->setRowStretch(5, 1);
-        boardLayout->setRowStretch(6, 1);
-        boardLayout->setRowStretch(7, 1);
-        boardLayout->setRowStretch(8, 1);
-        boardLayout->setRowStretch(9, 1);
-        boardLayout->setRowStretch(10, 1);
-        boardLayout->setColumnStretch(0, 1);
-        boardLayout->setColumnStretch(1, 1);
-        boardLayout->setColumnStretch(2, 1);
-        boardLayout->setColumnStretch(3, 1);
-        boardLayout->setColumnStretch(4, 1);
-        boardLayout->setColumnStretch(5, 1);
-        boardLayout->setColumnStretch(6, 1);
-        boardLayout->setColumnStretch(7, 1);
-        boardLayout->setColumnStretch(8, 1);
-        boardLayout->setColumnStretch(9, 1);
-        boardLayout->setColumnStretch(10, 1);
+        boardLayout->setRowStretch(0, 20);
+        boardLayout->setRowStretch(1, 16);
+        boardLayout->setRowStretch(2, 16);
+        boardLayout->setRowStretch(3, 16);
+        boardLayout->setRowStretch(4, 16);
+        boardLayout->setRowStretch(5, 16);
+        boardLayout->setRowStretch(6, 16);
+        boardLayout->setRowStretch(7, 16);
+        boardLayout->setRowStretch(8, 16);
+        boardLayout->setRowStretch(9, 16);
+        boardLayout->setRowStretch(10, 20);
+        boardLayout->setColumnStretch(0, 20);
+        boardLayout->setColumnStretch(1, 16);
+        boardLayout->setColumnStretch(2, 16);
+        boardLayout->setColumnStretch(3, 16);
+        boardLayout->setColumnStretch(4, 16);
+        boardLayout->setColumnStretch(5, 16);
+        boardLayout->setColumnStretch(6, 16);
+        boardLayout->setColumnStretch(7, 16);
+        boardLayout->setColumnStretch(8, 16);
+        boardLayout->setColumnStretch(9, 16);
+        boardLayout->setColumnStretch(10, 20);
 
         mainLayout->addWidget(boardWidget);
 
@@ -1583,117 +1583,123 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Monopoly", nullptr));
         MainWindow->setStyleSheet(QCoreApplication::translate("MainWindow", "\n"
-"QMainWindow { background: #eef1ec; }\n"
-"QWidget { color: #263c36; font-family: \"Segoe UI\"; font-size: 12px; }\n"
-"QFrame[tile=\"true\"] { background: #fffdf6; border: 1px solid #54685d; }\n"
-"QFrame#boardCenter { background: #dce8dc; border: 1px solid #54685d; }\n"
-"QGroupBox { background: #fffdf6; border: 1px solid #c7d1c5; border-radius: 8px; margin-top: 16px; padding: 16px 10px 10px; font-weight: bold; }\n"
-"QGroupBox::title { subcontrol-origin: margin; left: 12px; }\n"
-"QPushButton { padding: 12px; border: 1px solid #bbc9be; border-radius: 5px; }\n"
-"QPushButton:disabled { color: #7c897f; background: #e5ebe3; }\n"
-"QLabel#boardTitle { font-size: 34px; font-weight: bold; }\n"
+"QMainWindow, QWidget#centralwidget { background: #202625; }\n"
+"QWidget { color: #e0e3dc; font-family: \"Segoe UI\"; font-size: 12px; }\n"
+"QLabel { background: transparent; }\n"
+"QFrame[tile=\"true\"] { background: #3c4540; border: 1px solid #758279; }\n"
+"QFrame#boardCenter { background: #255c32; border: 1px solid #758279; }\n"
+"QGroupBox { background: #303936; border: 1px solid #59675f; border-radius: 8px; margin-top: 16px; padding: 16px 10px 10px; font-weight: bold; }\n"
+"QGroupBox::title { subcontrol-origin: margin; left: 12px; color: #e0e3dc; }\n"
+"QPushButton { color: #e0e3dc; background: #40554a; padding: 12px; border: 1px solid #788f80; border-radius: 5px; }\n"
+"QPushButton:hover { background: #4b6356; }\n"
+"QPushButton:pressed { background: #34473e; }\n"
+"QPushButton:focus { border: 2px solid #a4bda8; }\n"
+"QPushButton:disabled { color: #a4ada5; background: #343d38; border: 1px solid #59675f; }\n"
+"QLabel#diceLabel { font-size: 26px; font-weight: bold; }\n"
+"QLabel#boardTitle { color: #d2dfd2; f"
+                        "ont-size: 34px; font-weight: bold; }\n"
 "", nullptr));
-        tileName0->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName0->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName0->setText(QCoreApplication::translate("MainWindow", "GO", nullptr));
         propertyColor1->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
-        tileName1->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName1->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName1->setText(QCoreApplication::translate("MainWindow", "Oak Street", nullptr));
-        tileName2->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName2->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName2->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor3->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
-        tileName3->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName3->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName3->setText(QCoreApplication::translate("MainWindow", "Pine Street", nullptr));
-        tileName4->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName4->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName4->setText(QCoreApplication::translate("MainWindow", "Income Tax", nullptr));
-        tileName5->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName5->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName5->setText(QCoreApplication::translate("MainWindow", "South Station", nullptr));
-        propertyColor6->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #a5d8e8; border: none;", nullptr));
-        tileName6->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor6->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        tileName6->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName6->setText(QCoreApplication::translate("MainWindow", "Birch Street", nullptr));
-        tileName7->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName7->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName7->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
-        propertyColor8->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #a5d8e8; border: none;", nullptr));
-        tileName8->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor8->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        tileName8->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName8->setText(QCoreApplication::translate("MainWindow", "Maple Street", nullptr));
-        propertyColor9->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #a5d8e8; border: none;", nullptr));
-        tileName9->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor9->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        tileName9->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName9->setText(QCoreApplication::translate("MainWindow", "Cedar Street", nullptr));
-        tileName10->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName10->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName10->setText(QCoreApplication::translate("MainWindow", "JAIL / VISITING", nullptr));
-        propertyColor11->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #cc71ab; border: none;", nullptr));
-        tileName11->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor11->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        tileName11->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName11->setText(QCoreApplication::translate("MainWindow", "Rose Street", nullptr));
-        tileName12->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName12->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName12->setText(QCoreApplication::translate("MainWindow", "Electric Company", nullptr));
-        propertyColor13->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #cc71ab; border: none;", nullptr));
-        tileName13->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor13->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        tileName13->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName13->setText(QCoreApplication::translate("MainWindow", "Tulip Street", nullptr));
-        propertyColor14->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #cc71ab; border: none;", nullptr));
-        tileName14->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor14->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        tileName14->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName14->setText(QCoreApplication::translate("MainWindow", "Lily Street", nullptr));
-        tileName15->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName15->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName15->setText(QCoreApplication::translate("MainWindow", "West Station", nullptr));
-        propertyColor16->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #ed9f51; border: none;", nullptr));
-        tileName16->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor16->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        tileName16->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName16->setText(QCoreApplication::translate("MainWindow", "Orange Street", nullptr));
-        tileName17->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName17->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName17->setText(QCoreApplication::translate("MainWindow", "Peach Street", nullptr));
-        propertyColor18->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #ed9f51; border: none;", nullptr));
-        tileName18->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor18->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        tileName18->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName18->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
-        propertyColor19->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #ed9f51; border: none;", nullptr));
-        tileName19->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor19->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        tileName19->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName19->setText(QCoreApplication::translate("MainWindow", "Apricot Street", nullptr));
-        tileName20->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName20->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName20->setText(QCoreApplication::translate("MainWindow", "FREE PARKING", nullptr));
-        propertyColor21->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #d56862; border: none;", nullptr));
-        tileName21->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor21->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        tileName21->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName21->setText(QCoreApplication::translate("MainWindow", "Ruby Street", nullptr));
-        tileName22->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName22->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName22->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
-        propertyColor23->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #d56862; border: none;", nullptr));
-        tileName23->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor23->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        tileName23->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName23->setText(QCoreApplication::translate("MainWindow", "Scarlet Street", nullptr));
-        propertyColor24->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #d56862; border: none;", nullptr));
-        tileName24->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor24->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        tileName24->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName24->setText(QCoreApplication::translate("MainWindow", "Crimson Street", nullptr));
-        tileName25->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName25->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName25->setText(QCoreApplication::translate("MainWindow", "North Station", nullptr));
-        propertyColor26->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #e8ce61; border: none;", nullptr));
-        tileName26->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor26->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        tileName26->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName26->setText(QCoreApplication::translate("MainWindow", "Sunflower Street", nullptr));
-        propertyColor27->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #e8ce61; border: none;", nullptr));
-        tileName27->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor27->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        tileName27->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName27->setText(QCoreApplication::translate("MainWindow", "Daffodil Street", nullptr));
-        tileName28->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName28->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName28->setText(QCoreApplication::translate("MainWindow", "Water Works", nullptr));
-        propertyColor29->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #e8ce61; border: none;", nullptr));
-        tileName29->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor29->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        tileName29->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName29->setText(QCoreApplication::translate("MainWindow", "Marigold Street", nullptr));
-        tileName30->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName30->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName30->setText(QCoreApplication::translate("MainWindow", "GO TO JAIL", nullptr));
-        propertyColor31->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #6eab7e; border: none;", nullptr));
-        tileName31->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor31->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        tileName31->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName31->setText(QCoreApplication::translate("MainWindow", "Forest Street", nullptr));
-        propertyColor32->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #6eab7e; border: none;", nullptr));
-        tileName32->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor32->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        tileName32->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName32->setText(QCoreApplication::translate("MainWindow", "Willow Street", nullptr));
-        tileName33->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName33->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName33->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
-        propertyColor34->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #6eab7e; border: none;", nullptr));
-        tileName34->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor34->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        tileName34->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName34->setText(QCoreApplication::translate("MainWindow", "Meadow Street", nullptr));
-        tileName35->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName35->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName35->setText(QCoreApplication::translate("MainWindow", "East Station", nullptr));
-        tileName36->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName36->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName36->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
-        propertyColor37->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #638bbc; border: none;", nullptr));
-        tileName37->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor37->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
+        tileName37->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName37->setText(QCoreApplication::translate("MainWindow", "Ocean Avenue", nullptr));
-        tileName38->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        tileName38->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName38->setText(QCoreApplication::translate("MainWindow", "Luxury Tax", nullptr));
-        propertyColor39->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #638bbc; border: none;", nullptr));
-        tileName39->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 10px;", nullptr));
+        propertyColor39->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
+        tileName39->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName39->setText(QCoreApplication::translate("MainWindow", "Royal Avenue", nullptr));
         boardTitle->setText(QCoreApplication::translate("MainWindow", "MONOPOLY", nullptr));
         chance->setTitle(QCoreApplication::translate("MainWindow", "Chance", nullptr));
