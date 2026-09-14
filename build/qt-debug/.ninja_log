@@ -1,12 +1,24 @@
 # ninja log v6
-61	227	8109338862651827	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
 61	227	8109338862651827	UIApp_autogen/timestamp	2d6012252bfb1921
 228	298	8109338864305529	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	b7d6cab28acb3898
+61	227	8109338862651827	UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
 2514	2613	8109338887180882	UIApp.exe	7489bfac1ec0e4f4
 61	227	8109338862651827	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/timestamp	2d6012252bfb1921
 61	227	8109338862651827	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	2d6012252bfb1921
-236	305	8109338864332047	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	e7fc37bdb72b24fd
 241	2514	8109338864450039	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	6d7e8fd38894787a
+236	305	8109338864332047	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	e7fc37bdb72b24fd
 232	305	8109338864332047	CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj	1d9fe322eaa5296d
 246	600	8109338864494966	CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj	3a93cb2e24f5b99
 12	32	8109339463044179	C:/Users/woutk/source/repos/C++/C++ QT Monopoly/build/qt-debug/CMakeFiles/cmake.verify_globs	129480238a057f8a
+21	45	8110529869834605	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/cmake.verify_globs	430ef40b02d71372
+57	230	8110529870211281	UIApp_autogen/timestamp	bd3616ddc5bf3315
+57	230	8110529870211281	UIApp_autogen/mocs_compilation.cpp	bd3616ddc5bf3315
+57	230	8110529870211281	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/timestamp	bd3616ddc5bf3315
+57	230	8110529870211281	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	bd3616ddc5bf3315
+231	284	8110529871956336	CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj	de98d53491032ccb
+252	625	8110529872170187	CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj	65d1959bed4743a6
+235	714	8110529871997757	CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj	c775fb7d256fc74e
+239	850	8110529872037819	CMakeFiles/UIApp.dir/GAME/GameState/Dice.cpp.obj	332abbb6051fdfbd
+243	900	8110529872067874	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	82331c82e0ec2ebb
+247	2631	8110529872116170	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	6a0119ca8ddeaf06
+2631	2767	8110529895959024	UIApp.exe	7bdd21731fca716d

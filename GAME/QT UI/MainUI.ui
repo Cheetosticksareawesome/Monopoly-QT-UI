@@ -1,66 +1,3039 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>859</width>
-    <height>632</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>MainWindow</string>
-  </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
     <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>230</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>1120</width>
+        <height>820</height>
+      </rect>
     </property>
-    <property name="text">
-     <string>Roll Dice!</string>
+    <property name="windowTitle">
+      <string>Monopoly</string>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>120</y>
-      <width>131</width>
-      <height>71</height>
-     </rect>
+    <property name="styleSheet">
+      <string>
+QMainWindow { background: #eef1ec; }
+QWidget { color: #263c36; font-family: "Segoe UI"; font-size: 12px; }
+QFrame[tile="true"] { background: #fffdf6; border: 1px solid #54685d; }
+QFrame#boardCenter { background: #dce8dc; border: 1px solid #54685d; }
+QGroupBox { background: #fffdf6; border: 1px solid #c7d1c5; border-radius: 8px; margin-top: 16px; padding: 16px 10px 10px; font-weight: bold; }
+QGroupBox::title { subcontrol-origin: margin; left: 12px; }
+QPushButton { padding: 12px; border: 1px solid #bbc9be; border-radius: 5px; }
+QPushButton:disabled { color: #7c897f; background: #e5ebe3; }
+QLabel#boardTitle { font-size: 34px; font-weight: bold; }
+</string>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Roll Dice!</string>
-    </property>
-    <property name="scaledContents">
-     <bool>false</bool>
-    </property>
-   </widget>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QHBoxLayout" name="mainLayout" stretch="3,1">
+        <property name="spacing">
+          <number>20</number>
+        </property>
+        <property name="leftMargin">
+          <number>20</number>
+        </property>
+        <property name="topMargin">
+          <number>20</number>
+        </property>
+        <property name="rightMargin">
+          <number>20</number>
+        </property>
+        <property name="bottomMargin">
+          <number>20</number>
+        </property>
+        <item>
+          <widget class="QWidget" name="boardWidget">
+            <property name="minimumSize">
+              <size>
+                <width>550</width>
+                <height>550</height>
+              </size>
+            </property>
+            <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+              </sizepolicy>
+            </property>
+            <layout class="QGridLayout" name="boardLayout" rowstretch="1,1,1,1,1,1,1,1,1,1,1" columnstretch="1,1,1,1,1,1,1,1,1,1,1">
+              <property name="spacing">
+                <number>0</number>
+              </property>
+              <property name="leftMargin">
+                <number>0</number>
+              </property>
+              <property name="topMargin">
+                <number>0</number>
+              </property>
+              <property name="rightMargin">
+                <number>0</number>
+              </property>
+              <property name="bottomMargin">
+                <number>0</number>
+              </property>
+              <item row="10" column="10">
+                <widget class="QFrame" name="tile0">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout0">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName0">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>GO</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea0">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="9">
+                <widget class="QFrame" name="tile1">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout1">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor1">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #996c53; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName1">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Oak Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea1">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="8">
+                <widget class="QFrame" name="tile2">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout2">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName2">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Community Chest</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea2">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="7">
+                <widget class="QFrame" name="tile3">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout3">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor3">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #996c53; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName3">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Pine Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea3">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="6">
+                <widget class="QFrame" name="tile4">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout4">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName4">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Income Tax</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea4">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="5">
+                <widget class="QFrame" name="tile5">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout5">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName5">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>South Station</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea5">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="4">
+                <widget class="QFrame" name="tile6">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout6">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor6">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #a5d8e8; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName6">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Birch Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea6">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="3">
+                <widget class="QFrame" name="tile7">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout7">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName7">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Chance</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea7">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="2">
+                <widget class="QFrame" name="tile8">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout8">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor8">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #a5d8e8; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName8">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Maple Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea8">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="1">
+                <widget class="QFrame" name="tile9">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout9">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor9">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #a5d8e8; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName9">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Cedar Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea9">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="10" column="0">
+                <widget class="QFrame" name="tile10">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout10">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName10">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>JAIL / VISITING</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea10">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="9" column="0">
+                <widget class="QFrame" name="tile11">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout11">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor11">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #cc71ab; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName11">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Rose Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea11">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="8" column="0">
+                <widget class="QFrame" name="tile12">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout12">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName12">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Electric Company</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea12">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="7" column="0">
+                <widget class="QFrame" name="tile13">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout13">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor13">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #cc71ab; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName13">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Tulip Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea13">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="6" column="0">
+                <widget class="QFrame" name="tile14">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout14">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor14">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #cc71ab; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName14">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Lily Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea14">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="5" column="0">
+                <widget class="QFrame" name="tile15">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout15">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName15">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>West Station</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea15">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="4" column="0">
+                <widget class="QFrame" name="tile16">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout16">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor16">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #ed9f51; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName16">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Orange Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea16">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="3" column="0">
+                <widget class="QFrame" name="tile17">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout17">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName17">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Peach Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea17">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="2" column="0">
+                <widget class="QFrame" name="tile18">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout18">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor18">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #ed9f51; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName18">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Community Chest</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea18">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="1" column="0">
+                <widget class="QFrame" name="tile19">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout19">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor19">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #ed9f51; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName19">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Apricot Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea19">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="0">
+                <widget class="QFrame" name="tile20">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout20">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName20">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>FREE PARKING</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea20">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="1">
+                <widget class="QFrame" name="tile21">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout21">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor21">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #d56862; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName21">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Ruby Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea21">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="2">
+                <widget class="QFrame" name="tile22">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout22">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName22">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Chance</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea22">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="3">
+                <widget class="QFrame" name="tile23">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout23">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor23">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #d56862; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName23">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Scarlet Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea23">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="4">
+                <widget class="QFrame" name="tile24">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout24">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor24">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #d56862; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName24">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Crimson Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea24">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="5">
+                <widget class="QFrame" name="tile25">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout25">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName25">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>North Station</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea25">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="6">
+                <widget class="QFrame" name="tile26">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout26">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor26">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #e8ce61; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName26">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Sunflower Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea26">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="7">
+                <widget class="QFrame" name="tile27">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout27">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor27">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #e8ce61; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName27">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Daffodil Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea27">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="8">
+                <widget class="QFrame" name="tile28">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout28">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName28">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Water Works</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea28">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="9">
+                <widget class="QFrame" name="tile29">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout29">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor29">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #e8ce61; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName29">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Marigold Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea29">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="0" column="10">
+                <widget class="QFrame" name="tile30">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout30">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName30">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>GO TO JAIL</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea30">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="1" column="10">
+                <widget class="QFrame" name="tile31">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout31">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor31">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #6eab7e; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName31">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Forest Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea31">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="2" column="10">
+                <widget class="QFrame" name="tile32">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout32">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor32">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #6eab7e; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName32">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Willow Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea32">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="3" column="10">
+                <widget class="QFrame" name="tile33">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout33">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName33">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Community Chest</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea33">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="4" column="10">
+                <widget class="QFrame" name="tile34">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout34">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor34">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #6eab7e; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName34">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Meadow Street</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea34">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="5" column="10">
+                <widget class="QFrame" name="tile35">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout35">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName35">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>East Station</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea35">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="6" column="10">
+                <widget class="QFrame" name="tile36">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout36">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName36">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Chance</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea36">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="7" column="10">
+                <widget class="QFrame" name="tile37">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout37">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor37">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #638bbc; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName37">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Ocean Avenue</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea37">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="8" column="10">
+                <widget class="QFrame" name="tile38">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout38">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="tileName38">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Luxury Tax</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea38">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="9" column="10">
+                <widget class="QFrame" name="tile39">
+                  <property name="tile" stdset="0">
+                    <bool>true</bool>
+                  </property>
+                  <layout class="QVBoxLayout" name="tileLayout39">
+                    <property name="spacing">
+                      <number>2</number>
+                    </property>
+                    <property name="leftMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>3</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>3</number>
+                    </property>
+                    <item>
+                      <widget class="QFrame" name="propertyColor39">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>10</height>
+                          </size>
+                        </property>
+                        <property name="styleSheet">
+                          <string>background: #638bbc; border: none;</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="tileName39">
+                        <property name="styleSheet">
+                          <string>font-size: 10px;</string>
+                        </property>
+                        <property name="text">
+                          <string>Royal Avenue</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QWidget" name="tokenArea39">
+                        <property name="minimumSize">
+                          <size>
+                            <width>0</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                        <property name="maximumSize">
+                          <size>
+                            <width>16777215</width>
+                            <height>12</height>
+                          </size>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item row="1" column="1" rowspan="9" colspan="9">
+                <widget class="QFrame" name="boardCenter">
+                  <layout class="QVBoxLayout" name="centerLayout">
+                    <property name="leftMargin">
+                      <number>40</number>
+                    </property>
+                    <property name="topMargin">
+                      <number>40</number>
+                    </property>
+                    <property name="rightMargin">
+                      <number>40</number>
+                    </property>
+                    <property name="bottomMargin">
+                      <number>40</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="boardTitle">
+                        <property name="text">
+                          <string>MONOPOLY</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <layout class="QHBoxLayout" name="cardsLayout">
+                        <property name="spacing">
+                          <number>20</number>
+                        </property>
+                        <item>
+                          <widget class="QGroupBox" name="chance">
+                            <property name="title">
+                              <string>Chance</string>
+                            </property>
+                            <property name="minimumSize">
+                              <size>
+                                <width>0</width>
+                                <height>170</height>
+                              </size>
+                            </property>
+                            <layout class="QVBoxLayout" name="chanceLayout">
+                              <item>
+                                <widget class="QLabel" name="chanceText">
+                                  <property name="text">
+                                    <string>Chance cards appear here</string>
+                                  </property>
+                                  <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="wordWrap">
+                                    <bool>true</bool>
+                                  </property>
+                                </widget>
+                              </item>
+                            </layout>
+                          </widget>
+                        </item>
+                        <item>
+                          <widget class="QGroupBox" name="community">
+                            <property name="title">
+                              <string>Community Chest</string>
+                            </property>
+                            <property name="minimumSize">
+                              <size>
+                                <width>0</width>
+                                <height>170</height>
+                              </size>
+                            </property>
+                            <layout class="QVBoxLayout" name="communityLayout">
+                              <item>
+                                <widget class="QLabel" name="communityText">
+                                  <property name="text">
+                                    <string>Community Chest cards appear here</string>
+                                  </property>
+                                  <property name="alignment">
+                                    <set>Qt::AlignCenter</set>
+                                  </property>
+                                  <property name="wordWrap">
+                                    <bool>true</bool>
+                                  </property>
+                                </widget>
+                              </item>
+                            </layout>
+                          </widget>
+                        </item>
+                      </layout>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="diceLabel">
+                        <property name="text">
+                          <string>DICE AREA
+
+—  +  —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="gameMessage">
+                        <property name="text">
+                          <string>Game messages will appear here.</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+            </layout>
+          </widget>
+        </item>
+        <item>
+          <widget class="QWidget" name="sidebar">
+            <property name="minimumSize">
+              <size>
+                <width>260</width>
+                <height>0</height>
+              </size>
+            </property>
+            <layout class="QVBoxLayout" name="sidebarLayout">
+              <property name="spacing">
+                <number>18</number>
+              </property>
+              <item>
+                <widget class="QGroupBox" name="playersPanel">
+                  <property name="title">
+                    <string>Players</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="playersLayout">
+                    <property name="spacing">
+                      <number>16</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="player1">
+                        <property name="text">
+                          <string>Player 1   |   € —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="player2">
+                        <property name="text">
+                          <string>Player 2   |   € —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="player3">
+                        <property name="text">
+                          <string>Player 3   |   € —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="player4">
+                        <property name="text">
+                          <string>Player 4   |   € —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <widget class="QGroupBox" name="turnPanel">
+                  <property name="title">
+                    <string>Current turn</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="turnLayout">
+                    <property name="spacing">
+                      <number>16</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="currentPlayerLabel">
+                        <property name="text">
+                          <string>Waiting for players</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QLabel" name="positionLabel">
+                        <property name="text">
+                          <string>Position: —</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QPushButton" name="rollDiceButton">
+                        <property name="enabled">
+                          <bool>false</bool>
+                        </property>
+                        <property name="text">
+                          <string>Roll Dice</string>
+                        </property>
+                      </widget>
+                    </item>
+                    <item>
+                      <widget class="QPushButton" name="endTurnButton">
+                        <property name="enabled">
+                          <bool>false</bool>
+                        </property>
+                        <property name="text">
+                          <string>End Turn</string>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <widget class="QGroupBox" name="propertyPanel">
+                  <property name="title">
+                    <string>Selected property</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="propertyLayout">
+                    <property name="spacing">
+                      <number>16</number>
+                    </property>
+                    <item>
+                      <widget class="QLabel" name="propertyDetails">
+                        <property name="text">
+                          <string>Property details will appear here.</string>
+                        </property>
+                        <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="wordWrap">
+                          <bool>true</bool>
+                        </property>
+                      </widget>
+                    </item>
+                  </layout>
+                </widget>
+              </item>
+              <item>
+                <spacer name="sidebarSpacer">
+                  <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                    <size>
+                      <width>20</width>
+                      <height>40</height>
+                    </size>
+                  </property>
+                </spacer>
+              </item>
+            </layout>
+          </widget>
+        </item>
+      </layout>
+    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>859</width>
-     <height>33</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
- </widget>
- <resources/>
- <connections/>
+  <resources />
+  <connections />
 </ui>
