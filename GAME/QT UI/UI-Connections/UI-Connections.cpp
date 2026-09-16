@@ -4,7 +4,7 @@
 #include "Dice.h"
 #include "ui_MainUI.h"
 
-void Connect_UI(Ui::MainWindow ui, GameState game)
+void Connect_UI(Ui::MainWindow& ui, GameState& game)
 {
 
     ui.rollDiceButton->setEnabled(true);

@@ -4,6 +4,7 @@
 #include <QApplication>
 #include <QMainWindow>
 
+#include "UI-Connections.h"
 #include "ui_MainUI.h"
 
 #include "Player.h"
@@ -18,11 +19,8 @@ int main(int argc, char *argv[])
     Ui::MainWindow ui;
     ui.setupUi(&window);
 
-
     window.show();
     //++
-
-    std::cout << "Hello Monopoly!" << std::endl;
 
     // Temporary players: console input would block Qt's event loop here.
     // create a setup method which sets up UI & the game

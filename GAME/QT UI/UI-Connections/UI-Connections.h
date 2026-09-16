@@ -2,4 +2,4 @@
 
 
 
-void Connect_UI(Ui::MainWindow ui, GameState game);
+void Connect_UI(Ui::MainWindow& ui, GameState& game);
