@@ -14,5 +14,5 @@ struct GameState
 
 GameState SetupGame();
 
-void MovePlayer(GameState &game, int steps);
-void EndTurn(GameState &game);
+void MovePlayer(GameState& game, int steps);
+void EndTurn(GameState& game);

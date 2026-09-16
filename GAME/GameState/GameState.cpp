@@ -4,7 +4,7 @@
 
 #include "GameState.h"
 
-void MovePlayer(GameState &game, int steps)
+void MovePlayer(GameState& game, int steps)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
