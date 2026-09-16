@@ -25,28 +25,17 @@ int main(int argc, char *argv[])
     std::cout << "Hello Monopoly!" << std::endl;
 
     // Temporary players: console input would block Qt's event loop here.
+    // create a setup method which sets up UI & the game
     GameState game{};
     game.board = CreateBoard();
     game.Players = {{"player_1", 1500, 0}, {"player_2", 1500, 0}};
+    
+
 
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
     ui.currentPlayerLabel->setText("Current player: " + QString::fromStdString(CurrentPlayer.Name));
 
-    ui.rollDiceButton->setEnabled(true);
-    QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [&ui, &game](){
 
-        int roll = RollDice();
-        ui.diceLabel->setText(QString::number(roll));
-        MovePlayer(game, roll);
-        ui.positionLabel->setText(QString::fromStdString(game.board.Spaces[game.Players[game.CurrentPlayerIndex].Position].Name));
-    });
-
-    ui.endTurnButton->setEnabled(true);
-    QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
-    {
-        EndTurn(game);
-        ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
-    });
 
     /*
     for(int i = 0; i < game.Players.size(); i++)
