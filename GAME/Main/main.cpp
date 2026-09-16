@@ -18,16 +18,9 @@ int main(int argc, char *argv[])
     Ui::MainWindow ui;
     ui.setupUi(&window);
 
-    ui.rollDiceButton->setEnabled(true);
-    QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [ui]()
-    {
-        int roll = RollDice();
-        ui.diceLabel->setText(QString::number(roll));
-    });
 
     window.show();
     //++
-
 
     std::cout << "Hello Monopoly!" << std::endl;
 
@@ -36,16 +29,29 @@ int main(int argc, char *argv[])
     game.board = CreateBoard();
     game.Players = {{"player_1", 1500, 0}, {"player_2", 1500, 0}};
 
+    Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
+    ui.currentPlayerLabel->setText("Current player: " + QString::fromStdString(CurrentPlayer.Name));
+
+    ui.rollDiceButton->setEnabled(true);
+    QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [&ui, &game](){
+
+        int roll = RollDice();
+        ui.diceLabel->setText(QString::number(roll));
+        MovePlayer(game, roll);
+        ui.positionLabel->setText(QString::fromStdString(game.board.Spaces[game.Players[game.CurrentPlayerIndex].Position].Name));
+    });
+
+    ui.endTurnButton->setEnabled(true);
+    QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
+    {
+        EndTurn(game);
+        ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
+    });
+
     /*
     for(int i = 0; i < game.Players.size(); i++)
     {
-
-    //reference:
-    Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
-
-    std::cout << "Current turn: " << CurrentPlayer.Name << std::endl;
-
-
+    
     int roll = RollDice();
     std::cout << CurrentPlayer.Name << " Rolled " << roll << std::endl;
 
@@ -54,9 +60,10 @@ int main(int argc, char *argv[])
 
 
     EndTurn(game);
+    ui.currentPlayerLabel->setText("current player: " + QString::fromStdString(CurrentPlayer.Name));
     }
     */
-    
+        
     return app.exec();
 }
 

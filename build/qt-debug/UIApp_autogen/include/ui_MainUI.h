@@ -29,7 +29,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QHBoxLayout *mainLayout;
-    QWidget *boardWidget;
     QGridLayout *boardLayout;
     QFrame *tile0;
     QVBoxLayout *tileLayout0;
@@ -225,7 +224,6 @@ public:
     QLabel *communityText;
     QLabel *diceLabel;
     QLabel *gameMessage;
-    QWidget *sidebar;
     QVBoxLayout *sidebarLayout;
     QGroupBox *playersPanel;
     QVBoxLayout *playersLayout;
@@ -255,19 +253,11 @@ public:
         mainLayout->setSpacing(20);
         mainLayout->setObjectName("mainLayout");
         mainLayout->setContentsMargins(20, 20, 20, 20);
-        boardWidget = new QWidget(centralwidget);
-        boardWidget->setObjectName("boardWidget");
-        boardWidget->setMinimumSize(QSize(550, 550));
-        QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Expanding);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(boardWidget->sizePolicy().hasHeightForWidth());
-        boardWidget->setSizePolicy(sizePolicy);
-        boardLayout = new QGridLayout(boardWidget);
+        boardLayout = new QGridLayout();
         boardLayout->setSpacing(0);
         boardLayout->setObjectName("boardLayout");
         boardLayout->setContentsMargins(0, 0, 0, 0);
-        tile0 = new QFrame(boardWidget);
+        tile0 = new QFrame(centralwidget);
         tile0->setObjectName("tile0");
         tile0->setProperty("tile", QVariant(true));
         tileLayout0 = new QVBoxLayout(tile0);
@@ -276,7 +266,7 @@ public:
         tileLayout0->setContentsMargins(3, 3, 3, 3);
         tileName0 = new QLabel(tile0);
         tileName0->setObjectName("tileName0");
-        tileName0->setAlignment(Qt::AlignCenter);
+        tileName0->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName0->setWordWrap(true);
 
         tileLayout0->addWidget(tileName0);
@@ -291,7 +281,7 @@ public:
 
         boardLayout->addWidget(tile0, 10, 10, 1, 1);
 
-        tile1 = new QFrame(boardWidget);
+        tile1 = new QFrame(centralwidget);
         tile1->setObjectName("tile1");
         tile1->setProperty("tile", QVariant(true));
         tileLayout1 = new QVBoxLayout(tile1);
@@ -307,7 +297,7 @@ public:
 
         tileName1 = new QLabel(tile1);
         tileName1->setObjectName("tileName1");
-        tileName1->setAlignment(Qt::AlignCenter);
+        tileName1->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName1->setWordWrap(true);
 
         tileLayout1->addWidget(tileName1);
@@ -322,7 +312,7 @@ public:
 
         boardLayout->addWidget(tile1, 10, 9, 1, 1);
 
-        tile2 = new QFrame(boardWidget);
+        tile2 = new QFrame(centralwidget);
         tile2->setObjectName("tile2");
         tile2->setProperty("tile", QVariant(true));
         tileLayout2 = new QVBoxLayout(tile2);
@@ -331,7 +321,7 @@ public:
         tileLayout2->setContentsMargins(3, 3, 3, 3);
         tileName2 = new QLabel(tile2);
         tileName2->setObjectName("tileName2");
-        tileName2->setAlignment(Qt::AlignCenter);
+        tileName2->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName2->setWordWrap(true);
 
         tileLayout2->addWidget(tileName2);
@@ -346,7 +336,7 @@ public:
 
         boardLayout->addWidget(tile2, 10, 8, 1, 1);
 
-        tile3 = new QFrame(boardWidget);
+        tile3 = new QFrame(centralwidget);
         tile3->setObjectName("tile3");
         tile3->setProperty("tile", QVariant(true));
         tileLayout3 = new QVBoxLayout(tile3);
@@ -362,7 +352,7 @@ public:
 
         tileName3 = new QLabel(tile3);
         tileName3->setObjectName("tileName3");
-        tileName3->setAlignment(Qt::AlignCenter);
+        tileName3->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName3->setWordWrap(true);
 
         tileLayout3->addWidget(tileName3);
@@ -377,7 +367,7 @@ public:
 
         boardLayout->addWidget(tile3, 10, 7, 1, 1);
 
-        tile4 = new QFrame(boardWidget);
+        tile4 = new QFrame(centralwidget);
         tile4->setObjectName("tile4");
         tile4->setProperty("tile", QVariant(true));
         tileLayout4 = new QVBoxLayout(tile4);
@@ -386,7 +376,7 @@ public:
         tileLayout4->setContentsMargins(3, 3, 3, 3);
         tileName4 = new QLabel(tile4);
         tileName4->setObjectName("tileName4");
-        tileName4->setAlignment(Qt::AlignCenter);
+        tileName4->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName4->setWordWrap(true);
 
         tileLayout4->addWidget(tileName4);
@@ -401,7 +391,7 @@ public:
 
         boardLayout->addWidget(tile4, 10, 6, 1, 1);
 
-        tile5 = new QFrame(boardWidget);
+        tile5 = new QFrame(centralwidget);
         tile5->setObjectName("tile5");
         tile5->setProperty("tile", QVariant(true));
         tileLayout5 = new QVBoxLayout(tile5);
@@ -410,7 +400,7 @@ public:
         tileLayout5->setContentsMargins(3, 3, 3, 3);
         tileName5 = new QLabel(tile5);
         tileName5->setObjectName("tileName5");
-        tileName5->setAlignment(Qt::AlignCenter);
+        tileName5->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName5->setWordWrap(true);
 
         tileLayout5->addWidget(tileName5);
@@ -425,7 +415,7 @@ public:
 
         boardLayout->addWidget(tile5, 10, 5, 1, 1);
 
-        tile6 = new QFrame(boardWidget);
+        tile6 = new QFrame(centralwidget);
         tile6->setObjectName("tile6");
         tile6->setProperty("tile", QVariant(true));
         tileLayout6 = new QVBoxLayout(tile6);
@@ -441,7 +431,7 @@ public:
 
         tileName6 = new QLabel(tile6);
         tileName6->setObjectName("tileName6");
-        tileName6->setAlignment(Qt::AlignCenter);
+        tileName6->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName6->setWordWrap(true);
 
         tileLayout6->addWidget(tileName6);
@@ -456,7 +446,7 @@ public:
 
         boardLayout->addWidget(tile6, 10, 4, 1, 1);
 
-        tile7 = new QFrame(boardWidget);
+        tile7 = new QFrame(centralwidget);
         tile7->setObjectName("tile7");
         tile7->setProperty("tile", QVariant(true));
         tileLayout7 = new QVBoxLayout(tile7);
@@ -465,7 +455,7 @@ public:
         tileLayout7->setContentsMargins(3, 3, 3, 3);
         tileName7 = new QLabel(tile7);
         tileName7->setObjectName("tileName7");
-        tileName7->setAlignment(Qt::AlignCenter);
+        tileName7->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName7->setWordWrap(true);
 
         tileLayout7->addWidget(tileName7);
@@ -480,7 +470,7 @@ public:
 
         boardLayout->addWidget(tile7, 10, 3, 1, 1);
 
-        tile8 = new QFrame(boardWidget);
+        tile8 = new QFrame(centralwidget);
         tile8->setObjectName("tile8");
         tile8->setProperty("tile", QVariant(true));
         tileLayout8 = new QVBoxLayout(tile8);
@@ -496,7 +486,7 @@ public:
 
         tileName8 = new QLabel(tile8);
         tileName8->setObjectName("tileName8");
-        tileName8->setAlignment(Qt::AlignCenter);
+        tileName8->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName8->setWordWrap(true);
 
         tileLayout8->addWidget(tileName8);
@@ -511,7 +501,7 @@ public:
 
         boardLayout->addWidget(tile8, 10, 2, 1, 1);
 
-        tile9 = new QFrame(boardWidget);
+        tile9 = new QFrame(centralwidget);
         tile9->setObjectName("tile9");
         tile9->setProperty("tile", QVariant(true));
         tileLayout9 = new QVBoxLayout(tile9);
@@ -527,7 +517,7 @@ public:
 
         tileName9 = new QLabel(tile9);
         tileName9->setObjectName("tileName9");
-        tileName9->setAlignment(Qt::AlignCenter);
+        tileName9->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName9->setWordWrap(true);
 
         tileLayout9->addWidget(tileName9);
@@ -542,7 +532,7 @@ public:
 
         boardLayout->addWidget(tile9, 10, 1, 1, 1);
 
-        tile10 = new QFrame(boardWidget);
+        tile10 = new QFrame(centralwidget);
         tile10->setObjectName("tile10");
         tile10->setProperty("tile", QVariant(true));
         tileLayout10 = new QVBoxLayout(tile10);
@@ -551,7 +541,7 @@ public:
         tileLayout10->setContentsMargins(3, 3, 3, 3);
         tileName10 = new QLabel(tile10);
         tileName10->setObjectName("tileName10");
-        tileName10->setAlignment(Qt::AlignCenter);
+        tileName10->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName10->setWordWrap(true);
 
         tileLayout10->addWidget(tileName10);
@@ -566,7 +556,7 @@ public:
 
         boardLayout->addWidget(tile10, 10, 0, 1, 1);
 
-        tile11 = new QFrame(boardWidget);
+        tile11 = new QFrame(centralwidget);
         tile11->setObjectName("tile11");
         tile11->setProperty("tile", QVariant(true));
         tileLayout11 = new QVBoxLayout(tile11);
@@ -582,7 +572,7 @@ public:
 
         tileName11 = new QLabel(tile11);
         tileName11->setObjectName("tileName11");
-        tileName11->setAlignment(Qt::AlignCenter);
+        tileName11->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName11->setWordWrap(true);
 
         tileLayout11->addWidget(tileName11);
@@ -597,7 +587,7 @@ public:
 
         boardLayout->addWidget(tile11, 9, 0, 1, 1);
 
-        tile12 = new QFrame(boardWidget);
+        tile12 = new QFrame(centralwidget);
         tile12->setObjectName("tile12");
         tile12->setProperty("tile", QVariant(true));
         tileLayout12 = new QVBoxLayout(tile12);
@@ -606,7 +596,7 @@ public:
         tileLayout12->setContentsMargins(3, 3, 3, 3);
         tileName12 = new QLabel(tile12);
         tileName12->setObjectName("tileName12");
-        tileName12->setAlignment(Qt::AlignCenter);
+        tileName12->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName12->setWordWrap(true);
 
         tileLayout12->addWidget(tileName12);
@@ -621,7 +611,7 @@ public:
 
         boardLayout->addWidget(tile12, 8, 0, 1, 1);
 
-        tile13 = new QFrame(boardWidget);
+        tile13 = new QFrame(centralwidget);
         tile13->setObjectName("tile13");
         tile13->setProperty("tile", QVariant(true));
         tileLayout13 = new QVBoxLayout(tile13);
@@ -637,7 +627,7 @@ public:
 
         tileName13 = new QLabel(tile13);
         tileName13->setObjectName("tileName13");
-        tileName13->setAlignment(Qt::AlignCenter);
+        tileName13->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName13->setWordWrap(true);
 
         tileLayout13->addWidget(tileName13);
@@ -652,7 +642,7 @@ public:
 
         boardLayout->addWidget(tile13, 7, 0, 1, 1);
 
-        tile14 = new QFrame(boardWidget);
+        tile14 = new QFrame(centralwidget);
         tile14->setObjectName("tile14");
         tile14->setProperty("tile", QVariant(true));
         tileLayout14 = new QVBoxLayout(tile14);
@@ -668,7 +658,7 @@ public:
 
         tileName14 = new QLabel(tile14);
         tileName14->setObjectName("tileName14");
-        tileName14->setAlignment(Qt::AlignCenter);
+        tileName14->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName14->setWordWrap(true);
 
         tileLayout14->addWidget(tileName14);
@@ -683,7 +673,7 @@ public:
 
         boardLayout->addWidget(tile14, 6, 0, 1, 1);
 
-        tile15 = new QFrame(boardWidget);
+        tile15 = new QFrame(centralwidget);
         tile15->setObjectName("tile15");
         tile15->setProperty("tile", QVariant(true));
         tileLayout15 = new QVBoxLayout(tile15);
@@ -692,7 +682,7 @@ public:
         tileLayout15->setContentsMargins(3, 3, 3, 3);
         tileName15 = new QLabel(tile15);
         tileName15->setObjectName("tileName15");
-        tileName15->setAlignment(Qt::AlignCenter);
+        tileName15->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName15->setWordWrap(true);
 
         tileLayout15->addWidget(tileName15);
@@ -707,7 +697,7 @@ public:
 
         boardLayout->addWidget(tile15, 5, 0, 1, 1);
 
-        tile16 = new QFrame(boardWidget);
+        tile16 = new QFrame(centralwidget);
         tile16->setObjectName("tile16");
         tile16->setProperty("tile", QVariant(true));
         tileLayout16 = new QVBoxLayout(tile16);
@@ -723,7 +713,7 @@ public:
 
         tileName16 = new QLabel(tile16);
         tileName16->setObjectName("tileName16");
-        tileName16->setAlignment(Qt::AlignCenter);
+        tileName16->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName16->setWordWrap(true);
 
         tileLayout16->addWidget(tileName16);
@@ -738,7 +728,7 @@ public:
 
         boardLayout->addWidget(tile16, 4, 0, 1, 1);
 
-        tile17 = new QFrame(boardWidget);
+        tile17 = new QFrame(centralwidget);
         tile17->setObjectName("tile17");
         tile17->setProperty("tile", QVariant(true));
         tileLayout17 = new QVBoxLayout(tile17);
@@ -747,7 +737,7 @@ public:
         tileLayout17->setContentsMargins(3, 3, 3, 3);
         tileName17 = new QLabel(tile17);
         tileName17->setObjectName("tileName17");
-        tileName17->setAlignment(Qt::AlignCenter);
+        tileName17->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName17->setWordWrap(true);
 
         tileLayout17->addWidget(tileName17);
@@ -762,7 +752,7 @@ public:
 
         boardLayout->addWidget(tile17, 3, 0, 1, 1);
 
-        tile18 = new QFrame(boardWidget);
+        tile18 = new QFrame(centralwidget);
         tile18->setObjectName("tile18");
         tile18->setProperty("tile", QVariant(true));
         tileLayout18 = new QVBoxLayout(tile18);
@@ -778,7 +768,7 @@ public:
 
         tileName18 = new QLabel(tile18);
         tileName18->setObjectName("tileName18");
-        tileName18->setAlignment(Qt::AlignCenter);
+        tileName18->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName18->setWordWrap(true);
 
         tileLayout18->addWidget(tileName18);
@@ -793,7 +783,7 @@ public:
 
         boardLayout->addWidget(tile18, 2, 0, 1, 1);
 
-        tile19 = new QFrame(boardWidget);
+        tile19 = new QFrame(centralwidget);
         tile19->setObjectName("tile19");
         tile19->setProperty("tile", QVariant(true));
         tileLayout19 = new QVBoxLayout(tile19);
@@ -809,7 +799,7 @@ public:
 
         tileName19 = new QLabel(tile19);
         tileName19->setObjectName("tileName19");
-        tileName19->setAlignment(Qt::AlignCenter);
+        tileName19->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName19->setWordWrap(true);
 
         tileLayout19->addWidget(tileName19);
@@ -824,7 +814,7 @@ public:
 
         boardLayout->addWidget(tile19, 1, 0, 1, 1);
 
-        tile20 = new QFrame(boardWidget);
+        tile20 = new QFrame(centralwidget);
         tile20->setObjectName("tile20");
         tile20->setProperty("tile", QVariant(true));
         tileLayout20 = new QVBoxLayout(tile20);
@@ -833,7 +823,7 @@ public:
         tileLayout20->setContentsMargins(3, 3, 3, 3);
         tileName20 = new QLabel(tile20);
         tileName20->setObjectName("tileName20");
-        tileName20->setAlignment(Qt::AlignCenter);
+        tileName20->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName20->setWordWrap(true);
 
         tileLayout20->addWidget(tileName20);
@@ -848,7 +838,7 @@ public:
 
         boardLayout->addWidget(tile20, 0, 0, 1, 1);
 
-        tile21 = new QFrame(boardWidget);
+        tile21 = new QFrame(centralwidget);
         tile21->setObjectName("tile21");
         tile21->setProperty("tile", QVariant(true));
         tileLayout21 = new QVBoxLayout(tile21);
@@ -864,7 +854,7 @@ public:
 
         tileName21 = new QLabel(tile21);
         tileName21->setObjectName("tileName21");
-        tileName21->setAlignment(Qt::AlignCenter);
+        tileName21->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName21->setWordWrap(true);
 
         tileLayout21->addWidget(tileName21);
@@ -879,7 +869,7 @@ public:
 
         boardLayout->addWidget(tile21, 0, 1, 1, 1);
 
-        tile22 = new QFrame(boardWidget);
+        tile22 = new QFrame(centralwidget);
         tile22->setObjectName("tile22");
         tile22->setProperty("tile", QVariant(true));
         tileLayout22 = new QVBoxLayout(tile22);
@@ -888,7 +878,7 @@ public:
         tileLayout22->setContentsMargins(3, 3, 3, 3);
         tileName22 = new QLabel(tile22);
         tileName22->setObjectName("tileName22");
-        tileName22->setAlignment(Qt::AlignCenter);
+        tileName22->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName22->setWordWrap(true);
 
         tileLayout22->addWidget(tileName22);
@@ -903,7 +893,7 @@ public:
 
         boardLayout->addWidget(tile22, 0, 2, 1, 1);
 
-        tile23 = new QFrame(boardWidget);
+        tile23 = new QFrame(centralwidget);
         tile23->setObjectName("tile23");
         tile23->setProperty("tile", QVariant(true));
         tileLayout23 = new QVBoxLayout(tile23);
@@ -919,7 +909,7 @@ public:
 
         tileName23 = new QLabel(tile23);
         tileName23->setObjectName("tileName23");
-        tileName23->setAlignment(Qt::AlignCenter);
+        tileName23->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName23->setWordWrap(true);
 
         tileLayout23->addWidget(tileName23);
@@ -934,7 +924,7 @@ public:
 
         boardLayout->addWidget(tile23, 0, 3, 1, 1);
 
-        tile24 = new QFrame(boardWidget);
+        tile24 = new QFrame(centralwidget);
         tile24->setObjectName("tile24");
         tile24->setProperty("tile", QVariant(true));
         tileLayout24 = new QVBoxLayout(tile24);
@@ -950,7 +940,7 @@ public:
 
         tileName24 = new QLabel(tile24);
         tileName24->setObjectName("tileName24");
-        tileName24->setAlignment(Qt::AlignCenter);
+        tileName24->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName24->setWordWrap(true);
 
         tileLayout24->addWidget(tileName24);
@@ -965,7 +955,7 @@ public:
 
         boardLayout->addWidget(tile24, 0, 4, 1, 1);
 
-        tile25 = new QFrame(boardWidget);
+        tile25 = new QFrame(centralwidget);
         tile25->setObjectName("tile25");
         tile25->setProperty("tile", QVariant(true));
         tileLayout25 = new QVBoxLayout(tile25);
@@ -974,7 +964,7 @@ public:
         tileLayout25->setContentsMargins(3, 3, 3, 3);
         tileName25 = new QLabel(tile25);
         tileName25->setObjectName("tileName25");
-        tileName25->setAlignment(Qt::AlignCenter);
+        tileName25->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName25->setWordWrap(true);
 
         tileLayout25->addWidget(tileName25);
@@ -989,7 +979,7 @@ public:
 
         boardLayout->addWidget(tile25, 0, 5, 1, 1);
 
-        tile26 = new QFrame(boardWidget);
+        tile26 = new QFrame(centralwidget);
         tile26->setObjectName("tile26");
         tile26->setProperty("tile", QVariant(true));
         tileLayout26 = new QVBoxLayout(tile26);
@@ -1005,7 +995,7 @@ public:
 
         tileName26 = new QLabel(tile26);
         tileName26->setObjectName("tileName26");
-        tileName26->setAlignment(Qt::AlignCenter);
+        tileName26->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName26->setWordWrap(true);
 
         tileLayout26->addWidget(tileName26);
@@ -1020,7 +1010,7 @@ public:
 
         boardLayout->addWidget(tile26, 0, 6, 1, 1);
 
-        tile27 = new QFrame(boardWidget);
+        tile27 = new QFrame(centralwidget);
         tile27->setObjectName("tile27");
         tile27->setProperty("tile", QVariant(true));
         tileLayout27 = new QVBoxLayout(tile27);
@@ -1036,7 +1026,7 @@ public:
 
         tileName27 = new QLabel(tile27);
         tileName27->setObjectName("tileName27");
-        tileName27->setAlignment(Qt::AlignCenter);
+        tileName27->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName27->setWordWrap(true);
 
         tileLayout27->addWidget(tileName27);
@@ -1051,7 +1041,7 @@ public:
 
         boardLayout->addWidget(tile27, 0, 7, 1, 1);
 
-        tile28 = new QFrame(boardWidget);
+        tile28 = new QFrame(centralwidget);
         tile28->setObjectName("tile28");
         tile28->setProperty("tile", QVariant(true));
         tileLayout28 = new QVBoxLayout(tile28);
@@ -1060,7 +1050,7 @@ public:
         tileLayout28->setContentsMargins(3, 3, 3, 3);
         tileName28 = new QLabel(tile28);
         tileName28->setObjectName("tileName28");
-        tileName28->setAlignment(Qt::AlignCenter);
+        tileName28->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName28->setWordWrap(true);
 
         tileLayout28->addWidget(tileName28);
@@ -1075,7 +1065,7 @@ public:
 
         boardLayout->addWidget(tile28, 0, 8, 1, 1);
 
-        tile29 = new QFrame(boardWidget);
+        tile29 = new QFrame(centralwidget);
         tile29->setObjectName("tile29");
         tile29->setProperty("tile", QVariant(true));
         tileLayout29 = new QVBoxLayout(tile29);
@@ -1091,7 +1081,7 @@ public:
 
         tileName29 = new QLabel(tile29);
         tileName29->setObjectName("tileName29");
-        tileName29->setAlignment(Qt::AlignCenter);
+        tileName29->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName29->setWordWrap(true);
 
         tileLayout29->addWidget(tileName29);
@@ -1106,7 +1096,7 @@ public:
 
         boardLayout->addWidget(tile29, 0, 9, 1, 1);
 
-        tile30 = new QFrame(boardWidget);
+        tile30 = new QFrame(centralwidget);
         tile30->setObjectName("tile30");
         tile30->setProperty("tile", QVariant(true));
         tileLayout30 = new QVBoxLayout(tile30);
@@ -1115,7 +1105,7 @@ public:
         tileLayout30->setContentsMargins(3, 3, 3, 3);
         tileName30 = new QLabel(tile30);
         tileName30->setObjectName("tileName30");
-        tileName30->setAlignment(Qt::AlignCenter);
+        tileName30->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName30->setWordWrap(true);
 
         tileLayout30->addWidget(tileName30);
@@ -1130,7 +1120,7 @@ public:
 
         boardLayout->addWidget(tile30, 0, 10, 1, 1);
 
-        tile31 = new QFrame(boardWidget);
+        tile31 = new QFrame(centralwidget);
         tile31->setObjectName("tile31");
         tile31->setProperty("tile", QVariant(true));
         tileLayout31 = new QVBoxLayout(tile31);
@@ -1146,7 +1136,7 @@ public:
 
         tileName31 = new QLabel(tile31);
         tileName31->setObjectName("tileName31");
-        tileName31->setAlignment(Qt::AlignCenter);
+        tileName31->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName31->setWordWrap(true);
 
         tileLayout31->addWidget(tileName31);
@@ -1161,7 +1151,7 @@ public:
 
         boardLayout->addWidget(tile31, 1, 10, 1, 1);
 
-        tile32 = new QFrame(boardWidget);
+        tile32 = new QFrame(centralwidget);
         tile32->setObjectName("tile32");
         tile32->setProperty("tile", QVariant(true));
         tileLayout32 = new QVBoxLayout(tile32);
@@ -1177,7 +1167,7 @@ public:
 
         tileName32 = new QLabel(tile32);
         tileName32->setObjectName("tileName32");
-        tileName32->setAlignment(Qt::AlignCenter);
+        tileName32->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName32->setWordWrap(true);
 
         tileLayout32->addWidget(tileName32);
@@ -1192,7 +1182,7 @@ public:
 
         boardLayout->addWidget(tile32, 2, 10, 1, 1);
 
-        tile33 = new QFrame(boardWidget);
+        tile33 = new QFrame(centralwidget);
         tile33->setObjectName("tile33");
         tile33->setProperty("tile", QVariant(true));
         tileLayout33 = new QVBoxLayout(tile33);
@@ -1201,7 +1191,7 @@ public:
         tileLayout33->setContentsMargins(3, 3, 3, 3);
         tileName33 = new QLabel(tile33);
         tileName33->setObjectName("tileName33");
-        tileName33->setAlignment(Qt::AlignCenter);
+        tileName33->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName33->setWordWrap(true);
 
         tileLayout33->addWidget(tileName33);
@@ -1216,7 +1206,7 @@ public:
 
         boardLayout->addWidget(tile33, 3, 10, 1, 1);
 
-        tile34 = new QFrame(boardWidget);
+        tile34 = new QFrame(centralwidget);
         tile34->setObjectName("tile34");
         tile34->setProperty("tile", QVariant(true));
         tileLayout34 = new QVBoxLayout(tile34);
@@ -1232,7 +1222,7 @@ public:
 
         tileName34 = new QLabel(tile34);
         tileName34->setObjectName("tileName34");
-        tileName34->setAlignment(Qt::AlignCenter);
+        tileName34->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName34->setWordWrap(true);
 
         tileLayout34->addWidget(tileName34);
@@ -1247,7 +1237,7 @@ public:
 
         boardLayout->addWidget(tile34, 4, 10, 1, 1);
 
-        tile35 = new QFrame(boardWidget);
+        tile35 = new QFrame(centralwidget);
         tile35->setObjectName("tile35");
         tile35->setProperty("tile", QVariant(true));
         tileLayout35 = new QVBoxLayout(tile35);
@@ -1256,7 +1246,7 @@ public:
         tileLayout35->setContentsMargins(3, 3, 3, 3);
         tileName35 = new QLabel(tile35);
         tileName35->setObjectName("tileName35");
-        tileName35->setAlignment(Qt::AlignCenter);
+        tileName35->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName35->setWordWrap(true);
 
         tileLayout35->addWidget(tileName35);
@@ -1271,7 +1261,7 @@ public:
 
         boardLayout->addWidget(tile35, 5, 10, 1, 1);
 
-        tile36 = new QFrame(boardWidget);
+        tile36 = new QFrame(centralwidget);
         tile36->setObjectName("tile36");
         tile36->setProperty("tile", QVariant(true));
         tileLayout36 = new QVBoxLayout(tile36);
@@ -1280,7 +1270,7 @@ public:
         tileLayout36->setContentsMargins(3, 3, 3, 3);
         tileName36 = new QLabel(tile36);
         tileName36->setObjectName("tileName36");
-        tileName36->setAlignment(Qt::AlignCenter);
+        tileName36->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName36->setWordWrap(true);
 
         tileLayout36->addWidget(tileName36);
@@ -1295,7 +1285,7 @@ public:
 
         boardLayout->addWidget(tile36, 6, 10, 1, 1);
 
-        tile37 = new QFrame(boardWidget);
+        tile37 = new QFrame(centralwidget);
         tile37->setObjectName("tile37");
         tile37->setProperty("tile", QVariant(true));
         tileLayout37 = new QVBoxLayout(tile37);
@@ -1311,7 +1301,7 @@ public:
 
         tileName37 = new QLabel(tile37);
         tileName37->setObjectName("tileName37");
-        tileName37->setAlignment(Qt::AlignCenter);
+        tileName37->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName37->setWordWrap(true);
 
         tileLayout37->addWidget(tileName37);
@@ -1326,7 +1316,7 @@ public:
 
         boardLayout->addWidget(tile37, 7, 10, 1, 1);
 
-        tile38 = new QFrame(boardWidget);
+        tile38 = new QFrame(centralwidget);
         tile38->setObjectName("tile38");
         tile38->setProperty("tile", QVariant(true));
         tileLayout38 = new QVBoxLayout(tile38);
@@ -1335,7 +1325,7 @@ public:
         tileLayout38->setContentsMargins(3, 3, 3, 3);
         tileName38 = new QLabel(tile38);
         tileName38->setObjectName("tileName38");
-        tileName38->setAlignment(Qt::AlignCenter);
+        tileName38->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName38->setWordWrap(true);
 
         tileLayout38->addWidget(tileName38);
@@ -1350,7 +1340,7 @@ public:
 
         boardLayout->addWidget(tile38, 8, 10, 1, 1);
 
-        tile39 = new QFrame(boardWidget);
+        tile39 = new QFrame(centralwidget);
         tile39->setObjectName("tile39");
         tile39->setProperty("tile", QVariant(true));
         tileLayout39 = new QVBoxLayout(tile39);
@@ -1366,7 +1356,7 @@ public:
 
         tileName39 = new QLabel(tile39);
         tileName39->setObjectName("tileName39");
-        tileName39->setAlignment(Qt::AlignCenter);
+        tileName39->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName39->setWordWrap(true);
 
         tileLayout39->addWidget(tileName39);
@@ -1381,14 +1371,14 @@ public:
 
         boardLayout->addWidget(tile39, 9, 10, 1, 1);
 
-        boardCenter = new QFrame(boardWidget);
+        boardCenter = new QFrame(centralwidget);
         boardCenter->setObjectName("boardCenter");
         centerLayout = new QVBoxLayout(boardCenter);
         centerLayout->setObjectName("centerLayout");
         centerLayout->setContentsMargins(40, 40, 40, 40);
         boardTitle = new QLabel(boardCenter);
         boardTitle->setObjectName("boardTitle");
-        boardTitle->setAlignment(Qt::AlignCenter);
+        boardTitle->setAlignment(Qt::AlignmentFlag::AlignCenter);
         boardTitle->setWordWrap(true);
 
         centerLayout->addWidget(boardTitle);
@@ -1403,7 +1393,7 @@ public:
         chanceLayout->setObjectName("chanceLayout");
         chanceText = new QLabel(chance);
         chanceText->setObjectName("chanceText");
-        chanceText->setAlignment(Qt::AlignCenter);
+        chanceText->setAlignment(Qt::AlignmentFlag::AlignCenter);
         chanceText->setWordWrap(true);
 
         chanceLayout->addWidget(chanceText);
@@ -1418,7 +1408,7 @@ public:
         communityLayout->setObjectName("communityLayout");
         communityText = new QLabel(community);
         communityText->setObjectName("communityText");
-        communityText->setAlignment(Qt::AlignCenter);
+        communityText->setAlignment(Qt::AlignmentFlag::AlignCenter);
         communityText->setWordWrap(true);
 
         communityLayout->addWidget(communityText);
@@ -1431,14 +1421,14 @@ public:
 
         diceLabel = new QLabel(boardCenter);
         diceLabel->setObjectName("diceLabel");
-        diceLabel->setAlignment(Qt::AlignCenter);
+        diceLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         diceLabel->setWordWrap(true);
 
         centerLayout->addWidget(diceLabel);
 
         gameMessage = new QLabel(boardCenter);
         gameMessage->setObjectName("gameMessage");
-        gameMessage->setAlignment(Qt::AlignCenter);
+        gameMessage->setAlignment(Qt::AlignmentFlag::AlignCenter);
         gameMessage->setWordWrap(true);
 
         centerLayout->addWidget(gameMessage);
@@ -1469,44 +1459,40 @@ public:
         boardLayout->setColumnStretch(9, 16);
         boardLayout->setColumnStretch(10, 20);
 
-        mainLayout->addWidget(boardWidget);
+        mainLayout->addLayout(boardLayout);
 
-        sidebar = new QWidget(centralwidget);
-        sidebar->setObjectName("sidebar");
-        sidebar->setMinimumSize(QSize(260, 0));
-        sidebarLayout = new QVBoxLayout(sidebar);
+        sidebarLayout = new QVBoxLayout();
         sidebarLayout->setSpacing(18);
         sidebarLayout->setObjectName("sidebarLayout");
-        sidebarLayout->setContentsMargins(0, 0, 0, 0);
-        playersPanel = new QGroupBox(sidebar);
+        playersPanel = new QGroupBox(centralwidget);
         playersPanel->setObjectName("playersPanel");
         playersLayout = new QVBoxLayout(playersPanel);
         playersLayout->setSpacing(16);
         playersLayout->setObjectName("playersLayout");
         player1 = new QLabel(playersPanel);
         player1->setObjectName("player1");
-        player1->setAlignment(Qt::AlignCenter);
+        player1->setAlignment(Qt::AlignmentFlag::AlignCenter);
         player1->setWordWrap(true);
 
         playersLayout->addWidget(player1);
 
         player2 = new QLabel(playersPanel);
         player2->setObjectName("player2");
-        player2->setAlignment(Qt::AlignCenter);
+        player2->setAlignment(Qt::AlignmentFlag::AlignCenter);
         player2->setWordWrap(true);
 
         playersLayout->addWidget(player2);
 
         player3 = new QLabel(playersPanel);
         player3->setObjectName("player3");
-        player3->setAlignment(Qt::AlignCenter);
+        player3->setAlignment(Qt::AlignmentFlag::AlignCenter);
         player3->setWordWrap(true);
 
         playersLayout->addWidget(player3);
 
         player4 = new QLabel(playersPanel);
         player4->setObjectName("player4");
-        player4->setAlignment(Qt::AlignCenter);
+        player4->setAlignment(Qt::AlignmentFlag::AlignCenter);
         player4->setWordWrap(true);
 
         playersLayout->addWidget(player4);
@@ -1514,21 +1500,21 @@ public:
 
         sidebarLayout->addWidget(playersPanel);
 
-        turnPanel = new QGroupBox(sidebar);
+        turnPanel = new QGroupBox(centralwidget);
         turnPanel->setObjectName("turnPanel");
         turnLayout = new QVBoxLayout(turnPanel);
         turnLayout->setSpacing(16);
         turnLayout->setObjectName("turnLayout");
         currentPlayerLabel = new QLabel(turnPanel);
         currentPlayerLabel->setObjectName("currentPlayerLabel");
-        currentPlayerLabel->setAlignment(Qt::AlignCenter);
+        currentPlayerLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         currentPlayerLabel->setWordWrap(true);
 
         turnLayout->addWidget(currentPlayerLabel);
 
         positionLabel = new QLabel(turnPanel);
         positionLabel->setObjectName("positionLabel");
-        positionLabel->setAlignment(Qt::AlignCenter);
+        positionLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         positionLabel->setWordWrap(true);
 
         turnLayout->addWidget(positionLabel);
@@ -1548,14 +1534,14 @@ public:
 
         sidebarLayout->addWidget(turnPanel);
 
-        propertyPanel = new QGroupBox(sidebar);
+        propertyPanel = new QGroupBox(centralwidget);
         propertyPanel->setObjectName("propertyPanel");
         propertyLayout = new QVBoxLayout(propertyPanel);
         propertyLayout->setSpacing(16);
         propertyLayout->setObjectName("propertyLayout");
         propertyDetails = new QLabel(propertyPanel);
         propertyDetails->setObjectName("propertyDetails");
-        propertyDetails->setAlignment(Qt::AlignCenter);
+        propertyDetails->setAlignment(Qt::AlignmentFlag::AlignCenter);
         propertyDetails->setWordWrap(true);
 
         propertyLayout->addWidget(propertyDetails);
@@ -1568,7 +1554,7 @@ public:
         sidebarLayout->addItem(sidebarSpacer);
 
 
-        mainLayout->addWidget(sidebar);
+        mainLayout->addLayout(sidebarLayout);
 
         mainLayout->setStretch(0, 3);
         mainLayout->setStretch(1, 1);
@@ -1706,7 +1692,7 @@ public:
         chanceText->setText(QCoreApplication::translate("MainWindow", "Chance cards appear here", nullptr));
         community->setTitle(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         communityText->setText(QCoreApplication::translate("MainWindow", "Community Chest cards appear here", nullptr));
-        diceLabel->setText(QCoreApplication::translate("MainWindow", "DICE AREA\n"
+        diceLabel->setText(QCoreApplication::translate("MainWindow", "DICES\n"
 "\n"
 "\342\200\224  +  \342\200\224", nullptr));
         gameMessage->setText(QCoreApplication::translate("MainWindow", "Game messages will appear here.", nullptr));
