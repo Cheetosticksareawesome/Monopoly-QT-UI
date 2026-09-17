@@ -2917,64 +2917,6 @@ QLabel#boardTitle { color: #d2dfd2; font-size: 34px; font-weight: bold; }
        </widget>
       </item>
       <item>
-       <widget class="QGroupBox" name="turnPanel">
-        <property name="title">
-         <string>Current turn</string>
-        </property>
-        <layout class="QVBoxLayout" name="turnLayout">
-         <property name="spacing">
-          <number>16</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="currentPlayerLabel">
-           <property name="text">
-            <string>Waiting for players</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="positionLabel">
-           <property name="text">
-            <string>Position: —</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignmentFlag::AlignCenter</set>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="rollDiceButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>Roll Dice</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="endTurnButton">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-           <property name="text">
-            <string>End Turn</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
        <widget class="QGroupBox" name="propertyPanel">
         <property name="title">
          <string>Selected property</string>
@@ -2983,6 +2925,71 @@ QLabel#boardTitle { color: #d2dfd2; font-size: 34px; font-weight: bold; }
          <property name="spacing">
           <number>16</number>
          </property>
+         <item>
+          <widget class="QGroupBox" name="turnPanel">
+           <property name="title">
+            <string>Current turn</string>
+           </property>
+           <layout class="QVBoxLayout" name="turnLayout">
+            <property name="spacing">
+             <number>16</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="currentPlayerLabel">
+              <property name="text">
+               <string>Waiting for players</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="positionLabel">
+              <property name="text">
+               <string>Position: —</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="rollDiceButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Roll Dice</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="endTurnButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>End Turn</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="buyButton">
+              <property name="text">
+               <string>Buy Property</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
          <item>
           <widget class="QLabel" name="propertyDetails">
            <property name="text">

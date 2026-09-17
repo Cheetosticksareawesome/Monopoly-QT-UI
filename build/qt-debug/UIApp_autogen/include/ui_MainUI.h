@@ -231,14 +231,15 @@ public:
     QLabel *player2;
     QLabel *player3;
     QLabel *player4;
+    QGroupBox *propertyPanel;
+    QVBoxLayout *propertyLayout;
     QGroupBox *turnPanel;
     QVBoxLayout *turnLayout;
     QLabel *currentPlayerLabel;
     QLabel *positionLabel;
     QPushButton *rollDiceButton;
     QPushButton *endTurnButton;
-    QGroupBox *propertyPanel;
-    QVBoxLayout *propertyLayout;
+    QPushButton *buyButton;
     QLabel *propertyDetails;
     QSpacerItem *sidebarSpacer;
 
@@ -1500,7 +1501,12 @@ public:
 
         sidebarLayout->addWidget(playersPanel);
 
-        turnPanel = new QGroupBox(centralwidget);
+        propertyPanel = new QGroupBox(centralwidget);
+        propertyPanel->setObjectName("propertyPanel");
+        propertyLayout = new QVBoxLayout(propertyPanel);
+        propertyLayout->setSpacing(16);
+        propertyLayout->setObjectName("propertyLayout");
+        turnPanel = new QGroupBox(propertyPanel);
         turnPanel->setObjectName("turnPanel");
         turnLayout = new QVBoxLayout(turnPanel);
         turnLayout->setSpacing(16);
@@ -1531,14 +1537,14 @@ public:
 
         turnLayout->addWidget(endTurnButton);
 
+        buyButton = new QPushButton(turnPanel);
+        buyButton->setObjectName("buyButton");
 
-        sidebarLayout->addWidget(turnPanel);
+        turnLayout->addWidget(buyButton);
 
-        propertyPanel = new QGroupBox(centralwidget);
-        propertyPanel->setObjectName("propertyPanel");
-        propertyLayout = new QVBoxLayout(propertyPanel);
-        propertyLayout->setSpacing(16);
-        propertyLayout->setObjectName("propertyLayout");
+
+        propertyLayout->addWidget(turnPanel);
+
         propertyDetails = new QLabel(propertyPanel);
         propertyDetails->setObjectName("propertyDetails");
         propertyDetails->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -1701,12 +1707,13 @@ public:
         player2->setText(QCoreApplication::translate("MainWindow", "Player 2   |   \342\202\254 \342\200\224", nullptr));
         player3->setText(QCoreApplication::translate("MainWindow", "Player 3   |   \342\202\254 \342\200\224", nullptr));
         player4->setText(QCoreApplication::translate("MainWindow", "Player 4   |   \342\202\254 \342\200\224", nullptr));
+        propertyPanel->setTitle(QCoreApplication::translate("MainWindow", "Selected property", nullptr));
         turnPanel->setTitle(QCoreApplication::translate("MainWindow", "Current turn", nullptr));
         currentPlayerLabel->setText(QCoreApplication::translate("MainWindow", "Waiting for players", nullptr));
         positionLabel->setText(QCoreApplication::translate("MainWindow", "Position: \342\200\224", nullptr));
         rollDiceButton->setText(QCoreApplication::translate("MainWindow", "Roll Dice", nullptr));
         endTurnButton->setText(QCoreApplication::translate("MainWindow", "End Turn", nullptr));
-        propertyPanel->setTitle(QCoreApplication::translate("MainWindow", "Selected property", nullptr));
+        buyButton->setText(QCoreApplication::translate("MainWindow", "Buy Property", nullptr));
         propertyDetails->setText(QCoreApplication::translate("MainWindow", "Property details will appear here.", nullptr));
     } // retranslateUi
 

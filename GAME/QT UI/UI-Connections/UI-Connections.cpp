@@ -13,13 +13,15 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
     QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [&ui, &game]()
     {
 
-
         int roll = RollDice();
         ui.diceLabel->setText(QString::number(roll));
         MovePlayer(game, roll);
 
         Player &player = game.Players[game.CurrentPlayerIndex];
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
+
+        ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
+
         if (CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::TrainStation || CurrentTile.Type == SpaceType::Utility)
         {
             ui.propertyDetails->setText(
@@ -70,4 +72,11 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         ui.rollDiceButton->setEnabled(!game.HasRolled);
         ui.endTurnButton->setEnabled(game.HasRolled);
     });
+
+    ui.buyButton->setEnabled(false);
+    QObject::connect(ui.buyButton, &QPushButton::clicked, [&ui, &game]()
+    {
+
+    });
+
 }
