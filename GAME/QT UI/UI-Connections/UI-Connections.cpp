@@ -9,7 +9,7 @@
 void Connect_UI(Ui::MainWindow& ui, GameState& game)
 {
 
-    ui.rollDiceButton->setEnabled(true);
+    ui.rollDiceButton->setEnabled(!game.HasRolled);
     QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [&ui, &game]()
     {
 
@@ -20,19 +20,29 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
 
         Player &player = game.Players[game.CurrentPlayerIndex];
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
+        if (CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::TrainStation || CurrentTile.Type == SpaceType::Utility)
+        {
+            ui.propertyDetails->setText(
+                QString::fromStdString("Name: " + CurrentTile.Name) + "\nPrice: "
+              + QString::number(CurrentTile.Price) + "\nRent: "
+              + QString::number(CurrentTile.Rent) + "\nMortage: "
+              + QString::number(CurrentTile.Mortage)
 
-        ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
-        ui.propertyDetails->setText(
-           QString::fromStdString("Name: " + CurrentTile.Name) + "\nPrice: "
-         + QString::number(CurrentTile.Price) + "\nRent: " 
-         + QString::number(CurrentTile.Rent) + "\nMortage: " 
-         + QString::number(CurrentTile.Mortage)
+            );
+        }
+
+        else
+        {
+            ui.propertyDetails->setText(QString::fromStdString("Name: " + CurrentTile.Name));
+        }
         
-        ); 
+        game.HasRolled = !game.HasRolled;
+        ui.rollDiceButton->setEnabled(!game.HasRolled);
+        ui.endTurnButton->setEnabled(game.HasRolled);
     });
 
     
-    ui.endTurnButton->setEnabled(true);
+    ui.endTurnButton->setEnabled(game.HasRolled);
     QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
     {
         EndTurn(game);
@@ -41,12 +51,23 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
 
         ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
-        ui.propertyDetails->setText(
-           QString::fromStdString("Name: " + CurrentTile.Name) + "\nPrice: "
-         + QString::number(CurrentTile.Price) + "\nRent: "
-         + QString::number(CurrentTile.Rent) + "\nMortage: "
-         + QString::number(CurrentTile.Mortage)
-            
-        );
+        ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
+
+        if (CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::TrainStation || CurrentTile.Type == SpaceType::Utility)
+        {
+            ui.propertyDetails->setText(
+                QString::fromStdString("Name: " + CurrentTile.Name) + "\nPrice: "
+              + QString::number(CurrentTile.Price) + "\nRent: "
+              + QString::number(CurrentTile.Rent) + "\nMortage: "
+              + QString::number(CurrentTile.Mortage)
+
+            );
+        }
+
+        else{ ui.propertyDetails->setText(QString::fromStdString("Name: " + CurrentTile.Name)); }
+
+        game.HasRolled = !game.HasRolled;
+        ui.rollDiceButton->setEnabled(!game.HasRolled);
+        ui.endTurnButton->setEnabled(game.HasRolled);
     });
 }

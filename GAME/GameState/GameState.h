@@ -10,6 +10,7 @@ struct GameState
     std::vector<Player> Players;
     int CurrentPlayerIndex{0};
     Board board;
+    bool HasRolled{false};
 };
 
 GameState SetupGame();
