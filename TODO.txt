@@ -1,5 +1,5 @@
 ﻿MONOPOLY IN C++ / QT - LEARNING CHECKPOINT
-Updated: 16-09-2026
+Updated: 17-09-2026
 
 HOW WE WILL WORK
 - Main learning priority: linking Qt UI to C++ game data and behaviour.
@@ -7,12 +7,14 @@ HOW WE WILL WORK
 - Use one meaningful, visible outcome per task, not vague milestones or
   a separate task for each statement. Keep only the next task detailed.
 - The user attempts application code; the assistant gives targeted feedback.
+- Do not provide implementation examples or make design choices unless asked.
+  Read current files before assigning a task the user may already have completed.
 - Explain unfamiliar Qt APIs and C++ concepts before expecting their use.
   Supply a small example when requested; do not make the user guess unknown syntax.
 - The assistant handles build configuration. Application changes require a request.
 - When asked for repetitive declarations, generate ONLY those declarations.
   Do not also wire them up, populate containers, or implement surrounding logic.
-- The assistant filled both board declarations and vector assignments this session.
+- On 16-09 the assistant filled both board declarations and vector assignments.
   The user clarified the scope, then explicitly chose to KEEP the result.
 - Do not mistake frustration or uncertainty for permission to take over.
 - Prefer hints and named helpers; introduce refactoring only when useful and explained.
@@ -23,26 +25,36 @@ HOW WE WILL WORK
   Discord; do not create another organisation task or sync external services unasked.
 
 RESUME HERE
-Next agreed milestone: show a simple P1 marker on Go, then make it follow movement.
-Start by explaining Qt widget parenting and how a label can live in tokenArea0.
-No marker code has been written yet. Let the user attempt it.
-The existing tokenArea0..tokenArea39 widgets are empty and constrained to 12px high;
-check marker visibility and sizing when implementing, rather than assuming it fits.
-One small unfinished display task remains: positionLabel is updated on Roll only,
-not at startup or after End Turn. Mention it briefly; do not claim it is complete.
+Current focus: finish extracting button connections into Connect_UI, then display
+landed-space details. User is stopping here; do not implement tasks on their behalf.
+- UI-Connections.h and .cpp now both take ui and game by reference: corrected.
+- main.cpp now includes UI-Connections.h: added.
+- Still unfinished: the header does not declare/include Ui::MainWindow or GameState.
+  It is included before those types are known in both main and UI-Connections.cpp.
+- Still unfinished: main does not call Connect_UI after creating ui and game.
+- No build/run of these latest edits was performed. Do not call the extraction finished.
+Next session: help the user finish those two remaining pieces, with short feedback.
+Afterward: display the landed space's name, price and rent in propertyDetails,
+clearing stale details on non-purchasable spaces. Streets, stations and utilities
+now have distinct types; account for that when deciding what to display.
+The earlier P1 marker milestone remains later, not implemented or abandoned.
 
-CURRENT IMPLEMENTATION - SOURCE INSPECTED 16-09-2026
+CURRENT IMPLEMENTATION - SOURCE INSPECTED 17-09-2026
 - Qt startup, Designer form setup, showing the window, and app.exec() are active.
 - main.cpp owns game and ui. Two temporary players start at position 0 with 1500.
 - Startup shows the current player's name using QString::fromStdString.
-- Roll captures ui and game by reference, rolls once, displays the total,
+- Inside Connect_UI, Roll captures ui and game by reference, rolls once, displays the total,
   calls MovePlayer(game, roll), and displays the destination space name.
 - End Turn advances CurrentPlayerIndex and refreshes the current player's name.
-- Both buttons are enabled. Repeated rolls and ending before rolling are allowed.
+- Connect_UI contains button enabling, but is not called yet; Designer disables both buttons.
+  Once connected, repeated rolls and ending before rolling remain unrestricted.
 - The old automatic console turn loop is commented out; do not restore it for UI turns.
 - CreateBoard creates exactly 40 spaces indexed 0..39, matching UI tile names/order.
-- Streets, stations and utilities currently share Property. Special spaces use Rest,
-  except GO. These are placeholders, not implementations of taxes, jail or cards.
+- BoardSpace stores Price, Rent, Mortage and OwnerIndex (default -1).
+- Streets, stations, utilities and special spaces now have matching types.
+  Rest is a temporary vector-fill value; every board index is overwritten.
+- Prices, base rents and mortgages are populated; utility rent is a fixed prototype 28.
+  Purchase, rent-transfer, mortgage, tax, jail and card rules remain unimplemented.
 - Player has Name, Money and Position; GameState has Players, CurrentPlayerIndex, board.
 - MovePlayer and EndTurn wrap with remainder. They assume valid, nonempty collections.
 - RollDice returns a two-die total; individual values are not retained in game state.
@@ -54,20 +66,34 @@ CURRENT IMPLEMENTATION - SOURCE INSPECTED 16-09-2026
   Community Chest (18) has one. Colour-group game data is not implemented.
 - settings.json is empty; Player.cpp only includes Player.h.
 - CMake uses C++20, Qt Widgets, automatic GAME source discovery and AUTOUIC.
-  VS Code tasks/debugging use the qt-debug preset. No configuration changes needed here.
+  VS Code tasks/debugging use the qt-debug preset. CMake was regenerated for moved files.
+- MainUI.ui now lives in GAME/QT UI/UI-Files; connection files live in UI-Connections.
+- Position text updates on Roll only; startup and End Turn position refresh remain pending.
 
 VERIFICATION / CREDIT
-- The user reported the UI interaction working during this session and reported
-  improvement after the missing movement call was identified. This is user evidence,
-  not an assistant-observed exhaustive runtime check.
-- The assistant previously ran a C++ syntax-only check on the expanded board.cpp:
-  passed. This does not verify the full application or rendered board.
-- This documentation update reads all 21 project files (source, UI, configuration,
-  notes and TODO); generated build output and Git internals are excluded.
-- No build or application run was performed for this documentation update.
-- Origin of the original Roll hookup is unknown; do not claim the user or assistant
-  independently authored it. The user attempted End Turn and display wiring with review.
+- All 23 project files were read in the preceding review, excluding generated build
+  output and Git internals. Main and both connection files were reread for this update.
+- Prior user reports support working UI interaction before the connection extraction.
+  They do not verify the current extracted version.
+- Board.cpp syntax checks passed after values and new space types were filled in.
+- CMake regeneration succeeded. The earlier full build failed when connection
+  statements were outside a function. The user has since wrapped them in Connect_UI.
+- Latest edits were source-inspected only; no new build or runtime checks this update.
+- The original Roll hookup's authorship is unknown. The user attempted End Turn,
+  displays and the extraction; the assistant reviewed and handled include/build setup.
+- Board fields/types were chosen by the user; bulk values/formatting/type assignments
+  were supplied by the assistant on request. Do not equate assisted work with mastery.
 
+DONE / PROGRESS - 17-09-2026
+[x] Add ownership, price, rent and mortgage fields to BoardSpace.
+[x] Populate board values and assign dedicated station, utility and special-space types.
+    Evidence: source inspection and board.cpp syntax checks.
+[x] Move the Designer form into UI-Files; regenerate CMake include/form paths.
+[x] Move button callback bodies into Connect_UI in separate header/source files.
+    Structural progress only: header dependencies and main's function call remain pending.
+[x] Change Connect_UI parameters to references in declaration and definition.
+[x] Include UI-Connections.h in main.cpp.
+    Evidence for latest extraction changes: source inspection only.
 DONE THIS SESSION - 16-09-2026
 [x] Display the current player's name on startup. Evidence: source inspection.
 [x] Connect End Turn to index switching and name refresh. Evidence: source inspection;
@@ -83,7 +109,13 @@ DONE THIS SESSION - 16-09-2026
     and looking up the current player after switching turns. Guided practice,
     not a claim of independent mastery.
 
-NEXT - VISIBLE PLAYER MARKERS
+NEXT - FINISH UI CONNECTION EXTRACTION
+[ ] Make the types used by UI-Connections.h known in that header.
+[ ] Call Connect_UI after creating the UI and game, before app.exec().
+[ ] When ready, build and confirm both buttons still work with the original game state.
+[ ] Display landed-space details in propertyDetails; clear stale non-purchasable details.
+
+LATER - VISIBLE PLAYER MARKERS
 [ ] Show P1 on Go using the existing tokenArea0; explain parenting first.
 [ ] Make P1's displayed location follow its stored Position after movement.
 [ ] Add P2 and keep both visible when sharing a space.
@@ -97,7 +129,7 @@ NEAR-TERM FOLLOW-UPS
 [ ] Check the expanded board during a run, including crossing index 39 back to GO.
 
 LATER - KEEP THESE AS OUTCOMES, DETAIL WHEN READY
-[ ] Add property prices, fixed rent and an owner identifier (including no owner).
+[ ] Review the prototype values when implementing purchases and rent.
 [ ] Buy or decline an unowned property; reject unaffordable or duplicate purchases.
 [ ] Transfer rent to another owner, once per landing; skip own/unowned spaces.
 [ ] Award the agreed money amount when passing GO.
@@ -230,4 +262,3 @@ Completed 14-09-2026 (source inspection only; no build/run):
 [x] Select the current-player reference inside each iteration.
 [x] Use that same player reference for the destination output.
 [x] Replace the attempted range loop over size() with a counting for loop.
-
