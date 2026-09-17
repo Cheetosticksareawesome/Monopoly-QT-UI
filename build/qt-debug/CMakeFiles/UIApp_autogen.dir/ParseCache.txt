@@ -2,6 +2,7 @@
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.h
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.h
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections/UI-Connections.h
+ uic:ui_MainUI.h
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h
 C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp

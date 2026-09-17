@@ -19,11 +19,10 @@ void EndTurn(GameState& game)
 GameState SetupGame()
 {
     int PlayerCount{};
-
     GameState game;
     game.board = CreateBoard();
 
-    std::cout << "Enter The amount of Human players 1-4" << std::endl;
+    
     while(true){
         if(std::cin >> PlayerCount)
         {
