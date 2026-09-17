@@ -38,3 +38,11 @@
 42	139	8113605548983410	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	bd3616ddc5bf3315
 140	2638	8113605549930028	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	4064b4c11e6d9f8
 2638	2804	8113605574917557	UIApp.exe	a85cda01a62e89c
+16	39	8113630602132953	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/cmake.verify_globs	430ef40b02d71372
+47	149	8113630602514676	UIApp_autogen/timestamp	bd3616ddc5bf3315
+47	149	8113630602514676	UIApp_autogen/mocs_compilation.cpp	bd3616ddc5bf3315
+47	149	8113630602514676	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/timestamp	bd3616ddc5bf3315
+47	149	8113630602514676	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	bd3616ddc5bf3315
+153	2536	8113630603474650	CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Connections/UI-Connections.cpp.obj	5db0b20638162b6f
+149	2865	8113630603474650	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	4064b4c11e6d9f8
+2865	3052	8113630630710581	UIApp.exe	a85cda01a62e89c

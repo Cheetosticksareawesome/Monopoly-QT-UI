@@ -32,7 +32,17 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
     ui.endTurnButton->setEnabled(true);
     QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
     {
-    EndTurn(game);
-    ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
+        Player& player = game.Players[game.CurrentPlayerIndex];
+        BoardSpace& CurrentTile = game.board.Spaces[player.Position];
+
+        EndTurn(game);
+        ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
+        ui.propertyDetails->setText(
+           QString::fromStdString("Name: " + CurrentTile.Name) + "\nPrice: "
+         + QString::number(CurrentTile.Price) + "\nRent: "
+         + QString::number(CurrentTile.Rent) + "\nMortage: "
+         + QString::number(CurrentTile.Mortage)
+            
+        );
     });
 }
