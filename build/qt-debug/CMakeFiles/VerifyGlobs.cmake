@@ -11,6 +11,7 @@ set(OLD_GLOB
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main/main.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections/UI-Connections.cpp"
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers/UI-Helpers.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -25,6 +26,7 @@ set(OLD_GLOB
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections/UI-Connections.h"
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers/UI-Helpers.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

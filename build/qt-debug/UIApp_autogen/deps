@@ -218,6 +218,8 @@ UIApp_autogen/timestamp: \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Connections/UI-Connections.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Connections/UI-Connections.h \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Helpers/UI-Helpers.cpp \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Helpers/UI-Helpers.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeSystem.cmake \

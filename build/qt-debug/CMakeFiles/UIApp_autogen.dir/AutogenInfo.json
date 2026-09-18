@@ -307,6 +307,12 @@
 			"MU",
 			"W2F7MXT6LW/moc_UI-Connections.cpp",
 			null
+		],
+		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers/UI-Helpers.h",
+			"MU",
+			"4AUEL5IVDE/moc_UI-Helpers.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -341,6 +347,7 @@
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Files",
+		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers",
 		"C:/Qt/6.11.2/mingw_64/include/QtWidgets",
 		"C:/Qt/6.11.2/mingw_64/include",
 		"C:/Qt/6.11.2/mingw_64/include/QtCore",
@@ -413,6 +420,11 @@
 		],
 		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections/UI-Connections.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers/UI-Helpers.cpp",
 			"MU",
 			null
 		]
