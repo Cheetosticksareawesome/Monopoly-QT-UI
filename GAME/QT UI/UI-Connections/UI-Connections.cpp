@@ -16,9 +16,12 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
     {
         UpdatePlayerLabels(game, ui);
 
-        int roll = RollDice();
-        ui.diceLabel->setText(QString::number(roll));
-        MovePlayer(game, roll);
+        DiceRoll roll = RollDice();
+        bool double_dice = roll.Die1 == roll.Die2;
+
+        ui.diceLabel->setText(QString::number(roll.Die1) + " + " + QString::number(roll.Die2));
+        MovePlayer(game, (roll.Die1 + roll.Die2));
+        UpdatePlayerLabels(game, ui);
 
         Player &player = game.Players[game.CurrentPlayerIndex];
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
@@ -54,9 +57,21 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
             }
         }
 
+
+        if(double_dice)
+        {
+            player.DoubleDiceCount++;
+            if(player.DoubleDiceCount >= 3)
+            {
+                //SendToJail();
+                player.DoubleDiceCount = 0;
+            }
+        }
+
         game.HasRolled = !game.HasRolled;
-        ui.rollDiceButton->setEnabled(!game.HasRolled);
-        ui.endTurnButton->setEnabled(game.HasRolled); });
+        ui.rollDiceButton->setEnabled(double_dice);
+        ui.endTurnButton->setEnabled(!double_dice); }
+    );
 
     ui.endTurnButton->setEnabled(game.HasRolled);
     QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
@@ -95,4 +110,5 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         UpdatePlayerLabels(game, ui);
         ui.buyButton->setEnabled(false);
     });
+
 }

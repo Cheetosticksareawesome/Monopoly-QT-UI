@@ -12,10 +12,9 @@ int RollDie()
     return die(Generator);
 }
 
-int RollDice()
+DiceRoll RollDice()
 {
-    int Die_1{RollDie()};
-    int Die_2{RollDie()};
+    bool Double = false;
 
-    return Die_1 + Die_2;
+    return {RollDie(), RollDie()};
 }

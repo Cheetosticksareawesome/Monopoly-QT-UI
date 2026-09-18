@@ -173,38 +173,6 @@ UIApp_autogen/timestamp: \
 	C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake \
 	C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargetsPrecheck.cmake \
 	C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXCompilerFlag.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckLibraryExists.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindThreads.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindVulkan.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckCompilerFlag.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckFlagCommonConfig.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake \
-	C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/CMake/UIApp.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/CMakeLists.txt \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp \
@@ -220,8 +188,46 @@ UIApp_autogen/timestamp: \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Connections/UI-Connections.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Helpers/UI-Helpers.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Helpers/UI-Helpers.h \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/4.3.3/CMakeCXXCompiler.cmake \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/4.3.3/CMakeRCCompiler.cmake \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/4.3.3/CMakeSystem.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeCXXInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeFindDependencyMacro.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeGenericSystem.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeRCInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CheckCXXCompilerFlag.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CheckCXXSourceCompiles.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/CheckLibraryExists.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Compiler/GNU.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/FindPackageMessage.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/FindThreads.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/FindVulkan.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/GNUInstallDirs.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Internal/CheckFlagCommonConfig.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Linker/GNU.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-CXX.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU-CXX.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Linker/Windows-GNU.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU-CXX.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-GNU.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-Initialize.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows-windres.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/Windows.cmake \
+	C:/mingw/mingw64/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT\ UI/UI-Files/MainUI.ui \
-	C:/Qt/Tools/CMake_64/bin/cmake.exe
+	C:/mingw/mingw64/bin/cmake.exe
