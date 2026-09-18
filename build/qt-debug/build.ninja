@@ -89,6 +89,16 @@ build CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj: CXX_COMPILER__UIApp
   OBJECT_FILE_DIR = CMakeFiles\UIApp.dir\GAME\GameState
   TARGET_SUPPORT_DIR = CMakeFiles\UIApp.dir
 
+build CMakeFiles/UIApp.dir/GAME/GameState/jail.cpp.obj: CXX_COMPILER__UIApp_unscanned_Debug C$:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp || cmake_object_order_depends_target_UIApp
+  CONFIG = Debug
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\UIApp.dir\GAME\GameState\jail.cpp.obj.d
+  FLAGS = -g -std=c++20
+  INCLUDES = -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/include -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main -IC:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player -I"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections" -I"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Files" -I"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers" -isystem C:/Qt/6.11.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.11.2/mingw_64/include -isystem C:/Qt/6.11.2/mingw_64/include/QtCore -isystem C:/Qt/6.11.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.11.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\UIApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\UIApp.dir\GAME\GameState
+  TARGET_SUPPORT_DIR = CMakeFiles\UIApp.dir
+
 build CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj: CXX_COMPILER__UIApp_unscanned_Debug C$:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main/main.cpp || cmake_object_order_depends_target_UIApp
   CONFIG = Debug
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
@@ -137,7 +147,7 @@ build CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Helpers/UI-Helpers.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable UIApp.exe
 
-build UIApp.exe: CXX_EXECUTABLE_LINKER__UIApp_Debug CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj CMakeFiles/UIApp.dir/GAME/GameState/Dice.cpp.obj CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Connections/UI-Connections.cpp.obj CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Helpers/UI-Helpers.cpp.obj | C$:/Qt/6.11.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.11.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.11.2/mingw_64/lib/libQt6Core.a || UIApp_autogen UIApp_autogen_timestamp_deps
+build UIApp.exe: CXX_EXECUTABLE_LINKER__UIApp_Debug CMakeFiles/UIApp.dir/UIApp_autogen/mocs_compilation.cpp.obj CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj CMakeFiles/UIApp.dir/GAME/GameState/Dice.cpp.obj CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj CMakeFiles/UIApp.dir/GAME/GameState/jail.cpp.obj CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Connections/UI-Connections.cpp.obj CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Helpers/UI-Helpers.cpp.obj | C$:/Qt/6.11.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.11.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.11.2/mingw_64/lib/libQt6Core.a || UIApp_autogen UIApp_autogen_timestamp_deps
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/6.11.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.11.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.11.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

@@ -303,6 +303,12 @@
 			null
 		],
 		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.h",
+			"MU",
+			"LDI2COPEBG/moc_jail.cpp",
+			null
+		],
+		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h",
 			"MU",
 			"BI3FIYR7O6/moc_Player.cpp",
@@ -411,6 +417,11 @@
 		],
 		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp",
 			"MU",
 			null
 		],

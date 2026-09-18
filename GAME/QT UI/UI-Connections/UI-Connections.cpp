@@ -4,27 +4,42 @@
 #include "Dice.h"
 #include "ui_MainUI.h"
 #include "UI-Helpers.h"
+#include "jail.h"
 
 
 
 void Connect_UI(Ui::MainWindow& ui, GameState& game)
 {
     UpdatePlayerLabels(game, ui);
-
+    //rollDice
     ui.rollDiceButton->setEnabled(!game.HasRolled);
     QObject::connect(ui.rollDiceButton, &QPushButton::clicked, [&ui, &game]()
     {
         UpdatePlayerLabels(game, ui);
 
+        Player &player = game.Players[game.CurrentPlayerIndex];
+
         DiceRoll roll = RollDice();
         bool double_dice = roll.Die1 == roll.Die2;
+
+        if (double_dice)
+        {
+            player.DoubleDiceCount++;
+            if (player.DoubleDiceCount >= 3)
+            {
+                SendToJail(player);
+            }
+        }
 
         ui.diceLabel->setText(QString::number(roll.Die1) + " + " + QString::number(roll.Die2));
         MovePlayer(game, (roll.Die1 + roll.Die2));
         UpdatePlayerLabels(game, ui);
 
-        Player &player = game.Players[game.CurrentPlayerIndex];
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
+
+        game.HasRolled = true;
+        ui.buyButton->setEnabled(false);
+
 
         ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
 
@@ -51,28 +66,19 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         }
         else
         {
-            if(CurrentTile.OwnerIndex == -1 && CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::Utility || CurrentTile.Type == SpaceType::TrainStation)
+            if(CurrentTile.OwnerIndex == -1 && (CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::Utility || CurrentTile.Type == SpaceType::TrainStation))
             {
                 ui.buyButton->setEnabled(true);
             }
         }
 
 
-        if(double_dice)
-        {
-            player.DoubleDiceCount++;
-            if(player.DoubleDiceCount >= 3)
-            {
-                //SendToJail();
-                player.DoubleDiceCount = 0;
-            }
-        }
+        ui.rollDiceButton->setEnabled(double_dice && !player.InJail);
+        ui.endTurnButton->setEnabled(!double_dice || player.InJail); 
+    
+    });
 
-        game.HasRolled = !game.HasRolled;
-        ui.rollDiceButton->setEnabled(double_dice);
-        ui.endTurnButton->setEnabled(!double_dice); }
-    );
-
+    //EndTurn
     ui.endTurnButton->setEnabled(game.HasRolled);
     QObject::connect(ui.endTurnButton, &QPushButton::clicked, [&ui, &game]()
     {
@@ -80,6 +86,7 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
 
         Player &player = game.Players[game.CurrentPlayerIndex];
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
+        
 
         ui.buyButton->setEnabled(false);
         ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
@@ -98,11 +105,11 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
 
         else{ ui.propertyDetails->setText(QString::fromStdString("Name: " + CurrentTile.Name)); }
 
-        game.HasRolled = !game.HasRolled;
+        game.HasRolled = false;
         ui.rollDiceButton->setEnabled(!game.HasRolled);
         ui.endTurnButton->setEnabled(game.HasRolled);
     });
-
+    //buyProperty
     ui.buyButton->setEnabled(false);
     QObject::connect(ui.buyButton, &QPushButton::clicked, [&ui, &game]()
     {

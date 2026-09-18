@@ -1,11 +1,10 @@
 
 #include "GameState.h"
 
-void SendToJail(GameState &game)
+void SendToJail(Player& player)
 {
-    Player& player = game.Players[game.CurrentPlayerIndex];
-    
     player.Position = 10;
     player.InJail = true;
     player.JailTurns = 0;
+    player.DoubleDiceCount = 0;
 }

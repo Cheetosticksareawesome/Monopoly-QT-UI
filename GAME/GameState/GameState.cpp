@@ -3,6 +3,7 @@
 #include <limits>
 
 #include "GameState.h"
+#include "jail.h"
 
 void MovePlayer(GameState& game, int steps)
 {
@@ -18,11 +19,38 @@ void MovePlayer(GameState& game, int steps)
         steps = 0;
     }
     CurrentPlayer.Position = (CurrentPlayer.Position + steps) % game.board.Spaces.size();
+
+    
+    switch (game.board.Spaces[CurrentPlayer.Position].Type)
+    {
+    case SpaceType::GoToJail:
+        SendToJail(CurrentPlayer);
+        break;
+    case SpaceType::Chance:
+        break;
+    case SpaceType::Community_Chest:
+        break;
+    case SpaceType::Free_Parking:
+        break;
+    case SpaceType::IncomeTax:
+        break;
+    case SpaceType::Luxury_Tax:
+        break;
+    case SpaceType::Property:
+    case SpaceType::Utility:
+    case SpaceType::TrainStation:
+        break;
+
+    default:
+        break;
+    }
 }
 
 void EndTurn(GameState& game)
 {
     Player& player = game.Players[game.CurrentPlayerIndex];
+    player.DoubleDiceCount = 0;
+
     if(player.InJail)
     {
         player.JailTurns++;
