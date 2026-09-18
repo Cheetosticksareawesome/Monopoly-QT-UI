@@ -25,6 +25,6 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
 
     for(int i = 0; i < playerLabels.size(); i++)
     {
-        playerLabels[i]->setText(QString::fromStdString(game.Players[0].Name) + "|" + "€ " + QString::number(game.Players[0].Money));
+        playerLabels[i]->setText(QString::fromStdString(game.Players[i].Name) + "|" + "€ " + QString::number(game.Players[i].Money));
     }
 }
