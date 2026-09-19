@@ -5,8 +5,9 @@
 			"expression" : "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/*.cpp",
 			"paths" : 
 			[
+				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.cpp",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp",
-				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.cpp",
+				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.cpp",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.cpp",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main/main.cpp",
@@ -20,8 +21,9 @@
 			"expression" : "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/*.h",
 			"paths" : 
 			[
+				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.h",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.h",
-				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.h",
+				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.h",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.h",
 				"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h",

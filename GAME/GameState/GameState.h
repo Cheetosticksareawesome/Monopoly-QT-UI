@@ -4,13 +4,17 @@
 
 #include "Player.h"
 #include "board.h"
+#include "DrawableCards.h"
 
 struct GameState
 {
-    std::vector<Player> Players;
     int CurrentPlayerIndex{0};
-    Board board;
     bool HasRolled{false};
+
+    std::vector<Player> Players;
+    std::vector<ChanceCard> ChanceCards;
+    std::vector<Community_Chest> Community_Chests;
+    Board board;
 };
 
 GameState SetupGame();

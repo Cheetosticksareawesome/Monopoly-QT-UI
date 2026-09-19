@@ -4,8 +4,9 @@
 # UIAPP_FILES at CMake/UIApp.cmake:4 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/*.cpp")
 set(OLD_GLOB
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp"
-  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.cpp"
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main/main.cpp"
@@ -37,8 +38,9 @@ endif()
 # UIAPP_FILES at CMake/UIApp.cmake:4 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/*.h")
 set(OLD_GLOB
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.h"
-  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.h"
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h"

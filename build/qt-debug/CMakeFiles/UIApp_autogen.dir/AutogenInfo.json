@@ -285,15 +285,21 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.h",
+			"MU",
+			"ZVJNSUULCZ/moc_Dice.cpp",
+			null
+		],
+		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.h",
 			"MU",
 			"MI4PJQ55YP/moc_board.cpp",
 			null
 		],
 		[
-			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.h",
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.h",
 			"MU",
-			"LDI2COPEBG/moc_Dice.cpp",
+			"XCJ2G7CAMW/moc_DrawableCards.cpp",
 			null
 		],
 		[
@@ -353,7 +359,9 @@
 	"MOC_INCLUDES" : 
 	[
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME",
+		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board",
+		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player",
@@ -406,12 +414,17 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp",
 			"MU",
 			null
 		],
 		[
-			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.cpp",
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.cpp",
 			"MU",
 			null
 		],

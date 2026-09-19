@@ -175,10 +175,12 @@ UIApp_autogen/timestamp: \
 	C:/Qt/6.11.2/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/CMake/UIApp.cmake \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/CMakeLists.txt \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.cpp \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/Dice/Dice.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board/board.h \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.cpp \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/Dice.h \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.cpp \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp \

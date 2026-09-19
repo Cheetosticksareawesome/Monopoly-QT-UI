@@ -1,10 +1,10 @@
 ﻿#include "board.h"
+#include "DrawableCards.h"
 
 Board CreateBoard()
 {
     Board board{};
-    // Prototype base rents: no group bonuses or improvements yet.
-    // Stations use a single-station rent; utilities use a fixed prototype rent of 28.
+    
     //         Variable           Name                 Type                         Price  Rent  Mortage OwnerIndex
     BoardSpace Rest             { "Rest",              SpaceType::Rest,                0,    0,       0,         -1 };
 
@@ -86,7 +86,6 @@ Board CreateBoard()
     board.Spaces[37] = Ocean_ave;
     board.Spaces[38] = LuxuryTax;
     board.Spaces[39] = Royal_ave;
-
 
     return board;
 }

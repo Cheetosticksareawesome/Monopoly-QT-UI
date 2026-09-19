@@ -21,7 +21,7 @@ struct ChanceCard
     std::string Description;
     EffectType Effect;
     int MoneyAmount{0};
-    int ChanceCardPosition{0};
+    int SetPlayerPosition{0};
 };
 
 struct Community_Chest
@@ -30,7 +30,7 @@ struct Community_Chest
     std::string Description;
     EffectType Effect;
     int MoneyAmount{0};
-    int Community_ChestPosition{0};
+    int SetPlayerPosition{0};
 };
 
 ChanceCard DrawChanceCard();
