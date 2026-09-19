@@ -6,6 +6,7 @@
 #include "board.h"
 #include "DrawableCards.h"
 
+#include "ui_MainUI.h"
 
 struct GameState
 {

@@ -32,14 +32,13 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         }
 
         ui.diceLabel->setText(QString::number(roll.Die1) + " + " + QString::number(roll.Die2));
-        MovePlayer(game, (roll.Die1 + roll.Die2));
+        MovePlayer(game, ui, (roll.Die1 + roll.Die2));
         UpdatePlayerLabels(game, ui);
 
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
 
         game.HasRolled = true;
         ui.buyButton->setEnabled(false);
-
 
         ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
 

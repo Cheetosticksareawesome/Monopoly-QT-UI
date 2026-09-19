@@ -2,7 +2,7 @@
 
 #include <string>
 
-enum EffectType
+enum class EffectType
 {
     //standard effects
     MovePlayer,

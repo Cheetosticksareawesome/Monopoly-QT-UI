@@ -4,27 +4,27 @@
 #include <vector>
 
 //struct   StructName:    Name;                  Description:                     Effect:    Amount:   Position
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer, 200};
-ChanceCard Positive_BankError{"Bank error in favor", "a bank error gains you $100", EditMoney, 100};
-ChanceCard Negative_BankError{"Bank error Mistake", "a bank error costs you $100", EditMoney, -100};
-ChanceCard JailSentence{"Tax Evasion Gone Woof", "Your Dog forgot to file your Taxes, pay a $25 fee & go to jail", MovePlayer, -25, 10};
-ChanceCard TaskFailedSuccessfully{"Task Failed Successfully", "Your dog dug up a valuable gem worth &450, but the IRS wants half", EditMoney, 225};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200};
+ChanceCard Positive_BankError{"Bank error in favor", "a bank error gains you $100", EffectType::EditMoney, 100};
+ChanceCard Negative_BankError{"Bank error Mistake", "a bank error costs you $100", EffectType::EditMoney, -100};
+ChanceCard JailSentence{"Tax Evasion Gone Woof", "Your Dog forgot to file your Taxes, pay a $25 fee & go to jail", EffectType::MovePlayer, -25, 10};
+ChanceCard TaskFailedSuccessfully{"Task Failed Successfully", "Your dog dug up a valuable gem worth &450, but the IRS wants half", EffectType::EditMoney, 225};
 
 /*
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
+ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
 */
 //struct       Name:    Name:                  Description:                  Effect:       Money:    SetPlayerPosition
-Community_Chest C1{  "Sale of Stock", "from selling stock, you earned $150", EditMoney,     150,                       };
+Community_Chest C1{  "Sale of Stock", "from selling stock, you earned $150", EffectType::EditMoney,     150,                       };
 
 
 std::vector<ChanceCard> SetupChanceCards()
