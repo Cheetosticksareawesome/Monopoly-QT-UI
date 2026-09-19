@@ -6,6 +6,7 @@
 #include "board.h"
 #include "DrawableCards.h"
 
+
 struct GameState
 {
     int CurrentPlayerIndex{0};
@@ -19,5 +20,5 @@ struct GameState
 
 GameState SetupGame();
 
-void MovePlayer(GameState& game, int steps);
+void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps);
 void EndTurn(GameState& game);
