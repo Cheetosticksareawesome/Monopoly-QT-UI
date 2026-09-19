@@ -4,8 +4,12 @@
 
 #include "GameState.h"
 #include "jail.h"
+#include "UI-Helpers.h"
+#include "ui_MainUI.h"
+#include "UI-Connections.h"
 
-void MovePlayer(GameState& game, int steps)
+
+void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
@@ -33,8 +37,10 @@ void MovePlayer(GameState& game, int steps)
     case SpaceType::Free_Parking:
         break;
     case SpaceType::IncomeTax:
+        CurrentPlayer.Money -= 200;
         break;
     case SpaceType::Luxury_Tax:
+        CurrentPlayer.Money -= 100;
         break;
     case SpaceType::Property:
     case SpaceType::Utility:
@@ -44,6 +50,7 @@ void MovePlayer(GameState& game, int steps)
     default:
         break;
     }
+    UpdatePlayerLabels(game, ui);
 }
 
 void EndTurn(GameState& game)
