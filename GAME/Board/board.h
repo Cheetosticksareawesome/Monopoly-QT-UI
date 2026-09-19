@@ -32,6 +32,7 @@ struct BoardSpace
 struct Board
 {
     std::vector<BoardSpace> Spaces;
+    int FreeParkingMoney{0};
 };
 
 Board CreateBoard();

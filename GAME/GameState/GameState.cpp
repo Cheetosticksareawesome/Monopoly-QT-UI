@@ -12,18 +12,16 @@
 void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
+    steps = CurrentPlayer.InJail ? 0 : steps;
 
     if((CurrentPlayer.Position + steps) >= game.board.Spaces.size())
     {
         CurrentPlayer.Money += 200;
     }
 
-    if(CurrentPlayer.InJail)
-    {
-        steps = 0;
-    }
     CurrentPlayer.Position = (CurrentPlayer.Position + steps) % game.board.Spaces.size();
 
+    BoardSpace& CurrentSpace = game.board.Spaces[CurrentPlayer.Position];
     
     switch (game.board.Spaces[CurrentPlayer.Position].Type)
     {
