@@ -30,6 +30,7 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         SendToJail(CurrentPlayer);
         break;
     case SpaceType::Chance:
+        DrawChanceCard();
         break;
     case SpaceType::Community_Chest:
         break;

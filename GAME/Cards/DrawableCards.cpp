@@ -1,7 +1,10 @@
 
 #include "DrawableCards.h"
+#include "GameState.h"
 
+#include <iostream>
 #include <vector>
+#include <random>
 
 //struct   StructName:    Name;                  Description:                     Effect:    Amount:   Position
 ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200};
@@ -51,7 +54,39 @@ std::vector<Community_Chest> SetupCommunityChests()
     return Community_Chests;
 }
 
-ChanceCard DrawChanceCard()
+ChanceCard DrawChanceCard(std::vector<ChanceCard>& ChanceCards)
 {
+    std::random_device random;
+    std::mt19937 gen(random());
+    std::uniform_int_distribution<> dist(1, 6);
 
+    int rand_int = dist(gen);
+
+    return ChanceCards[rand_int];
+}
+
+void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, ChanceCard& chance)
+{
+    Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
+
+    //update ui
+    switch(chance.Effect)
+    {
+        case EffectType::EditMoney:
+            CurrentPlayer.Money += chance.MoneyAmount;
+            break;
+        case EffectType::MovePlayer:
+            CurrentPlayer.Position = chance.SetPlayerPosition;
+            break;
+        case EffectType::SummonWeather:
+            break;
+        case EffectType::HouseMarketCrash:
+            break;
+        case EffectType::ExtremeInflation:
+            break;
+        
+        default:
+            std::cerr << "Unhandled effect-type! File: " << __FILE__ << " Line: " << __LINE__ << std::endl;
+            break;
+    }
 }
