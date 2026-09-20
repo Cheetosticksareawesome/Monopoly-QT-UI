@@ -33,4 +33,7 @@ struct Community_Chest
     int SetPlayerPosition{0};
 };
 
+void ApplyCardEffect(GameState &game, Ui::MainWindow &ui, ChanceCard &chance);
+
 ChanceCard DrawChanceCard();
+Community_Chest OpenCommunityChest();

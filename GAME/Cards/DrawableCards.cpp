@@ -1,10 +1,12 @@
 
 #include "DrawableCards.h"
 #include "GameState.h"
+#include "UI-Helpers.h"
 
 #include <iostream>
 #include <vector>
 #include <random>
+#include <QTimer>
 
 //struct   StructName:    Name;                  Description:                     Effect:    Amount:   Position
 ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200};
@@ -65,11 +67,25 @@ ChanceCard DrawChanceCard(std::vector<ChanceCard>& ChanceCards)
     return ChanceCards[rand_int];
 }
 
-void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, ChanceCard& chance)
+Community_Chest OpenCommunityChest(std::vector<Community_Chest>& Community_Chests)
+{
+    std::random_device random;
+    std::mt19937 gen(random());
+    std::uniform_int_distribution<> dist(1, 6);
+
+    int rand_int = dist(gen);
+
+    return Community_Chests[rand_int];
+}
+
+
+void ApplyCardEffect(GameState& game, Ui::MainWindow& ui,// ChanceCard& chance) (this also needs to handle community chests)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
     //update ui
+    UpdateChanceCard(game, ui, chance);
+
     switch(chance.Effect)
     {
         case EffectType::EditMoney:
@@ -89,4 +105,8 @@ void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, ChanceCard& chance)
             std::cerr << "Unhandled effect-type! File: " << __FILE__ << " Line: " << __LINE__ << std::endl;
             break;
     }
+    QTimer::singleShot(10000, [&]()
+    { 
+        ui.chanceText->setText(QString::fromStdString(""));
+    });
 }

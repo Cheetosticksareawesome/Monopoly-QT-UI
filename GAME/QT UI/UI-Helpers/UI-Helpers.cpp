@@ -36,3 +36,8 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
         }
     }
 }
+
+void UpdateChanceCard(GameState& game, Ui::MainWindow& ui, ChanceCard card)
+{
+    ui.chanceText->setText(QString::fromStdString(card.Name + "\n\n" + card.Description));
+}

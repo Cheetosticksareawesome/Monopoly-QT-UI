@@ -33,6 +33,7 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         DrawChanceCard();
         break;
     case SpaceType::Community_Chest:
+        OpenCommunityChest();
         break;
     case SpaceType::Free_Parking:
         break;
