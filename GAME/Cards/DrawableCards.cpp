@@ -59,7 +59,7 @@ void FilterCards(GameState& game, std::vector<Card>& cards)
     for(Card card : cards)
     {
         if(card.IsChanceCard){ ChanceCards.push_back(card); }
-        if(card.IsCommunityChest){ ErrorType.push_back(card); }//
+        if(card.IsCommunityChest){ CommunityChests.push_back(card); }
         else{ ErrorType.push_back(card); }
     }
 
