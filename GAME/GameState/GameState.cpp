@@ -4,6 +4,7 @@
 
 #include "GameState.h"
 #include "jail.h"
+#include "DrawableCards.h"
 
 #include "UI-Helpers.h"
 #include "ui_MainUI.h"
@@ -30,10 +31,12 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         SendToJail(CurrentPlayer);
         break;
     case SpaceType::Chance:
-        DrawChanceCard();
+        if (!game.ChanceCards.empty())
+            DrawCard(game.ChanceCards);
         break;
     case SpaceType::Community_Chest:
-        OpenCommunityChest();
+        if (!game.CommunityChests.empty())
+            DrawCard(game.CommunityChests);
         break;
     case SpaceType::Free_Parking:
         break;
@@ -72,28 +75,13 @@ void EndTurn(GameState& game)
     game.CurrentPlayerIndex = (game.CurrentPlayerIndex + 1) % game.Players.size();
 }
 
-GameState SetupGame()
+GameState SetupGame(int PlayerCount)
 {
-    int PlayerCount{};
     GameState game;
     game.board = CreateBoard();
 
-    
-    while(true){
-        if(std::cin >> PlayerCount)
-        {
-            if(PlayerCount > 0 && PlayerCount < 5)
-            {
-                break;
-            }
-        }
-        else
-        {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-        std::cout << "Invalide input! (only integers 1-4)" << std::endl;
-    }
+    std::vector<Card> cards = SetupCards();
+    FilterCards(game, cards);
 
     int count{1};
     while(0 < PlayerCount)

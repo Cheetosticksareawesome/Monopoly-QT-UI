@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QMainWindow>
+#include <QInputDialog>
 
 #include "UI-Connections.h"
 #include "ui_MainUI.h"
@@ -20,20 +21,28 @@ int main(int argc, char *argv[])
     ui.setupUi(&window);
 
     window.show();
-    //++
+    bool accepted = false;
 
-    
+    int headCount = QInputDialog::getInt(
+        nullptr,
+        "New Game",
+        "How many players?",
+        2, // Default
+        1, // Minimum
+        4, // Maximum
+        1, // Step
+        &accepted);
+
+    if (!accepted)
+    {
+        return 0;
+    }
+
     // create a setup method which sets up UI & the game
-    GameState game{};
-    game.board = CreateBoard();
-    game.Players = {{"player_1", 1500, 0}, {"player_2", 1500, 0}};
-    
-
+    GameState game{SetupGame(headCount)};
+   
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
     ui.currentPlayerLabel->setText("Current player: " + QString::fromStdString(CurrentPlayer.Name));
-
-    
-
 
     Connect_UI(ui, game);
         

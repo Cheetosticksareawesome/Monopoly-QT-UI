@@ -14,12 +14,12 @@ struct GameState
     bool HasRolled{false};
 
     std::vector<Player> Players;
-    std::vector<ChanceCard> ChanceCards;
-    std::vector<Community_Chest> Community_Chests;
+    std::vector<Card> ChanceCards;
+    std::vector<Card> CommunityChests;
     Board board;
 };
 
-GameState SetupGame();
+GameState SetupGame(int PlayerCount);
 
 void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps);
 void EndTurn(GameState& game);

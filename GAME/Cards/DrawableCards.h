@@ -1,6 +1,10 @@
 #pragma once
 
 #include <string>
+#include <vector>
+
+struct GameState;
+namespace Ui { class MainWindow; }
 
 enum class EffectType
 {
@@ -15,25 +19,20 @@ enum class EffectType
 
 };
 
-struct ChanceCard 
+struct Card 
 {
     std::string Name;
     std::string Description;
     EffectType Effect;
     int MoneyAmount{0};
     int SetPlayerPosition{0};
+    bool IsChanceCard{false};
+    bool IsCommunityChest{false};
 };
 
-struct Community_Chest
-{
-    std::string Name;
-    std::string Description;
-    EffectType Effect;
-    int MoneyAmount{0};
-    int SetPlayerPosition{0};
-};
+void ApplyCardEffect(GameState &game, Ui::MainWindow &ui, Card &card);
 
-void ApplyCardEffect(GameState &game, Ui::MainWindow &ui, ChanceCard &chance);
+Card DrawCard(std::vector<Card> &Cards);
 
-ChanceCard DrawChanceCard();
-Community_Chest OpenCommunityChest();
+std::vector<Card> SetupCards();
+void FilterCards(GameState &game, std::vector<Card> &cards);

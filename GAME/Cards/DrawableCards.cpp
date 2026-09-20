@@ -8,83 +8,82 @@
 #include <random>
 #include <QTimer>
 
-//struct   StructName:    Name;                  Description:                     Effect:    Amount:   Position
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200};
-ChanceCard Positive_BankError{"Bank error in favor", "a bank error gains you $100", EffectType::EditMoney, 100};
-ChanceCard Negative_BankError{"Bank error Mistake", "a bank error costs you $100", EffectType::EditMoney, -100};
-ChanceCard JailSentence{"Tax Evasion Gone Woof", "Your Dog forgot to file your Taxes, pay a $25 fee & go to jail", EffectType::MovePlayer, -25, 10};
-ChanceCard TaskFailedSuccessfully{"Task Failed Successfully", "Your dog dug up a valuable gem worth &450, but the IRS wants half", EffectType::EditMoney, 225};
+// Name, description, effect, money amount, destination, Chance, Community Chest.
+Card MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200, 0, true, false};
+Card Positive_BankError{"Bank Error in Your Favor", "A bank error gains you $100", EffectType::EditMoney, 100, 0, false, true};
+Card Negative_BankError{"Bank Error Correction", "A bank error costs you $100", EffectType::EditMoney, -100, 0, false, true};
+Card JailSentence{"Tax Evasion Gone Woof", "Your dog forgot to file your taxes. Pay $25 and go to jail", EffectType::MovePlayer, -25, 10, true, false};
+Card TaskFailedSuccessfully{"Task Failed Successfully", "Your dog dug up a gem worth $450, but the IRS wants half. Collect $225", EffectType::EditMoney, 225, 0, true, false};
+Card SouthboundTrain{"Southbound Train", "Advance to South Station", EffectType::MovePlayer, 0, 5, true, false};
+Card RoyalInvitation{"Royal Invitation", "Advance to Royal Avenue", EffectType::MovePlayer, 0, 39, true, false};
+Card SpeedingFine{"Speeding Fine", "Your dog chased a car and you got the ticket. Pay $50", EffectType::EditMoney, -50, 0, true, false};
+Card LostWallet{"Lost Wallet", "You lost your wallet at the station. Lose $75", EffectType::EditMoney, -75, 0, true, false};
+Card TreasureMap{"Treasure Map", "Your questionable treasure map actually worked. Collect $150", EffectType::EditMoney, 150, 0, true, false};
+Card StockSale{"Sale of Stock", "From selling stock, you earned $150", EffectType::EditMoney, 150, 0, false, true};
+Card DoctorFee{"Doctor's Fee", "Time for your annual checkup. Pay $50", EffectType::EditMoney, -50, 0, false, true};
+Card TaxRefund{"Tax Refund", "Your paperwork finally paid off. Collect $100", EffectType::EditMoney, 100, 0, false, true};
+Card PetShowPrize{"Pet Show Prize", "Your dog won the neighborhood pet show. Collect $50", EffectType::EditMoney, 50, 0, false, true};
+Card RoofRepairs{"Roof Repairs", "That suspicious dripping needs fixing. Pay $125", EffectType::EditMoney, -125, 0, false, true};
+Card BirthdayGift{"Birthday Gift", "A relative sent you birthday money. Collect $100", EffectType::EditMoney, 100, 0, false, true};
 
-/*
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-ChanceCard MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer};
-*/
-//struct       Name:    Name:                  Description:                  Effect:       Money:    SetPlayerPosition
-Community_Chest C1{  "Sale of Stock", "from selling stock, you earned $150", EffectType::EditMoney,     150,                       };
-
-
-std::vector<ChanceCard> SetupChanceCards()
+std::vector<Card> SetupCards()
 {
-    std::vector<ChanceCard> ChanceCards;
-    ChanceCards.resize(16);
-
-    ChanceCards.push_back(MoveToStart);
-    ChanceCards.push_back(Positive_BankError);
-    ChanceCards.push_back(Negative_BankError);
-    ChanceCards.push_back(JailSentence);
-    ChanceCards.push_back(TaskFailedSuccessfully);
-
-    return ChanceCards;
+    return {
+        MoveToStart,
+        Positive_BankError,
+        Negative_BankError,
+        JailSentence,
+        TaskFailedSuccessfully,
+        SouthboundTrain,
+        RoyalInvitation,
+        SpeedingFine,
+        LostWallet,
+        TreasureMap,
+        StockSale,
+        DoctorFee,
+        TaxRefund,
+        PetShowPrize,
+        RoofRepairs,
+        BirthdayGift
+    };
 }
 
-std::vector<Community_Chest> SetupCommunityChests()
+void FilterCards(GameState& game, std::vector<Card>& cards)
 {
-    std::vector<Community_Chest> Community_Chests;
-    Community_Chests.resize(16);
+    std::vector<Card> CommunityChests;
+    std::vector<Card> ChanceCards;
+    std::vector<Card> ErrorType;
 
-    Community_Chests.push_back(C1);
+    for(Card card : cards)
+    {
+        if(card.IsChanceCard){ ChanceCards.push_back(card); }
+        if(card.IsCommunityChest){ CommunityChests.push_back(card); }
+        else{ ErrorType.push_back(card); }
+    }
 
-    return Community_Chests;
+    game.ChanceCards = ChanceCards;
+    game.CommunityChests = CommunityChests;
 }
 
-ChanceCard DrawChanceCard(std::vector<ChanceCard>& ChanceCards)
-{
-    std::random_device random;
-    std::mt19937 gen(random());
-    std::uniform_int_distribution<> dist(1, 6);
-
-    int rand_int = dist(gen);
-
-    return ChanceCards[rand_int];
-}
-
-Community_Chest OpenCommunityChest(std::vector<Community_Chest>& Community_Chests)
+Card DrawCard(std::vector<Card>& Cards)
 {
     std::random_device random;
     std::mt19937 gen(random());
-    std::uniform_int_distribution<> dist(1, 6);
+    std::uniform_int_distribution<> dist(0, static_cast<int>(Cards.size()) - 1);
 
     int rand_int = dist(gen);
 
-    return Community_Chests[rand_int];
+    return Cards[rand_int];
 }
 
 
-void ApplyCardEffect(GameState& game, Ui::MainWindow& ui,// ChanceCard& chance) (this also needs to handle community chests)
+
+void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, Card& chance)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
 
     //update ui
-    UpdateChanceCard(game, ui, chance);
+    UpdateCard(game, ui, chance);
 
     switch(chance.Effect)
     {

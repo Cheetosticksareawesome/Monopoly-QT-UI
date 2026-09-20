@@ -34,8 +34,6 @@ struct BoardSpace
 struct Board
 {
     std::vector<BoardSpace> Spaces;
-    std::vector<ChanceCard> ChanceCards;
-    std::vector<Community_Chest> Community_Chests;
     int FreeParkingMoney{0};
 };
 

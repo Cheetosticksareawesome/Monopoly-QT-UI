@@ -6,4 +6,4 @@
 void BuyProperty(GameState& game);
 
 void UpdatePlayerLabels(GameState &game, Ui::MainWindow &ui);
-void UpdateChanceCard(GameState &game, Ui::MainWindow &ui, ChanceCard card);
+void UpdateCard(GameState &game, Ui::MainWindow &ui, Card card);
