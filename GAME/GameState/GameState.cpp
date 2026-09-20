@@ -5,6 +5,7 @@
 #include "GameState.h"
 #include "jail.h"
 #include "DrawableCards.h"
+#include "logger-manager.h"
 
 #include "UI-Helpers.h"
 #include "ui_MainUI.h"
@@ -32,11 +33,15 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         break;
     case SpaceType::Chance:
         if (!game.ChanceCards.empty())
+        {
             DrawCard(game.ChanceCards);
+        }
         break;
     case SpaceType::Community_Chest:
         if (!game.CommunityChests.empty())
+        {
             DrawCard(game.CommunityChests);
+        }
         break;
     case SpaceType::Free_Parking:
         break;

@@ -1,0 +1,34 @@
+CARDTYPE ERRORS:
+
+Move To Start
+Move forward to start & collect $200
+Bank Error in Your Favor
+A bank error gains you $100
+Bank Error Correction
+A bank error costs you $100
+Tax Evasion Gone Woof
+Your dog forgot to file your taxes. Pay $25 and go to jail
+Task Failed Successfully
+Your dog dug up a gem worth $450, but the IRS wants half. Collect $225
+Southbound Train
+Advance to South Station
+Royal Invitation
+Advance to Royal Avenue
+Speeding Fine
+Your dog chased a car and you got the ticket. Pay $50
+Lost Wallet
+You lost your wallet at the station. Lose $75
+Treasure Map
+Your questionable treasure map actually worked. Collect $150
+Sale of Stock
+From selling stock, you earned $150
+Doctor's Fee
+Time for your annual checkup. Pay $50
+Tax Refund
+Your paperwork finally paid off. Collect $100
+Pet Show Prize
+Your dog won the neighborhood pet show. Collect $50
+Roof Repairs
+That suspicious dripping needs fixing. Pay $125
+Birthday Gift
+A relative sent you birthday money. Collect $100

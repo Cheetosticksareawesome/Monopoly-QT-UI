@@ -315,6 +315,12 @@
 			null
 		],
 		[
+			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Log/logger-manager.h",
+			"MU",
+			"UITE6SIPTJ/moc_logger-manager.cpp",
+			null
+		],
+		[
 			"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h",
 			"MU",
 			"BI3FIYR7O6/moc_Player.cpp",
@@ -363,6 +369,7 @@
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Board",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState",
+		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Log",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player",
 		"C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections",

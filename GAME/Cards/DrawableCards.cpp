@@ -2,11 +2,13 @@
 #include "DrawableCards.h"
 #include "GameState.h"
 #include "UI-Helpers.h"
+#include "logger-manager.h"
 
 #include <iostream>
 #include <vector>
 #include <random>
 #include <QTimer>
+#include <fstream>
 
 // Name, description, effect, money amount, destination, Chance, Community Chest.
 Card MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200, 0, true, false};
@@ -57,8 +59,20 @@ void FilterCards(GameState& game, std::vector<Card>& cards)
     for(Card card : cards)
     {
         if(card.IsChanceCard){ ChanceCards.push_back(card); }
-        if(card.IsCommunityChest){ CommunityChests.push_back(card); }
+        if(card.IsCommunityChest){ ErrorType.push_back(card); }//
         else{ ErrorType.push_back(card); }
+    }
+
+    if(ErrorType.size() > 0)
+    {
+        LogLineAppend("\nCARDTYPE ERRORS:\n");
+        for(Card card : ErrorType)
+        {
+            LogLineAppend(card.Name);
+            LogLineAppend(card.Description);
+            //LogLineAppend("\n");
+        }
+        LogLineAppend("\nEND OF CARDTYPE ERRORS:\n");
     }
 
     game.ChanceCards = ChanceCards;
