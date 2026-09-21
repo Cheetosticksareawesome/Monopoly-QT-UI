@@ -87,6 +87,55 @@ QLabel#boardTitle { color: #d2dfd2; font-size: 34px; font-weight: bold; }
           <number>3</number>
          </property>
          <item>
+          <widget class="QLabel" name="Pawn1">
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: blue;
+border: 3px solid black;</string>
+           </property>
+           <property name="text">
+            <string>P1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Pawn2">
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: red;
+border: 3px solid black;</string>
+           </property>
+           <property name="text">
+            <string>P2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QLabel" name="tileName0">
            <property name="styleSheet">
             <string>font-size: 12px;</string>
@@ -99,6 +148,52 @@ QLabel#boardTitle { color: #d2dfd2; font-size: 34px; font-weight: bold; }
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Pawn4">
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: orange;
+border: 3px solid black;</string>
+           </property>
+           <property name="text">
+            <string>P4</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Pawn3">
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: green;
+border: 3px solid black;</string>
+           </property>
+           <property name="text">
+            <string>P3</string>
            </property>
           </widget>
          </item>

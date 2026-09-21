@@ -32,7 +32,11 @@ public:
     QGridLayout *boardLayout;
     QFrame *tile0;
     QVBoxLayout *tileLayout0;
+    QLabel *Pawn1;
+    QLabel *Pawn2;
     QLabel *tileName0;
+    QLabel *Pawn4;
+    QLabel *Pawn3;
     QWidget *tokenArea0;
     QFrame *tile1;
     QVBoxLayout *tileLayout1;
@@ -265,12 +269,49 @@ public:
         tileLayout0->setSpacing(2);
         tileLayout0->setObjectName("tileLayout0");
         tileLayout0->setContentsMargins(3, 3, 3, 3);
+        Pawn1 = new QLabel(tile0);
+        Pawn1->setObjectName("Pawn1");
+        Pawn1->setMaximumSize(QSize(25, 25));
+        Pawn1->setBaseSize(QSize(25, 25));
+        Pawn1->setAutoFillBackground(false);
+        Pawn1->setStyleSheet(QString::fromUtf8("background-color: blue;\n"
+"border: 3px solid black;"));
+
+        tileLayout0->addWidget(Pawn1);
+
+        Pawn2 = new QLabel(tile0);
+        Pawn2->setObjectName("Pawn2");
+        Pawn2->setMaximumSize(QSize(25, 25));
+        Pawn2->setBaseSize(QSize(25, 25));
+        Pawn2->setStyleSheet(QString::fromUtf8("background-color: red;\n"
+"border: 3px solid black;"));
+
+        tileLayout0->addWidget(Pawn2);
+
         tileName0 = new QLabel(tile0);
         tileName0->setObjectName("tileName0");
         tileName0->setAlignment(Qt::AlignmentFlag::AlignCenter);
         tileName0->setWordWrap(true);
 
         tileLayout0->addWidget(tileName0);
+
+        Pawn4 = new QLabel(tile0);
+        Pawn4->setObjectName("Pawn4");
+        Pawn4->setMaximumSize(QSize(25, 25));
+        Pawn4->setBaseSize(QSize(25, 25));
+        Pawn4->setStyleSheet(QString::fromUtf8("background-color: orange;\n"
+"border: 3px solid black;"));
+
+        tileLayout0->addWidget(Pawn4);
+
+        Pawn3 = new QLabel(tile0);
+        Pawn3->setObjectName("Pawn3");
+        Pawn3->setMaximumSize(QSize(25, 25));
+        Pawn3->setBaseSize(QSize(25, 25));
+        Pawn3->setStyleSheet(QString::fromUtf8("background-color: green;\n"
+"border: 3px solid black;"));
+
+        tileLayout0->addWidget(Pawn3);
 
         tokenArea0 = new QWidget(tile0);
         tokenArea0->setObjectName("tokenArea0");
@@ -1591,8 +1632,12 @@ public:
 "QLabel#boardTitle { color: #d2dfd2; f"
                         "ont-size: 34px; font-weight: bold; }\n"
 "", nullptr));
+        Pawn1->setText(QCoreApplication::translate("MainWindow", "P1", nullptr));
+        Pawn2->setText(QCoreApplication::translate("MainWindow", "P2", nullptr));
         tileName0->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName0->setText(QCoreApplication::translate("MainWindow", "GO", nullptr));
+        Pawn4->setText(QCoreApplication::translate("MainWindow", "P4", nullptr));
+        Pawn3->setText(QCoreApplication::translate("MainWindow", "P3", nullptr));
         propertyColor1->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
         tileName1->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName1->setText(QCoreApplication::translate("MainWindow", "Oak Street", nullptr));
