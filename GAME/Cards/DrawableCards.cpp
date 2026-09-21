@@ -90,8 +90,6 @@ Card DrawCard(std::vector<Card>& Cards)
     return Cards[rand_int];
 }
 
-
-
 void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, Card& chance)
 {
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];

@@ -59,8 +59,6 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
 
         if (CurrentTile.OwnerIndex != -1 && CurrentTile.OwnerIndex != game.CurrentPlayerIndex)
         {
-            player.Money -= CurrentTile.Rent;
-            game.Players[CurrentTile.OwnerIndex].Money += CurrentTile.Rent;
             UpdatePlayerLabels(game, ui);
         }
         else
