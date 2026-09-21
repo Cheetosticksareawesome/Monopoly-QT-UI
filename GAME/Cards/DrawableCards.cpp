@@ -3,6 +3,7 @@
 #include "GameState.h"
 #include "UI-Helpers.h"
 #include "logger-manager.h"
+#include "jail.h"
 
 #include <iostream>
 #include <vector>
@@ -14,7 +15,7 @@
 Card MoveToStart{"Move To Start", "Move forward to start & collect $200", EffectType::MovePlayer, 200, 0, true, false};
 Card Positive_BankError{"Bank Error in Your Favor", "A bank error gains you $100", EffectType::EditMoney, 100, 0, false, true};
 Card Negative_BankError{"Bank Error Correction", "A bank error costs you $100", EffectType::EditMoney, -100, 0, false, true};
-Card JailSentence{"Tax Evasion Gone Woof", "Your dog forgot to file your taxes. Pay $25 and go to jail", EffectType::MovePlayer, -25, 10, true, false};
+Card JailSentence{"Tax Evasion Gone Woof", "Your dog forgot to file your taxes. Pay $25 and go to jail", EffectType::JailPlayer, -25, 10, true, false};
 Card TaskFailedSuccessfully{"Task Failed Successfully", "Your dog dug up a gem worth $450, but the IRS wants half. Collect $225", EffectType::EditMoney, 225, 0, true, false};
 Card SouthboundTrain{"Southbound Train", "Advance to South Station", EffectType::MovePlayer, 0, 5, true, false};
 Card RoyalInvitation{"Royal Invitation", "Advance to Royal Avenue", EffectType::MovePlayer, 0, 39, true, false};
@@ -103,7 +104,16 @@ void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, Card& chance)
             CurrentPlayer.Money += chance.MoneyAmount;
             break;
         case EffectType::MovePlayer:
+            if (CurrentPlayer.Position > chance.SetPlayerPosition)
+            {
+                CurrentPlayer.Money += chance.MoneyAmount;
+            }
             CurrentPlayer.Position = chance.SetPlayerPosition;
+            break;
+
+        case EffectType::JailPlayer:
+            game.Players[game.CurrentPlayerIndex].Money -= 25;
+            SendToJail(game.Players[game.CurrentPlayerIndex]);
             break;
         case EffectType::SummonWeather:
             break;
@@ -113,7 +123,11 @@ void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, Card& chance)
             break;
         
         default:
-            std::cerr << "Unhandled effect-type! File: " << __FILE__ << " Line: " << __LINE__ << std::endl;
+            std::ostringstream errorLine;
+            errorLine  << "Unhandled effect-type! File: " << __FILE__ << " Line: " << __LINE__;
+
+            LogLineAppend(errorLine.str());
+            std::cerr << errorLine.str() << std::endl;
             break;
     }
     QTimer::singleShot(10000, [&]()

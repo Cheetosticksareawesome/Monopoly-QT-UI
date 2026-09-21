@@ -55,6 +55,9 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
     case SpaceType::Luxury_Tax:
         CurrentPlayer.Money -= 100;
         break;
+    case SpaceType::Go:
+        CurrentPlayer.Money += 200;
+        break;
     case SpaceType::Property:
     case SpaceType::Utility:
     case SpaceType::TrainStation:

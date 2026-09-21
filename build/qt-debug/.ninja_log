@@ -12,9 +12,9 @@
 46	144	8116449406102917	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	298709c20b5ec741
 208	1027	8114729833365356	CMakeFiles/UIApp.dir/GAME/GameState/Dice.cpp.obj	e3f941629929f587
 316	3769	8116410878336112	CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Connections/UI-Connections.cpp.obj	98a6f24e8960bc65
-395	2155	8116857403743122	build.ninja	8c14a79dd8f821b1
+395	2155	8117050900208302	build.ninja	8c14a79dd8f821b1
 321	3892	8116410878416676	CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Helpers/UI-Helpers.cpp.obj	7a3a1e02611522de
 299	3824	8116410878192901	CMakeFiles/UIApp.dir/GAME/GameState/jail.cpp.obj	4b20c5fed0ebdce8
-395	2155	8116857403610668	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/cmake_install.cmake	8c14a79dd8f821b1
+395	2155	8117050900094458	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/cmake_install.cmake	8c14a79dd8f821b1
 144	2888	8116449407102664	CMakeFiles/UIApp.dir/GAME/Cards/DrawableCards.cpp.obj	653206e97b65c2a9
 280	1101	8116410878013072	CMakeFiles/UIApp.dir/GAME/Board/Dice/Dice.cpp.obj	368eeb558cc4cf26

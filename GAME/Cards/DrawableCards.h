@@ -11,6 +11,7 @@ enum class EffectType
     //standard effects
     MovePlayer,
     EditMoney,
+    JailPlayer,
 
     //custom Experimentals
     SummonWeather, //Destroy a random percentage of all player's houses
