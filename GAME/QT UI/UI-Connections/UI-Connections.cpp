@@ -25,9 +25,14 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         if (double_dice)
         {
             player.DoubleDiceCount++;
-            if (player.DoubleDiceCount >= 3)
+            if (!player.InJail && player.DoubleDiceCount >= 3)
             {
                 SendToJail(player);
+            }
+            if(player.InJail)
+            {
+                player.DoubleDiceCount = 0;
+                player.InJail = false;
             }
         }
 
@@ -69,10 +74,8 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
             }
         }
 
-
         ui.rollDiceButton->setEnabled(double_dice && !player.InJail);
         ui.endTurnButton->setEnabled(!double_dice || player.InJail); 
-    
     });
 
     //EndTurn

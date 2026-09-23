@@ -48,7 +48,7 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
 
     for(int i = 0; i < playerPawns.size(); i++)
     {
-        playerPawns[i]->setParent(ui.boardLayout[i])
+        playerPawns[i]->setParent(ui.boardLayout[i]);
     }
 }
 

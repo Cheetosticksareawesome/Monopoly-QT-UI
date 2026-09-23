@@ -14,7 +14,5 @@ int RollDie()
 
 DiceRoll RollDice()
 {
-    bool Double = false;
-
     return {RollDie(), RollDie()};
 }
