@@ -5,6 +5,8 @@
 #include <sstream>
 #include <iomanip>
 #include <string>
+#include <source_location>
+#include <filesystem>
 
 inline const std::string& LogFilename()
 {
@@ -26,8 +28,8 @@ inline const std::string& LogFilename()
 }
 
 template <typename T>
-void LogLineAppend(const T &line)
+void LogLineAppend(const T &line, std::source_location location = std::source_location::current())
 {
     std::ofstream logfile(LogFilename(), std::ios::app);
-    logfile << line << std::endl;
+    logfile << "File: " << std::filesystem::path(location.file_name()).filename() << " Line: " << location.line() << " Info: " << line << std::endl;
 }

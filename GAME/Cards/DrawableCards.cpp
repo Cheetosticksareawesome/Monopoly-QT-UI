@@ -130,8 +130,4 @@ void ApplyCardEffect(GameState& game, Ui::MainWindow& ui, Card& chance)
             std::cerr << errorLine.str() << std::endl;
             break;
     }
-    QTimer::singleShot(10000, [&]()
-    { 
-        ui.chanceText->setText(QString::fromStdString(""));
-    });
 }

@@ -26,7 +26,10 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
 
     BoardSpace& CurrentSpace = game.board.Spaces[CurrentPlayer.Position];
     
-    switch (game.board.Spaces[CurrentPlayer.Position].Type)
+    //update pawn
+    MovePawn(game, ui);
+
+    switch (CurrentSpace.Type)
     {
     case SpaceType::GoToJail:
         SendToJail(CurrentPlayer);

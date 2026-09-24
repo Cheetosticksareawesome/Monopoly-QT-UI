@@ -1,0 +1,22 @@
+File: "DrawableCards.cpp" Line: 69 Info: 
+CARDTYPE ERRORS:
+
+File: "DrawableCards.cpp" Line: 72 Info: Move To Start
+File: "DrawableCards.cpp" Line: 73 Info: Move forward to start & collect $200
+File: "DrawableCards.cpp" Line: 72 Info: Tax Evasion Gone Woof
+File: "DrawableCards.cpp" Line: 73 Info: Your dog forgot to file your taxes. Pay $25 and go to jail
+File: "DrawableCards.cpp" Line: 72 Info: Task Failed Successfully
+File: "DrawableCards.cpp" Line: 73 Info: Your dog dug up a gem worth $450, but the IRS wants half. Collect $225
+File: "DrawableCards.cpp" Line: 72 Info: Southbound Train
+File: "DrawableCards.cpp" Line: 73 Info: Advance to South Station
+File: "DrawableCards.cpp" Line: 72 Info: Royal Invitation
+File: "DrawableCards.cpp" Line: 73 Info: Advance to Royal Avenue
+File: "DrawableCards.cpp" Line: 72 Info: Speeding Fine
+File: "DrawableCards.cpp" Line: 73 Info: Your dog chased a car and you got the ticket. Pay $50
+File: "DrawableCards.cpp" Line: 72 Info: Lost Wallet
+File: "DrawableCards.cpp" Line: 73 Info: You lost your wallet at the station. Lose $75
+File: "DrawableCards.cpp" Line: 72 Info: Treasure Map
+File: "DrawableCards.cpp" Line: 73 Info: Your questionable treasure map actually worked. Collect $150
+File: "DrawableCards.cpp" Line: 76 Info: 
+END OF CARDTYPE ERRORS:
+

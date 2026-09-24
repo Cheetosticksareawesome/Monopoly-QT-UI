@@ -7,3 +7,4 @@ void BuyProperty(GameState& game);
 
 void UpdatePlayerLabels(GameState &game, Ui::MainWindow &ui);
 void UpdateCard(GameState &game, Ui::MainWindow &ui, Card card);
+void MovePawn(GameState &game, Ui::MainWindow &ui);

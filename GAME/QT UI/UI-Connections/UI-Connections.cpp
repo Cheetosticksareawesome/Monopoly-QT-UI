@@ -102,8 +102,10 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
 
             );
         }
-
         else{ ui.propertyDetails->setText(QString::fromStdString("Name: " + CurrentTile.Name)); }
+
+        ui.chanceText->setText(QString::fromStdString(""));
+        ui.communityText->setText(QString::fromStdString(""));
 
         game.HasRolled = false;
         ui.rollDiceButton->setEnabled(!game.HasRolled);
