@@ -1,0 +1,4 @@
+Total income (net, all players): 2023810
+Highest cash achieved: 603823
+Highest debt achieved / lowest money: 26
+Average gain per roll (net, active player): 10.47

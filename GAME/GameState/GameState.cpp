@@ -56,10 +56,9 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         CurrentPlayer.Money -= 200;
         break;
     case SpaceType::Luxury_Tax:
-        CurrentPlayer.Money -= 100;
+        CurrentPlayer.Money -= 200;
         break;
     case SpaceType::Go:
-        CurrentPlayer.Money += 200;
         break;
     case SpaceType::Property:
     case SpaceType::Utility:

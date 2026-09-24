@@ -1,0 +1,5 @@
+Four players; buy all affordable available properties; real random dice/cards; synchronous Qt button callbacks; no rendering/event-pump delays.
+Rolls=100000, purchases=28
+Active player, movement only: samples=100000, gain%=17.7810, loss%=54.1600, unchanged%=28.0590, net average=10.5265, average winning move=172.8828, average losing move=-37.3224
+Active player, including purchases: samples=100000, gain%=17.7810, loss%=54.1840, unchanged%=28.0350, net average=10.4696, average winning move=172.8648, average losing move=-37.4050
+Combined cash of all players, including purchases: samples=100000, gain%=17.7810, loss%=10.0740, unchanged%=72.1450, net average=20.2381, average winning move=175.6049, average losing move=-109.0550
