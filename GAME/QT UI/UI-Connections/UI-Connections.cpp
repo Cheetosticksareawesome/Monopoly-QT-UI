@@ -111,11 +111,12 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         ui.rollDiceButton->setEnabled(!game.HasRolled);
         ui.endTurnButton->setEnabled(game.HasRolled);
     });
+
     //buyProperty
     ui.buyButton->setEnabled(false);
     QObject::connect(ui.buyButton, &QPushButton::clicked, [&ui, &game]()
     {
-        BuyProperty(game);
+        BuyProperty(game, ui);
         UpdatePlayerLabels(game, ui);
         ui.buyButton->setEnabled(false);
     });

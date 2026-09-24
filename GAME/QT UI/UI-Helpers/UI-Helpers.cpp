@@ -3,15 +3,28 @@
 
 #include <vector>
 
-void BuyProperty(GameState& game)
+void BuyProperty(GameState& game, Ui::MainWindow& ui)
 {
     Player& player = game.Players[game.CurrentPlayerIndex];
     BoardSpace& CurrentTile = game.board.Spaces[player.Position];
+
+    const std::vector<QLabel *> playerPawns{ui.Pawn1, ui.Pawn2, ui.Pawn3, ui.Pawn4};
+    const std::vector<QFrame *> tiles{
+        ui.tile0, ui.tile1, ui.tile2, ui.tile3, ui.tile4,
+        ui.tile5, ui.tile6, ui.tile7, ui.tile8, ui.tile9,
+        ui.tile10, ui.tile11, ui.tile12, ui.tile13, ui.tile14,
+        ui.tile15, ui.tile16, ui.tile17, ui.tile18, ui.tile19,
+        ui.tile20, ui.tile21, ui.tile22, ui.tile23, ui.tile24,
+        ui.tile25, ui.tile26, ui.tile27, ui.tile28, ui.tile29,
+        ui.tile30, ui.tile31, ui.tile32, ui.tile33, ui.tile34,
+        ui.tile35, ui.tile36, ui.tile37, ui.tile38, ui.tile39
+    };
 
     if(player.Money >= CurrentTile.Price && CurrentTile.OwnerIndex == -1)
     {
         player.Money -= CurrentTile.Price;
         CurrentTile.OwnerIndex = game.CurrentPlayerIndex;
+        tiles[player.Position]->setStyleSheet(playerPawns[game.CurrentPlayerIndex]->styleSheet());
     }
 };
 
@@ -42,7 +55,7 @@ void UpdateCard(GameState& game, Ui::MainWindow& ui, Card card)
 
 void MovePawn(GameState& game, Ui::MainWindow& ui)
 {
-    std::vector<QLabel *> pawns{ui.Pawn1, ui.Pawn2, ui.Pawn3, ui.player4};
+    std::vector<QLabel *> pawns{ui.Pawn1, ui.Pawn2, ui.Pawn3, ui.Pawn4};
     std::vector<QFrame *> tiles{
         ui.tile0, ui.tile1, ui.tile2, ui.tile3, ui.tile4,
         ui.tile5, ui.tile6, ui.tile7, ui.tile8, ui.tile9,
