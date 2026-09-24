@@ -5,11 +5,11 @@
 #include "ui_MainUI.h"
 #include "UI-Helpers.h"
 #include "jail.h"
+#include <QFrame>
 
-
-
-void Connect_UI(Ui::MainWindow& ui, GameState& game)
+void Connect_UI(GameState &game, Ui::MainWindow &ui)
 {
+    SetupPawnLayouts(game, ui);
     UpdatePlayerLabels(game, ui);
     //rollDice
     ui.rollDiceButton->setEnabled(!game.HasRolled);
@@ -121,4 +121,43 @@ void Connect_UI(Ui::MainWindow& ui, GameState& game)
         ui.buyButton->setEnabled(false);
     });
 
+
+    //toggle Mortgage
+
+    //setup tooltips
+    std::vector<int> indices;
+    std::vector<QFrame *> tiles
+    {
+        ui.tile0, ui.tile1, ui.tile2, ui.tile3, ui.tile4,
+        ui.tile5, ui.tile6, ui.tile7, ui.tile8, ui.tile9,
+        ui.tile10, ui.tile11, ui.tile12, ui.tile13, ui.tile14,
+        ui.tile15, ui.tile16, ui.tile17, ui.tile18, ui.tile19,
+        ui.tile20, ui.tile21, ui.tile22, ui.tile23, ui.tile24,
+        ui.tile25, ui.tile26, ui.tile27, ui.tile28, ui.tile29,
+        ui.tile30, ui.tile31, ui.tile32, ui.tile33, ui.tile34,
+        ui.tile35, ui.tile36, ui.tile37, ui.tile38, ui.tile39
+    };
+
+    for(int i = 0; i < game.board.Spaces.size(); i++)
+    {
+        if (game.board.Spaces[i].Type == SpaceType::Property || game.board.Spaces[i].Type == SpaceType::Utility || game.board.Spaces[i].Type == SpaceType::TrainStation)
+        {
+            indices.push_back(i);
+        }
+    }
+    
+    for(int index : indices)
+    {
+        tiles[index]->setToolTip(
+            QString::fromStdString(game.board.Spaces[index].Name)     + QString::fromStdString(" \nType: ")
+          + QString::fromStdString(ToStdStringSpaceType(game.board.Spaces[index].Type))     + QString::fromStdString(" \nPrice: ")
+          + QString::number(game.board.Spaces[index].Price)           + QString::fromStdString(" \nRent: ")
+          + QString::number(game.board.Spaces[index].Rent)            + QString::fromStdString(" \nMortage: ")
+          + QString::number(game.board.Spaces[index].Mortage)         + QString::fromStdString(" \nOwner: ")
+          + QString::fromStdString(PlayerIndexToName(game, game.board.Spaces[index].OwnerIndex))
+
+        );
+        tiles[index]->setToolTipDuration(60000);
+    }
 }
+

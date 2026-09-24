@@ -38,3 +38,5 @@ struct Board
 };
 
 Board CreateBoard();
+
+std::string ToStdStringSpaceType(SpaceType type);

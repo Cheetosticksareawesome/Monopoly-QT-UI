@@ -3,5 +3,4 @@
 #include "GameState.h"
 #include "ui_MainUI.h"
 
-
-void Connect_UI(Ui::MainWindow& ui, GameState& game);
+void Connect_UI(GameState &game, Ui::MainWindow &ui);

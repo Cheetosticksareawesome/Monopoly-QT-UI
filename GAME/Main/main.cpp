@@ -44,7 +44,8 @@ int main(int argc, char *argv[])
     Player& CurrentPlayer = game.Players[game.CurrentPlayerIndex];
     ui.currentPlayerLabel->setText("Current player: " + QString::fromStdString(CurrentPlayer.Name));
 
-    Connect_UI(ui, game);
+    Connect_UI(game, ui);
+
         
     return app.exec();
 }

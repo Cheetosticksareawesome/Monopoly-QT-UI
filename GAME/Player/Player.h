@@ -2,6 +2,8 @@
 
 #include <string>
 
+struct GameState;
+
 struct Player
 {
     std::string Name;
@@ -11,3 +13,5 @@ struct Player
     bool InJail{false};
     int JailTurns{0};
 };
+
+std::string PlayerIndexToName(GameState& game, int& playerIndex);

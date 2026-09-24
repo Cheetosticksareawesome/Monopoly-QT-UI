@@ -1,5 +1,9 @@
 ﻿#include "board.h"
 #include "DrawableCards.h"
+#include "ui_MainUI.h"
+#include "logger-manager.h"
+
+#include <QLabel>
 
 Board CreateBoard()
 {
@@ -88,4 +92,51 @@ Board CreateBoard()
     board.Spaces[39] = Royal_ave;
 
     return board;
+}
+
+std::string ToStdStringSpaceType(SpaceType type)
+{
+    switch (type)
+    {
+        case SpaceType::Chance:
+            return "Chance";
+            break;
+        case SpaceType::Community_Chest:
+            return "Community Chest";
+            break;
+        case SpaceType::Free_Parking:
+            return "Free Parking";
+            break;
+        case SpaceType::Go:
+            return "Go";
+            break;
+        case SpaceType::GoToJail:
+            return "Go To Jail";
+            break;
+        case SpaceType::IncomeTax:
+            return "Income Tax";
+            break;
+        case SpaceType::Jail:
+            return "Jail";
+            break;
+        case SpaceType::Luxury_Tax:
+            return "Luxury Tax";
+            break;
+        case SpaceType::Property:
+            return "Property";
+            break;
+        case SpaceType::Rest:
+            return "Rest";
+            break;
+        case SpaceType::TrainStation:
+            return "Trainstation";
+            break;
+        case SpaceType::Utility:
+            return "Utility";
+            break;
+
+        default:
+            LogLineAppend("Conversion Error for SpaceType!");
+            return "Conversion Error";
+        }
 }
