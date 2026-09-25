@@ -71,7 +71,6 @@ void FilterCards(GameState& game, std::vector<Card>& cards)
         {
             LogLineAppend(card.Name);
             LogLineAppend(card.Description);
-            //LogLineAppend("\n");
         }
         LogLineAppend("\nEND OF CARDTYPE ERRORS:\n");
     }

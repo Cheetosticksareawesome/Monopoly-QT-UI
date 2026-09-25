@@ -63,7 +63,7 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
     case SpaceType::Property:
     case SpaceType::Utility:
     case SpaceType::TrainStation:
-        if (game.board.Spaces[CurrentPlayer.Position].OwnerIndex == -1 || game.board.Spaces[CurrentPlayer.Position].OwnerIndex == game.CurrentPlayerIndex)
+        if (game.board.Spaces[CurrentPlayer.Position].OwnerIndex == -1 || game.board.Spaces[CurrentPlayer.Position].OwnerIndex == game.CurrentPlayerIndex || game.board.Spaces[CurrentPlayer.Position].isMortgaged)
         {
             break;
         }

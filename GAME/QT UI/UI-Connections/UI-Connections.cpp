@@ -1,10 +1,12 @@
 ﻿
 #include "UI-Connections.h"
 #include "GameState.h"
+#include "board.h"
 #include "Dice.h"
 #include "ui_MainUI.h"
 #include "UI-Helpers.h"
 #include "jail.h"
+
 #include <QFrame>
 
 void Connect_UI(GameState &game, Ui::MainWindow &ui)
@@ -75,7 +77,8 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         }
 
         ui.rollDiceButton->setEnabled(double_dice && !player.InJail);
-        ui.endTurnButton->setEnabled(!double_dice || player.InJail); 
+        ui.endTurnButton->setEnabled(!double_dice || player.InJail);
+        ui.ToggleMortgageButton->setEnabled(game.HasRolled);
     });
 
     //EndTurn
@@ -110,6 +113,7 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         game.HasRolled = false;
         ui.rollDiceButton->setEnabled(!game.HasRolled);
         ui.endTurnButton->setEnabled(game.HasRolled);
+        ui.ToggleMortgageButton->setEnabled(game.HasRolled && ui.endTurnButton->isEnabled());
     });
 
     //buyProperty
@@ -123,5 +127,11 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
 
 
     //toggle Mortgage
+    ui.ToggleMortgageButton->setEnabled(game.HasRolled && ui.endTurnButton->isEnabled());
+    QObject::connect(ui.ToggleMortgageButton, &QPushButton::clicked, [&ui, &game]()
+    {
+        ToggleMortgage(game, ui);
+        UpdatePlayerLabels(game, ui);
+    });
 }
 

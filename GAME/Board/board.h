@@ -27,6 +27,7 @@ struct BoardSpace
     SpaceType Type;
     int Price{0};
     int Rent{0};
+    bool isMortgaged{false};
     int Mortage{Price / 2};
     int OwnerIndex{-1};
 };
@@ -40,3 +41,4 @@ struct Board
 Board CreateBoard();
 
 std::string ToStdStringSpaceType(SpaceType type);
+void ToggleMortgage(GameState &game, Ui::MainWindow &ui);

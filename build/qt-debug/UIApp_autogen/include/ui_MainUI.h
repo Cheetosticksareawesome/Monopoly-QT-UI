@@ -16,6 +16,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -244,6 +245,8 @@ public:
     QPushButton *rollDiceButton;
     QPushButton *endTurnButton;
     QPushButton *buyButton;
+    QLineEdit *MortgageField;
+    QPushButton *ToggleMortgageButton;
     QLabel *propertyDetails;
     QSpacerItem *sidebarSpacer;
 
@@ -1583,6 +1586,16 @@ public:
 
         turnLayout->addWidget(buyButton);
 
+        MortgageField = new QLineEdit(turnPanel);
+        MortgageField->setObjectName("MortgageField");
+
+        turnLayout->addWidget(MortgageField);
+
+        ToggleMortgageButton = new QPushButton(turnPanel);
+        ToggleMortgageButton->setObjectName("ToggleMortgageButton");
+
+        turnLayout->addWidget(ToggleMortgageButton);
+
 
         propertyLayout->addWidget(turnPanel);
 
@@ -1759,6 +1772,8 @@ public:
         rollDiceButton->setText(QCoreApplication::translate("MainWindow", "Roll Dice", nullptr));
         endTurnButton->setText(QCoreApplication::translate("MainWindow", "End Turn", nullptr));
         buyButton->setText(QCoreApplication::translate("MainWindow", "Buy Property", nullptr));
+        MortgageField->setText(QCoreApplication::translate("MainWindow", "Mortgage-index", nullptr));
+        ToggleMortgageButton->setText(QCoreApplication::translate("MainWindow", "Mortgage", nullptr));
         propertyDetails->setText(QCoreApplication::translate("MainWindow", "Property details will appear here.", nullptr));
     } // retranslateUi
 

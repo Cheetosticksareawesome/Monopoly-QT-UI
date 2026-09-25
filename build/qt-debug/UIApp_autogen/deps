@@ -185,7 +185,7 @@ UIApp_autogen/timestamp: \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.h \
-	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Log/logger-manager.h \
+	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Logger/logger-manager.h \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Main/main.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.cpp \
 	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h \

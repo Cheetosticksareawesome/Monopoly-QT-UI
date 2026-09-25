@@ -43,7 +43,7 @@ set(OLD_GLOB
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Cards/DrawableCards.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/GameState.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/GameState/jail.h"
-  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Log/logger-manager.h"
+  "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Logger/logger-manager.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/Player/Player.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Connections/UI-Connections.h"
   "C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/GAME/QT UI/UI-Helpers/UI-Helpers.h"

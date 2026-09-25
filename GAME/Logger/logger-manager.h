@@ -20,7 +20,7 @@ inline const std::string& LogFilename()
             return "GAME/Log/log.txt";
 
         std::ostringstream oss;
-        oss << "GAME/Log/game_log_" << std::put_time(localtime, "%Y-%m-%d_%H-%M-%S") << ".txt";
+        oss << "GAME/Logger/logs/game_log_" << std::put_time(localtime, "%Y-%m-%d_%H-%M-%S") << ".txt";
         return oss.str();
     }();
 

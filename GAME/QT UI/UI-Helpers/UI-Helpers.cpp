@@ -115,8 +115,24 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
 
     for (int index : indices)
     {
+        std::string Mortgaged = game.board.Spaces[index].isMortgaged ? "true" : "false";
+
         tiles[index]->setToolTip(
-            QString::fromStdString(game.board.Spaces[index].Name) + QString::fromStdString(" \nType: ") + QString::fromStdString(ToStdStringSpaceType(game.board.Spaces[index].Type)) + QString::fromStdString(" \nPrice: ") + QString::number(game.board.Spaces[index].Price) + QString::fromStdString(" \nRent: ") + QString::number(game.board.Spaces[index].Rent) + QString::fromStdString(" \nMortage: ") + QString::number(game.board.Spaces[index].Mortage) + QString::fromStdString(" \nOwner: ") + QString::fromStdString(PlayerIndexToName(game, game.board.Spaces[index].OwnerIndex))
+            QString::fromStdString(game.board.Spaces[index].Name) 
+            + QString::fromStdString(" \nType: ") 
+            + QString::fromStdString(ToStdStringSpaceType(game.board.Spaces[index].Type)) 
+            + QString::fromStdString(" \nPrice: ") 
+            + QString::number(game.board.Spaces[index].Price) 
+            + QString::fromStdString(" \nRent: ") 
+            + QString::number(game.board.Spaces[index].Rent) 
+            + QString::fromStdString(" \nMortage: ") 
+            + QString::number(game.board.Spaces[index].Mortage) 
+            + QString::fromStdString(" \nOwner: ") 
+            + QString::fromStdString(PlayerIndexToName(game, game.board.Spaces[index].OwnerIndex)) 
+            + QString::fromStdString(" \nProperty-Index: ") 
+            + QString::number(index)
+            + QString::fromStdString("\nIs-Mortgaged: ")
+            + QString::fromStdString(Mortgaged)
 
         );
         tiles[index]->setToolTipDuration(60000);

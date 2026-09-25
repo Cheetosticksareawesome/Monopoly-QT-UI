@@ -3082,6 +3082,20 @@ border: 3px solid black;</string>
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QLineEdit" name="MortgageField">
+              <property name="text">
+               <string>Mortgage-index</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="ToggleMortgageButton">
+              <property name="text">
+               <string>Mortgage</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </widget>
          </item>
