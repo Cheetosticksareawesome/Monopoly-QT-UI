@@ -43,6 +43,7 @@ public:
     QVBoxLayout *tileLayout1;
     QFrame *propertyColor1;
     QLabel *tileName1;
+    QLabel *mortgageLabel1;
     QWidget *tokenArea1;
     QFrame *tile2;
     QVBoxLayout *tileLayout2;
@@ -52,6 +53,7 @@ public:
     QVBoxLayout *tileLayout3;
     QFrame *propertyColor3;
     QLabel *tileName3;
+    QLabel *mortgageLabel3;
     QWidget *tokenArea3;
     QFrame *tile4;
     QVBoxLayout *tileLayout4;
@@ -60,11 +62,13 @@ public:
     QFrame *tile5;
     QVBoxLayout *tileLayout5;
     QLabel *tileName5;
+    QLabel *mortgageLabel5;
     QWidget *tokenArea5;
     QFrame *tile6;
     QVBoxLayout *tileLayout6;
     QFrame *propertyColor6;
     QLabel *tileName6;
+    QLabel *mortgageLabel6;
     QWidget *tokenArea6;
     QFrame *tile7;
     QVBoxLayout *tileLayout7;
@@ -74,11 +78,13 @@ public:
     QVBoxLayout *tileLayout8;
     QFrame *propertyColor8;
     QLabel *tileName8;
+    QLabel *mortgageLabel8;
     QWidget *tokenArea8;
     QFrame *tile9;
     QVBoxLayout *tileLayout9;
     QFrame *propertyColor9;
     QLabel *tileName9;
+    QLabel *mortgageLabel9;
     QWidget *tokenArea9;
     QFrame *tile10;
     QVBoxLayout *tileLayout10;
@@ -88,33 +94,40 @@ public:
     QVBoxLayout *tileLayout11;
     QFrame *propertyColor11;
     QLabel *tileName11;
+    QLabel *mortgageLabel11;
     QWidget *tokenArea11;
     QFrame *tile12;
     QVBoxLayout *tileLayout12;
     QLabel *tileName12;
+    QLabel *mortgageLabel12;
     QWidget *tokenArea12;
     QFrame *tile13;
     QVBoxLayout *tileLayout13;
     QFrame *propertyColor13;
     QLabel *tileName13;
+    QLabel *mortgageLabel13;
     QWidget *tokenArea13;
     QFrame *tile14;
     QVBoxLayout *tileLayout14;
     QFrame *propertyColor14;
     QLabel *tileName14;
+    QLabel *mortgageLabel14;
     QWidget *tokenArea14;
     QFrame *tile15;
     QVBoxLayout *tileLayout15;
     QLabel *tileName15;
+    QLabel *mortgageLabel15;
     QWidget *tokenArea15;
     QFrame *tile16;
     QVBoxLayout *tileLayout16;
     QFrame *propertyColor16;
     QLabel *tileName16;
+    QLabel *mortgageLabel16;
     QWidget *tokenArea16;
     QFrame *tile17;
     QVBoxLayout *tileLayout17;
     QLabel *tileName17;
+    QLabel *mortgageLabel17;
     QWidget *tokenArea17;
     QFrame *tile18;
     QVBoxLayout *tileLayout18;
@@ -125,6 +138,7 @@ public:
     QVBoxLayout *tileLayout19;
     QFrame *propertyColor19;
     QLabel *tileName19;
+    QLabel *mortgageLabel19;
     QWidget *tokenArea19;
     QFrame *tile20;
     QVBoxLayout *tileLayout20;
@@ -134,6 +148,7 @@ public:
     QVBoxLayout *tileLayout21;
     QFrame *propertyColor21;
     QLabel *tileName21;
+    QLabel *mortgageLabel21;
     QWidget *tokenArea21;
     QFrame *tile22;
     QVBoxLayout *tileLayout22;
@@ -143,34 +158,41 @@ public:
     QVBoxLayout *tileLayout23;
     QFrame *propertyColor23;
     QLabel *tileName23;
+    QLabel *mortgageLabel23;
     QWidget *tokenArea23;
     QFrame *tile24;
     QVBoxLayout *tileLayout24;
     QFrame *propertyColor24;
     QLabel *tileName24;
+    QLabel *mortgageLabel24;
     QWidget *tokenArea24;
     QFrame *tile25;
     QVBoxLayout *tileLayout25;
     QLabel *tileName25;
+    QLabel *mortgageLabel25;
     QWidget *tokenArea25;
     QFrame *tile26;
     QVBoxLayout *tileLayout26;
     QFrame *propertyColor26;
     QLabel *tileName26;
+    QLabel *mortgageLabel26;
     QWidget *tokenArea26;
     QFrame *tile27;
     QVBoxLayout *tileLayout27;
     QFrame *propertyColor27;
     QLabel *tileName27;
+    QLabel *mortgageLabel27;
     QWidget *tokenArea27;
     QFrame *tile28;
     QVBoxLayout *tileLayout28;
     QLabel *tileName28;
+    QLabel *mortgageLabel28;
     QWidget *tokenArea28;
     QFrame *tile29;
     QVBoxLayout *tileLayout29;
     QFrame *propertyColor29;
     QLabel *tileName29;
+    QLabel *mortgageLabel29;
     QWidget *tokenArea29;
     QFrame *tile30;
     QVBoxLayout *tileLayout30;
@@ -180,11 +202,13 @@ public:
     QVBoxLayout *tileLayout31;
     QFrame *propertyColor31;
     QLabel *tileName31;
+    QLabel *mortgageLabel31;
     QWidget *tokenArea31;
     QFrame *tile32;
     QVBoxLayout *tileLayout32;
     QFrame *propertyColor32;
     QLabel *tileName32;
+    QLabel *mortgageLabel32;
     QWidget *tokenArea32;
     QFrame *tile33;
     QVBoxLayout *tileLayout33;
@@ -194,10 +218,12 @@ public:
     QVBoxLayout *tileLayout34;
     QFrame *propertyColor34;
     QLabel *tileName34;
+    QLabel *mortgageLabel34;
     QWidget *tokenArea34;
     QFrame *tile35;
     QVBoxLayout *tileLayout35;
     QLabel *tileName35;
+    QLabel *mortgageLabel35;
     QWidget *tokenArea35;
     QFrame *tile36;
     QVBoxLayout *tileLayout36;
@@ -207,6 +233,7 @@ public:
     QVBoxLayout *tileLayout37;
     QFrame *propertyColor37;
     QLabel *tileName37;
+    QLabel *mortgageLabel37;
     QWidget *tokenArea37;
     QFrame *tile38;
     QVBoxLayout *tileLayout38;
@@ -216,6 +243,7 @@ public:
     QVBoxLayout *tileLayout39;
     QFrame *propertyColor39;
     QLabel *tileName39;
+    QLabel *mortgageLabel39;
     QWidget *tokenArea39;
     QFrame *boardCenter;
     QVBoxLayout *centerLayout;
@@ -347,6 +375,14 @@ public:
 
         tileLayout1->addWidget(tileName1);
 
+        mortgageLabel1 = new QLabel(tile1);
+        mortgageLabel1->setObjectName("mortgageLabel1");
+        mortgageLabel1->setVisible(false);
+        mortgageLabel1->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel1->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout1->addWidget(mortgageLabel1);
+
         tokenArea1 = new QWidget(tile1);
         tokenArea1->setObjectName("tokenArea1");
         tokenArea1->setMinimumSize(QSize(0, 12));
@@ -402,6 +438,14 @@ public:
 
         tileLayout3->addWidget(tileName3);
 
+        mortgageLabel3 = new QLabel(tile3);
+        mortgageLabel3->setObjectName("mortgageLabel3");
+        mortgageLabel3->setVisible(false);
+        mortgageLabel3->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel3->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout3->addWidget(mortgageLabel3);
+
         tokenArea3 = new QWidget(tile3);
         tokenArea3->setObjectName("tokenArea3");
         tokenArea3->setMinimumSize(QSize(0, 12));
@@ -450,6 +494,14 @@ public:
 
         tileLayout5->addWidget(tileName5);
 
+        mortgageLabel5 = new QLabel(tile5);
+        mortgageLabel5->setObjectName("mortgageLabel5");
+        mortgageLabel5->setVisible(false);
+        mortgageLabel5->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout5->addWidget(mortgageLabel5);
+
         tokenArea5 = new QWidget(tile5);
         tokenArea5->setObjectName("tokenArea5");
         tokenArea5->setMinimumSize(QSize(0, 12));
@@ -480,6 +532,14 @@ public:
         tileName6->setWordWrap(true);
 
         tileLayout6->addWidget(tileName6);
+
+        mortgageLabel6 = new QLabel(tile6);
+        mortgageLabel6->setObjectName("mortgageLabel6");
+        mortgageLabel6->setVisible(false);
+        mortgageLabel6->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel6->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout6->addWidget(mortgageLabel6);
 
         tokenArea6 = new QWidget(tile6);
         tokenArea6->setObjectName("tokenArea6");
@@ -536,6 +596,14 @@ public:
 
         tileLayout8->addWidget(tileName8);
 
+        mortgageLabel8 = new QLabel(tile8);
+        mortgageLabel8->setObjectName("mortgageLabel8");
+        mortgageLabel8->setVisible(false);
+        mortgageLabel8->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel8->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout8->addWidget(mortgageLabel8);
+
         tokenArea8 = new QWidget(tile8);
         tokenArea8->setObjectName("tokenArea8");
         tokenArea8->setMinimumSize(QSize(0, 12));
@@ -566,6 +634,14 @@ public:
         tileName9->setWordWrap(true);
 
         tileLayout9->addWidget(tileName9);
+
+        mortgageLabel9 = new QLabel(tile9);
+        mortgageLabel9->setObjectName("mortgageLabel9");
+        mortgageLabel9->setVisible(false);
+        mortgageLabel9->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel9->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout9->addWidget(mortgageLabel9);
 
         tokenArea9 = new QWidget(tile9);
         tokenArea9->setObjectName("tokenArea9");
@@ -622,6 +698,14 @@ public:
 
         tileLayout11->addWidget(tileName11);
 
+        mortgageLabel11 = new QLabel(tile11);
+        mortgageLabel11->setObjectName("mortgageLabel11");
+        mortgageLabel11->setVisible(false);
+        mortgageLabel11->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel11->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout11->addWidget(mortgageLabel11);
+
         tokenArea11 = new QWidget(tile11);
         tokenArea11->setObjectName("tokenArea11");
         tokenArea11->setMinimumSize(QSize(0, 12));
@@ -645,6 +729,14 @@ public:
         tileName12->setWordWrap(true);
 
         tileLayout12->addWidget(tileName12);
+
+        mortgageLabel12 = new QLabel(tile12);
+        mortgageLabel12->setObjectName("mortgageLabel12");
+        mortgageLabel12->setVisible(false);
+        mortgageLabel12->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel12->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout12->addWidget(mortgageLabel12);
 
         tokenArea12 = new QWidget(tile12);
         tokenArea12->setObjectName("tokenArea12");
@@ -677,6 +769,14 @@ public:
 
         tileLayout13->addWidget(tileName13);
 
+        mortgageLabel13 = new QLabel(tile13);
+        mortgageLabel13->setObjectName("mortgageLabel13");
+        mortgageLabel13->setVisible(false);
+        mortgageLabel13->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel13->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout13->addWidget(mortgageLabel13);
+
         tokenArea13 = new QWidget(tile13);
         tokenArea13->setObjectName("tokenArea13");
         tokenArea13->setMinimumSize(QSize(0, 12));
@@ -708,6 +808,14 @@ public:
 
         tileLayout14->addWidget(tileName14);
 
+        mortgageLabel14 = new QLabel(tile14);
+        mortgageLabel14->setObjectName("mortgageLabel14");
+        mortgageLabel14->setVisible(false);
+        mortgageLabel14->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel14->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout14->addWidget(mortgageLabel14);
+
         tokenArea14 = new QWidget(tile14);
         tokenArea14->setObjectName("tokenArea14");
         tokenArea14->setMinimumSize(QSize(0, 12));
@@ -731,6 +839,14 @@ public:
         tileName15->setWordWrap(true);
 
         tileLayout15->addWidget(tileName15);
+
+        mortgageLabel15 = new QLabel(tile15);
+        mortgageLabel15->setObjectName("mortgageLabel15");
+        mortgageLabel15->setVisible(false);
+        mortgageLabel15->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel15->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout15->addWidget(mortgageLabel15);
 
         tokenArea15 = new QWidget(tile15);
         tokenArea15->setObjectName("tokenArea15");
@@ -763,6 +879,14 @@ public:
 
         tileLayout16->addWidget(tileName16);
 
+        mortgageLabel16 = new QLabel(tile16);
+        mortgageLabel16->setObjectName("mortgageLabel16");
+        mortgageLabel16->setVisible(false);
+        mortgageLabel16->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel16->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout16->addWidget(mortgageLabel16);
+
         tokenArea16 = new QWidget(tile16);
         tokenArea16->setObjectName("tokenArea16");
         tokenArea16->setMinimumSize(QSize(0, 12));
@@ -786,6 +910,14 @@ public:
         tileName17->setWordWrap(true);
 
         tileLayout17->addWidget(tileName17);
+
+        mortgageLabel17 = new QLabel(tile17);
+        mortgageLabel17->setObjectName("mortgageLabel17");
+        mortgageLabel17->setVisible(false);
+        mortgageLabel17->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel17->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout17->addWidget(mortgageLabel17);
 
         tokenArea17 = new QWidget(tile17);
         tokenArea17->setObjectName("tokenArea17");
@@ -849,6 +981,14 @@ public:
 
         tileLayout19->addWidget(tileName19);
 
+        mortgageLabel19 = new QLabel(tile19);
+        mortgageLabel19->setObjectName("mortgageLabel19");
+        mortgageLabel19->setVisible(false);
+        mortgageLabel19->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel19->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout19->addWidget(mortgageLabel19);
+
         tokenArea19 = new QWidget(tile19);
         tokenArea19->setObjectName("tokenArea19");
         tokenArea19->setMinimumSize(QSize(0, 12));
@@ -903,6 +1043,14 @@ public:
         tileName21->setWordWrap(true);
 
         tileLayout21->addWidget(tileName21);
+
+        mortgageLabel21 = new QLabel(tile21);
+        mortgageLabel21->setObjectName("mortgageLabel21");
+        mortgageLabel21->setVisible(false);
+        mortgageLabel21->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel21->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout21->addWidget(mortgageLabel21);
 
         tokenArea21 = new QWidget(tile21);
         tokenArea21->setObjectName("tokenArea21");
@@ -959,6 +1107,14 @@ public:
 
         tileLayout23->addWidget(tileName23);
 
+        mortgageLabel23 = new QLabel(tile23);
+        mortgageLabel23->setObjectName("mortgageLabel23");
+        mortgageLabel23->setVisible(false);
+        mortgageLabel23->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel23->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout23->addWidget(mortgageLabel23);
+
         tokenArea23 = new QWidget(tile23);
         tokenArea23->setObjectName("tokenArea23");
         tokenArea23->setMinimumSize(QSize(0, 12));
@@ -990,6 +1146,14 @@ public:
 
         tileLayout24->addWidget(tileName24);
 
+        mortgageLabel24 = new QLabel(tile24);
+        mortgageLabel24->setObjectName("mortgageLabel24");
+        mortgageLabel24->setVisible(false);
+        mortgageLabel24->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel24->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout24->addWidget(mortgageLabel24);
+
         tokenArea24 = new QWidget(tile24);
         tokenArea24->setObjectName("tokenArea24");
         tokenArea24->setMinimumSize(QSize(0, 12));
@@ -1013,6 +1177,14 @@ public:
         tileName25->setWordWrap(true);
 
         tileLayout25->addWidget(tileName25);
+
+        mortgageLabel25 = new QLabel(tile25);
+        mortgageLabel25->setObjectName("mortgageLabel25");
+        mortgageLabel25->setVisible(false);
+        mortgageLabel25->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel25->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout25->addWidget(mortgageLabel25);
 
         tokenArea25 = new QWidget(tile25);
         tokenArea25->setObjectName("tokenArea25");
@@ -1045,6 +1217,14 @@ public:
 
         tileLayout26->addWidget(tileName26);
 
+        mortgageLabel26 = new QLabel(tile26);
+        mortgageLabel26->setObjectName("mortgageLabel26");
+        mortgageLabel26->setVisible(false);
+        mortgageLabel26->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel26->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout26->addWidget(mortgageLabel26);
+
         tokenArea26 = new QWidget(tile26);
         tokenArea26->setObjectName("tokenArea26");
         tokenArea26->setMinimumSize(QSize(0, 12));
@@ -1076,6 +1256,14 @@ public:
 
         tileLayout27->addWidget(tileName27);
 
+        mortgageLabel27 = new QLabel(tile27);
+        mortgageLabel27->setObjectName("mortgageLabel27");
+        mortgageLabel27->setVisible(false);
+        mortgageLabel27->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel27->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout27->addWidget(mortgageLabel27);
+
         tokenArea27 = new QWidget(tile27);
         tokenArea27->setObjectName("tokenArea27");
         tokenArea27->setMinimumSize(QSize(0, 12));
@@ -1099,6 +1287,14 @@ public:
         tileName28->setWordWrap(true);
 
         tileLayout28->addWidget(tileName28);
+
+        mortgageLabel28 = new QLabel(tile28);
+        mortgageLabel28->setObjectName("mortgageLabel28");
+        mortgageLabel28->setVisible(false);
+        mortgageLabel28->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel28->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout28->addWidget(mortgageLabel28);
 
         tokenArea28 = new QWidget(tile28);
         tokenArea28->setObjectName("tokenArea28");
@@ -1130,6 +1326,14 @@ public:
         tileName29->setWordWrap(true);
 
         tileLayout29->addWidget(tileName29);
+
+        mortgageLabel29 = new QLabel(tile29);
+        mortgageLabel29->setObjectName("mortgageLabel29");
+        mortgageLabel29->setVisible(false);
+        mortgageLabel29->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel29->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout29->addWidget(mortgageLabel29);
 
         tokenArea29 = new QWidget(tile29);
         tokenArea29->setObjectName("tokenArea29");
@@ -1186,6 +1390,14 @@ public:
 
         tileLayout31->addWidget(tileName31);
 
+        mortgageLabel31 = new QLabel(tile31);
+        mortgageLabel31->setObjectName("mortgageLabel31");
+        mortgageLabel31->setVisible(false);
+        mortgageLabel31->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel31->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout31->addWidget(mortgageLabel31);
+
         tokenArea31 = new QWidget(tile31);
         tokenArea31->setObjectName("tokenArea31");
         tokenArea31->setMinimumSize(QSize(0, 12));
@@ -1216,6 +1428,14 @@ public:
         tileName32->setWordWrap(true);
 
         tileLayout32->addWidget(tileName32);
+
+        mortgageLabel32 = new QLabel(tile32);
+        mortgageLabel32->setObjectName("mortgageLabel32");
+        mortgageLabel32->setVisible(false);
+        mortgageLabel32->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel32->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout32->addWidget(mortgageLabel32);
 
         tokenArea32 = new QWidget(tile32);
         tokenArea32->setObjectName("tokenArea32");
@@ -1272,6 +1492,14 @@ public:
 
         tileLayout34->addWidget(tileName34);
 
+        mortgageLabel34 = new QLabel(tile34);
+        mortgageLabel34->setObjectName("mortgageLabel34");
+        mortgageLabel34->setVisible(false);
+        mortgageLabel34->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel34->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout34->addWidget(mortgageLabel34);
+
         tokenArea34 = new QWidget(tile34);
         tokenArea34->setObjectName("tokenArea34");
         tokenArea34->setMinimumSize(QSize(0, 12));
@@ -1295,6 +1523,14 @@ public:
         tileName35->setWordWrap(true);
 
         tileLayout35->addWidget(tileName35);
+
+        mortgageLabel35 = new QLabel(tile35);
+        mortgageLabel35->setObjectName("mortgageLabel35");
+        mortgageLabel35->setVisible(false);
+        mortgageLabel35->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel35->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout35->addWidget(mortgageLabel35);
 
         tokenArea35 = new QWidget(tile35);
         tokenArea35->setObjectName("tokenArea35");
@@ -1351,6 +1587,14 @@ public:
 
         tileLayout37->addWidget(tileName37);
 
+        mortgageLabel37 = new QLabel(tile37);
+        mortgageLabel37->setObjectName("mortgageLabel37");
+        mortgageLabel37->setVisible(false);
+        mortgageLabel37->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel37->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout37->addWidget(mortgageLabel37);
+
         tokenArea37 = new QWidget(tile37);
         tokenArea37->setObjectName("tokenArea37");
         tokenArea37->setMinimumSize(QSize(0, 12));
@@ -1405,6 +1649,14 @@ public:
         tileName39->setWordWrap(true);
 
         tileLayout39->addWidget(tileName39);
+
+        mortgageLabel39 = new QLabel(tile39);
+        mortgageLabel39->setObjectName("mortgageLabel39");
+        mortgageLabel39->setVisible(false);
+        mortgageLabel39->setStyleSheet(QString::fromUtf8("background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;"));
+        mortgageLabel39->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        tileLayout39->addWidget(mortgageLabel39);
 
         tokenArea39 = new QWidget(tile39);
         tokenArea39->setObjectName("tokenArea39");
@@ -1654,103 +1906,131 @@ public:
         propertyColor1->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
         tileName1->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName1->setText(QCoreApplication::translate("MainWindow", "Oak Street", nullptr));
+        mortgageLabel1->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName2->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName2->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor3->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
         tileName3->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName3->setText(QCoreApplication::translate("MainWindow", "Pine Street", nullptr));
+        mortgageLabel3->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName4->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName4->setText(QCoreApplication::translate("MainWindow", "Income Tax", nullptr));
         tileName5->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName5->setText(QCoreApplication::translate("MainWindow", "South Station", nullptr));
+        mortgageLabel5->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor6->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
         tileName6->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName6->setText(QCoreApplication::translate("MainWindow", "Birch Street", nullptr));
+        mortgageLabel6->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName7->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName7->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor8->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
         tileName8->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName8->setText(QCoreApplication::translate("MainWindow", "Maple Street", nullptr));
+        mortgageLabel8->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor9->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
         tileName9->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName9->setText(QCoreApplication::translate("MainWindow", "Cedar Street", nullptr));
+        mortgageLabel9->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName10->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName10->setText(QCoreApplication::translate("MainWindow", "JAIL / VISITING", nullptr));
         propertyColor11->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
         tileName11->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName11->setText(QCoreApplication::translate("MainWindow", "Rose Street", nullptr));
+        mortgageLabel11->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName12->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName12->setText(QCoreApplication::translate("MainWindow", "Electric Company", nullptr));
+        mortgageLabel12->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor13->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
         tileName13->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName13->setText(QCoreApplication::translate("MainWindow", "Tulip Street", nullptr));
+        mortgageLabel13->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor14->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
         tileName14->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName14->setText(QCoreApplication::translate("MainWindow", "Lily Street", nullptr));
+        mortgageLabel14->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName15->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName15->setText(QCoreApplication::translate("MainWindow", "West Station", nullptr));
+        mortgageLabel15->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor16->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
         tileName16->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName16->setText(QCoreApplication::translate("MainWindow", "Orange Street", nullptr));
+        mortgageLabel16->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName17->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName17->setText(QCoreApplication::translate("MainWindow", "Peach Street", nullptr));
+        mortgageLabel17->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor18->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
         tileName18->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName18->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor19->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
         tileName19->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName19->setText(QCoreApplication::translate("MainWindow", "Apricot Street", nullptr));
+        mortgageLabel19->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName20->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName20->setText(QCoreApplication::translate("MainWindow", "FREE PARKING", nullptr));
         propertyColor21->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
         tileName21->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName21->setText(QCoreApplication::translate("MainWindow", "Ruby Street", nullptr));
+        mortgageLabel21->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName22->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName22->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor23->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
         tileName23->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName23->setText(QCoreApplication::translate("MainWindow", "Scarlet Street", nullptr));
+        mortgageLabel23->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor24->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
         tileName24->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName24->setText(QCoreApplication::translate("MainWindow", "Crimson Street", nullptr));
+        mortgageLabel24->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName25->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName25->setText(QCoreApplication::translate("MainWindow", "North Station", nullptr));
+        mortgageLabel25->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor26->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
         tileName26->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName26->setText(QCoreApplication::translate("MainWindow", "Sunflower Street", nullptr));
+        mortgageLabel26->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor27->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
         tileName27->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName27->setText(QCoreApplication::translate("MainWindow", "Daffodil Street", nullptr));
+        mortgageLabel27->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName28->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName28->setText(QCoreApplication::translate("MainWindow", "Water Works", nullptr));
+        mortgageLabel28->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor29->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
         tileName29->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName29->setText(QCoreApplication::translate("MainWindow", "Marigold Street", nullptr));
+        mortgageLabel29->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName30->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName30->setText(QCoreApplication::translate("MainWindow", "GO TO JAIL", nullptr));
         propertyColor31->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
         tileName31->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName31->setText(QCoreApplication::translate("MainWindow", "Forest Street", nullptr));
+        mortgageLabel31->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor32->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
         tileName32->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName32->setText(QCoreApplication::translate("MainWindow", "Willow Street", nullptr));
+        mortgageLabel32->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName33->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName33->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor34->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
         tileName34->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName34->setText(QCoreApplication::translate("MainWindow", "Meadow Street", nullptr));
+        mortgageLabel34->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName35->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName35->setText(QCoreApplication::translate("MainWindow", "East Station", nullptr));
+        mortgageLabel35->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName36->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName36->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor37->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
         tileName37->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName37->setText(QCoreApplication::translate("MainWindow", "Ocean Avenue", nullptr));
+        mortgageLabel37->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName38->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName38->setText(QCoreApplication::translate("MainWindow", "Luxury Tax", nullptr));
         propertyColor39->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
         tileName39->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName39->setText(QCoreApplication::translate("MainWindow", "Royal Avenue", nullptr));
+        mortgageLabel39->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         boardTitle->setText(QCoreApplication::translate("MainWindow", "MONOPOLY", nullptr));
         chance->setTitle(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         chanceText->setText(QCoreApplication::translate("MainWindow", "Chance cards appear here", nullptr));

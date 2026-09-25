@@ -273,6 +273,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel1">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea1" native="true">
            <property name="minimumSize">
             <size>
@@ -404,6 +420,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel3">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea3" native="true">
            <property name="minimumSize">
             <size>
@@ -516,6 +548,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel5">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea5" native="true">
            <property name="minimumSize">
             <size>
@@ -587,6 +635,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel6">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -722,6 +786,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel8">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea8" native="true">
            <property name="minimumSize">
             <size>
@@ -793,6 +873,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel9">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -928,6 +1024,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel11">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea11" native="true">
            <property name="minimumSize">
             <size>
@@ -980,6 +1092,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel12">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -1059,6 +1187,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel13">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea13" native="true">
            <property name="minimumSize">
             <size>
@@ -1134,6 +1278,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel14">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea14" native="true">
            <property name="minimumSize">
             <size>
@@ -1186,6 +1346,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel15">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -1265,6 +1441,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel16">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea16" native="true">
            <property name="minimumSize">
             <size>
@@ -1317,6 +1509,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel17">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -1471,6 +1679,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel19">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea19" native="true">
            <property name="minimumSize">
             <size>
@@ -1598,6 +1822,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel21">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -1733,6 +1973,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel23">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea23" native="true">
            <property name="minimumSize">
             <size>
@@ -1808,6 +2064,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel24">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea24" native="true">
            <property name="minimumSize">
             <size>
@@ -1860,6 +2132,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel25">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -1939,6 +2227,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel26">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea26" native="true">
            <property name="minimumSize">
             <size>
@@ -2014,6 +2318,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel27">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea27" native="true">
            <property name="minimumSize">
             <size>
@@ -2066,6 +2386,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel28">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -2141,6 +2477,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel29">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -2276,6 +2628,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel31">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea31" native="true">
            <property name="minimumSize">
             <size>
@@ -2347,6 +2715,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel32">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -2482,6 +2866,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel34">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea34" native="true">
            <property name="minimumSize">
             <size>
@@ -2534,6 +2934,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel35">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>
@@ -2669,6 +3085,22 @@ border: 3px solid black;</string>
           </widget>
          </item>
          <item>
+          <widget class="QLabel" name="mortgageLabel37">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QWidget" name="tokenArea37" native="true">
            <property name="minimumSize">
             <size>
@@ -2796,6 +3228,22 @@ border: 3px solid black;</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mortgageLabel39">
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: #392a16; color: #ffd584; border: 1px solid #b88b46; border-radius: 3px; padding: 2px; font-size: 9px; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>MORTGAGED</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
            </property>
           </widget>
          </item>

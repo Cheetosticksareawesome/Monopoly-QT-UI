@@ -10,45 +10,45 @@ Board CreateBoard()
 {
     Board board{};
     
-    //         Variable           Name                 Type                         Price  Rent  isMortgaged  Mortage OwnerIndex
-    BoardSpace Rest             { "Rest",              SpaceType::Rest,                0,    0,    false,       0,         -1 };
+    //         Variable           Name                 Type                         Price  Rent  isMortgaged  Mortage OwnerIndex ColorGroup
+    BoardSpace Rest             { "Rest",              SpaceType::Rest,                0,    0,    false,       0,         -1, "" };
 
-    BoardSpace Go               { "GO",                SpaceType::Go,                  0,    0,    false,       0,         -1 };
-    BoardSpace Oak_st           { "Oak Street",        SpaceType::Property,           60,    2,    false,      30,         -1 };
-    BoardSpace CommunityChest   { "Community Chest",   SpaceType::Community_Chest,     0,    0,    false,       0,         -1 };
-    BoardSpace Pine_st          { "Pine Street",       SpaceType::Property,           60,    4,    false,      30,         -1 };
-    BoardSpace IncomeTax        { "Income Tax",        SpaceType::IncomeTax,           0,    0,    false,       0,         -1 };
-    BoardSpace SouthStation     { "South Station",     SpaceType::TrainStation,      200,   25,    false,     100,         -1 };
-    BoardSpace Birch_st         { "Birch Street",      SpaceType::Property,          100,    6,    false,      50,         -1 };
-    BoardSpace Chance           { "Chance",            SpaceType::Chance,              0,    0,    false,       0,         -1 };
-    BoardSpace Maple_st         { "Maple Street",      SpaceType::Property,          100,    6,    false,      50,         -1 };
-    BoardSpace Cedar_st         { "Cedar Street",      SpaceType::Property,          120,    8,    false,      60,         -1 };
-    BoardSpace Jail             { "JAIL / VISITING",   SpaceType::Jail,                0,    0,    false,       0,         -1 };
-    BoardSpace Rose_st          { "Rose Street",       SpaceType::Property,          140,   10,    false,      70,         -1 };
-    BoardSpace ElectricCompany  { "Electric Company",  SpaceType::Utility,           150,   28,    false,      75,         -1 };
-    BoardSpace Tulip_st         { "Tulip Street",      SpaceType::Property,          140,   10,    false,      70,         -1 };
-    BoardSpace Lily_st          { "Lily Street",       SpaceType::Property,          160,   12,    false,      80,         -1 };
-    BoardSpace WestStation      { "West Station",      SpaceType::TrainStation,      200,   25,    false,     100,         -1 };
-    BoardSpace Orange_st        { "Orange Street",     SpaceType::Property,          180,   14,    false,      90,         -1 };
-    BoardSpace Peach_st         { "Peach Street",      SpaceType::Property,          180,   14,    false,      90,         -1 };
-    BoardSpace Apricot_st       { "Apricot Street",    SpaceType::Property,          200,   16,    false,     100,         -1 };
-    BoardSpace FreeParking      { "FREE PARKING",      SpaceType::Free_Parking,        0,    0,    false,       0,         -1 };
-    BoardSpace Ruby_st          { "Ruby Street",       SpaceType::Property,          220,   18,    false,     110,         -1 };
-    BoardSpace Scarlet_st       { "Scarlet Street",    SpaceType::Property,          220,   18,    false,     110,         -1 };
-    BoardSpace Crimson_st       { "Crimson Street",    SpaceType::Property,          240,   20,    false,     120,         -1 };
-    BoardSpace NorthStation     { "North Station",     SpaceType::TrainStation,      200,   25,    false,     100,         -1 };
-    BoardSpace Sunflower_st     { "Sunflower Street",  SpaceType::Property,          260,   22,    false,     130,         -1 };
-    BoardSpace Daffodil_st      { "Daffodil Street",   SpaceType::Property,          260,   22,    false,     130,         -1 };
-    BoardSpace WaterWorks       { "Water Works",       SpaceType::Utility,           150,   28,    false,      75,         -1 };
-    BoardSpace Marigold_st      { "Marigold Street",   SpaceType::Property,          280,   24,    false,     140,         -1 };
-    BoardSpace GoToJail         { "GO TO JAIL",        SpaceType::GoToJail,            0,    0,    false,       0,         -1 };
-    BoardSpace Forest_st        { "Forest Street",     SpaceType::Property,          300,   26,    false,     150,         -1 };
-    BoardSpace Willow_st        { "Willow Street",     SpaceType::Property,          300,   26,    false,     150,         -1 };
-    BoardSpace Meadow_st        { "Meadow Street",     SpaceType::Property,          320,   28,    false,     160,         -1 };
-    BoardSpace EastStation      { "East Station",      SpaceType::TrainStation,      200,   25,    false,     100,         -1 };
-    BoardSpace Ocean_ave        { "Ocean Avenue",      SpaceType::Property,          350,   35,    false,     175,         -1 };
-    BoardSpace LuxuryTax        { "Luxury Tax",        SpaceType::Luxury_Tax,          0,    0,    false,       0,         -1 };
-    BoardSpace Royal_ave        { "Royal Avenue",      SpaceType::Property,          400,   50,    false,     200,         -1 };
+    BoardSpace Go               { "GO",                SpaceType::Go,                  0,    0,    false,       0,         -1, "" };
+    BoardSpace Oak_st           { "Oak Street",        SpaceType::Property,           60,    2,    false,      30,         -1, "Brown" };
+    BoardSpace CommunityChest   { "Community Chest",   SpaceType::Community_Chest,     0,    0,    false,       0,         -1, "" };
+    BoardSpace Pine_st          { "Pine Street",       SpaceType::Property,           60,    4,    false,      30,         -1, "Brown" };
+    BoardSpace IncomeTax        { "Income Tax",        SpaceType::IncomeTax,           0,    0,    false,       0,         -1, "" };
+    BoardSpace SouthStation     { "South Station",     SpaceType::TrainStation,      200,   25,    false,     100,         -1, "" };
+    BoardSpace Birch_st         { "Birch Street",      SpaceType::Property,          100,    6,    false,      50,         -1, "LightBlue" };
+    BoardSpace Chance           { "Chance",            SpaceType::Chance,              0,    0,    false,       0,         -1, "" };
+    BoardSpace Maple_st         { "Maple Street",      SpaceType::Property,          100,    6,    false,      50,         -1, "LightBlue" };
+    BoardSpace Cedar_st         { "Cedar Street",      SpaceType::Property,          120,    8,    false,      60,         -1, "LightBlue" };
+    BoardSpace Jail             { "JAIL / VISITING",   SpaceType::Jail,                0,    0,    false,       0,         -1, "" };
+    BoardSpace Rose_st          { "Rose Street",       SpaceType::Property,          140,   10,    false,      70,         -1, "Pink" };
+    BoardSpace ElectricCompany  { "Electric Company",  SpaceType::Utility,           150,   28,    false,      75,         -1, "" };
+    BoardSpace Tulip_st         { "Tulip Street",      SpaceType::Property,          140,   10,    false,      70,         -1, "Pink" };
+    BoardSpace Lily_st          { "Lily Street",       SpaceType::Property,          160,   12,    false,      80,         -1, "Pink" };
+    BoardSpace WestStation      { "West Station",      SpaceType::TrainStation,      200,   25,    false,     100,         -1, "" };
+    BoardSpace Orange_st        { "Orange Street",     SpaceType::Property,          180,   14,    false,      90,         -1, "Orange" };
+    BoardSpace Peach_st         { "Peach Street",      SpaceType::Property,          180,   14,    false,      90,         -1, "Orange" };
+    BoardSpace Apricot_st       { "Apricot Street",    SpaceType::Property,          200,   16,    false,     100,         -1, "Orange" };
+    BoardSpace FreeParking      { "FREE PARKING",      SpaceType::Free_Parking,        0,    0,    false,       0,         -1, "" };
+    BoardSpace Ruby_st          { "Ruby Street",       SpaceType::Property,          220,   18,    false,     110,         -1, "Red" };
+    BoardSpace Scarlet_st       { "Scarlet Street",    SpaceType::Property,          220,   18,    false,     110,         -1, "Red" };
+    BoardSpace Crimson_st       { "Crimson Street",    SpaceType::Property,          240,   20,    false,     120,         -1, "Red" };
+    BoardSpace NorthStation     { "North Station",     SpaceType::TrainStation,      200,   25,    false,     100,         -1, "" };
+    BoardSpace Sunflower_st     { "Sunflower Street",  SpaceType::Property,          260,   22,    false,     130,         -1, "Yellow" };
+    BoardSpace Daffodil_st      { "Daffodil Street",   SpaceType::Property,          260,   22,    false,     130,         -1, "Yellow" };
+    BoardSpace WaterWorks       { "Water Works",       SpaceType::Utility,           150,   28,    false,      75,         -1, "" };
+    BoardSpace Marigold_st      { "Marigold Street",   SpaceType::Property,          280,   24,    false,     140,         -1, "Yellow" };
+    BoardSpace GoToJail         { "GO TO JAIL",        SpaceType::GoToJail,            0,    0,    false,       0,         -1, "" };
+    BoardSpace Forest_st        { "Forest Street",     SpaceType::Property,          300,   26,    false,     150,         -1, "Green" };
+    BoardSpace Willow_st        { "Willow Street",     SpaceType::Property,          300,   26,    false,     150,         -1, "Green" };
+    BoardSpace Meadow_st        { "Meadow Street",     SpaceType::Property,          320,   28,    false,     160,         -1, "Green" };
+    BoardSpace EastStation      { "East Station",      SpaceType::TrainStation,      200,   25,    false,     100,         -1, "" };
+    BoardSpace Ocean_ave        { "Ocean Avenue",      SpaceType::Property,          350,   35,    false,     175,         -1, "DarkBlue" };
+    BoardSpace LuxuryTax        { "Luxury Tax",        SpaceType::Luxury_Tax,          0,    0,    false,       0,         -1, "" };
+    BoardSpace Royal_ave        { "Royal Avenue",      SpaceType::Property,          400,   50,    false,     200,         -1, "DarkBlue" };
 
     board.Spaces.resize(40, Rest);
     board.Spaces[0] = Go;
@@ -148,21 +148,37 @@ void ToggleMortgage(GameState& game, Ui::MainWindow& ui)
     if(target.OwnerIndex != -1)
     {
         Player& Owner = game.Players[target.OwnerIndex];
-    
+        QLabel *mortgageLabel = ui.centralwidget->findChild<QLabel *>("mortgageLabel" + ui.MortgageField->text());
+
         if(target.OwnerIndex == game.CurrentPlayerIndex){
 
             if(target.isMortgaged)
             {
                 target.isMortgaged = false;
                 Owner.Money -= target.Mortage;
+                mortgageLabel->hide();
                 return;
             }
             if(!target.isMortgaged)
             {
                 target.isMortgaged = true;
                 Owner.Money += target.Mortage;
+                mortgageLabel->show();
                 return;
             }
         }
     }
+}
+
+bool DoubleRentCheck(GameState& game, BoardSpace& current)
+{
+    
+    for(BoardSpace space : game.board.Spaces)
+    {
+        if(space.ColorGroup == current.ColorGroup && space.OwnerIndex != current.OwnerIndex)
+        {
+            return false;
+        }
+    }
+    return true;
 }

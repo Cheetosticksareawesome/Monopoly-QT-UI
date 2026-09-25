@@ -6,6 +6,7 @@
 #include "jail.h"
 #include "DrawableCards.h"
 #include "logger-manager.h"
+#include "board.h"
 
 #include "UI-Helpers.h"
 #include "ui_MainUI.h"
@@ -69,8 +70,17 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
         }
         else
         {
-            CurrentPlayer.Money -= game.board.Spaces[CurrentPlayer.Position].Rent;
-            game.Players[game.board.Spaces[CurrentPlayer.Position].OwnerIndex].Money += game.board.Spaces[CurrentPlayer.Position].Rent;
+            if(CurrentSpace.Type == SpaceType::Property && DoubleRentCheck(game, CurrentSpace))
+            {
+                CurrentPlayer.Money -= (CurrentSpace.Rent *2);
+                game.Players[game.board.Spaces[CurrentPlayer.Position].OwnerIndex].Money += (CurrentSpace.Rent *2);
+            }
+            else
+            {
+                CurrentPlayer.Money -= game.board.Spaces[CurrentPlayer.Position].Rent;
+                game.Players[game.board.Spaces[CurrentPlayer.Position].OwnerIndex].Money += game.board.Spaces[CurrentPlayer.Position].Rent;
+            }
+            
         }
         break;
     case SpaceType::Jail:
