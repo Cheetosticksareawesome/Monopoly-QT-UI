@@ -31,6 +31,7 @@ struct BoardSpace
     int Mortage{Price / 2};
     int OwnerIndex{-1};
     std::string ColorGroup;
+    int HouseCount{0};
 };
 
 struct Board

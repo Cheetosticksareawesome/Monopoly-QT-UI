@@ -1,4 +1,4 @@
-﻿
+
 #include "UI-Connections.h"
 #include "GameState.h"
 #include "board.h"
@@ -45,7 +45,7 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
 
         game.HasRolled = true;
-        ui.buyButton->setEnabled(false);
+        ui.buyPropertyButton->setEnabled(false);
 
         ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
 
@@ -72,7 +72,7 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         {
             if(CurrentTile.OwnerIndex == -1 && (CurrentTile.Type == SpaceType::Property || CurrentTile.Type == SpaceType::Utility || CurrentTile.Type == SpaceType::TrainStation))
             {
-                ui.buyButton->setEnabled(true);
+                ui.buyPropertyButton->setEnabled(true);
             }
         }
 
@@ -91,7 +91,7 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         BoardSpace &CurrentTile = game.board.Spaces[player.Position];
         
 
-        ui.buyButton->setEnabled(false);
+        ui.buyPropertyButton->setEnabled(false);
         ui.currentPlayerLabel->setText(QString::fromStdString("Current player: " + game.Players[game.CurrentPlayerIndex].Name));
         ui.positionLabel->setText(QString::fromStdString(CurrentTile.Name));
 
@@ -117,14 +117,13 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
     });
 
     //buyProperty
-    ui.buyButton->setEnabled(false);
-    QObject::connect(ui.buyButton, &QPushButton::clicked, [&ui, &game]()
+    ui.buyPropertyButton->setEnabled(false);
+    QObject::connect(ui.buyPropertyButton, &QPushButton::clicked, [&ui, &game]()
     {
         BuyProperty(game, ui);
         UpdatePlayerLabels(game, ui);
-        ui.buyButton->setEnabled(false);
+        ui.buyPropertyButton->setEnabled(false);
     });
-
 
     //toggle Mortgage
     ui.ToggleMortgageButton->setEnabled(game.HasRolled && ui.endTurnButton->isEnabled());
@@ -132,6 +131,18 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
     {
         ToggleMortgage(game, ui);
         UpdatePlayerLabels(game, ui);
+    });
+
+    ui.BuyHouseButton->setEnabled(false);
+    QObject::connect(ui.BuyHouseButton, &QPushButton::clicked, [&ui, &game]()
+    {
+        if(game.CurrentPlayerIndex == game.board.Spaces[ui.MortgageField->text().toInt()].OwnerIndex && /*has enuf moneys*/)
+        {
+            game.board.Spaces[ui.MortgageField->text().toInt()].HouseCount++;
+            QLabel *HouseIconLabel = ui.centralwidget->findChild<QLabel *>("HouseIcon" + ui.MortgageField->text().toInt());
+            HouseIconLabel.show();
+            UpdatePlayerLabels(game, ui);
+        }
     });
 }
 

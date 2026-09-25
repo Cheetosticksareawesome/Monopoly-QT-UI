@@ -264,18 +264,21 @@ public:
     QLabel *player2;
     QLabel *player3;
     QLabel *player4;
-    QGroupBox *propertyPanel;
-    QVBoxLayout *propertyLayout;
     QGroupBox *turnPanel;
     QVBoxLayout *turnLayout;
     QLabel *currentPlayerLabel;
     QLabel *positionLabel;
+    QHBoxLayout *turnButtonsLayout;
     QPushButton *rollDiceButton;
     QPushButton *endTurnButton;
-    QPushButton *buyButton;
-    QLineEdit *MortgageField;
-    QPushButton *ToggleMortgageButton;
+    QGroupBox *propertyPanel;
+    QVBoxLayout *propertyLayout;
     QLabel *propertyDetails;
+    QPushButton *buyPropertyButton;
+    QLineEdit *MortgageField;
+    QHBoxLayout *propertyActionsLayout;
+    QPushButton *ToggleMortgageButton;
+    QPushButton *BuyHouseButton;
     QSpacerItem *sidebarSpacer;
 
     void setupUi(QMainWindow *MainWindow)
@@ -286,9 +289,9 @@ public:
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         mainLayout = new QHBoxLayout(centralwidget);
-        mainLayout->setSpacing(20);
+        mainLayout->setSpacing(12);
         mainLayout->setObjectName("mainLayout");
-        mainLayout->setContentsMargins(20, 20, 20, 20);
+        mainLayout->setContentsMargins(12, 12, 12, 12);
         boardLayout = new QGridLayout();
         boardLayout->setSpacing(0);
         boardLayout->setObjectName("boardLayout");
@@ -1672,7 +1675,7 @@ public:
         boardCenter->setObjectName("boardCenter");
         centerLayout = new QVBoxLayout(boardCenter);
         centerLayout->setObjectName("centerLayout");
-        centerLayout->setContentsMargins(40, 40, 40, 40);
+        centerLayout->setContentsMargins(20, 20, 20, 20);
         boardTitle = new QLabel(boardCenter);
         boardTitle->setObjectName("boardTitle");
         boardTitle->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -1685,7 +1688,7 @@ public:
         cardsLayout->setObjectName("cardsLayout");
         chance = new QGroupBox(boardCenter);
         chance->setObjectName("chance");
-        chance->setMinimumSize(QSize(0, 170));
+        chance->setMinimumSize(QSize(0, 140));
         chanceLayout = new QVBoxLayout(chance);
         chanceLayout->setObjectName("chanceLayout");
         chanceText = new QLabel(chance);
@@ -1700,7 +1703,7 @@ public:
 
         community = new QGroupBox(boardCenter);
         community->setObjectName("community");
-        community->setMinimumSize(QSize(0, 170));
+        community->setMinimumSize(QSize(0, 140));
         communityLayout = new QVBoxLayout(community);
         communityLayout->setObjectName("communityLayout");
         communityText = new QLabel(community);
@@ -1759,12 +1762,12 @@ public:
         mainLayout->addLayout(boardLayout);
 
         sidebarLayout = new QVBoxLayout();
-        sidebarLayout->setSpacing(18);
+        sidebarLayout->setSpacing(10);
         sidebarLayout->setObjectName("sidebarLayout");
         playersPanel = new QGroupBox(centralwidget);
         playersPanel->setObjectName("playersPanel");
         playersLayout = new QVBoxLayout(playersPanel);
-        playersLayout->setSpacing(16);
+        playersLayout->setSpacing(8);
         playersLayout->setObjectName("playersLayout");
         player1 = new QLabel(playersPanel);
         player1->setObjectName("player1");
@@ -1797,15 +1800,10 @@ public:
 
         sidebarLayout->addWidget(playersPanel);
 
-        propertyPanel = new QGroupBox(centralwidget);
-        propertyPanel->setObjectName("propertyPanel");
-        propertyLayout = new QVBoxLayout(propertyPanel);
-        propertyLayout->setSpacing(16);
-        propertyLayout->setObjectName("propertyLayout");
-        turnPanel = new QGroupBox(propertyPanel);
+        turnPanel = new QGroupBox(centralwidget);
         turnPanel->setObjectName("turnPanel");
         turnLayout = new QVBoxLayout(turnPanel);
-        turnLayout->setSpacing(16);
+        turnLayout->setSpacing(8);
         turnLayout->setObjectName("turnLayout");
         currentPlayerLabel = new QLabel(turnPanel);
         currentPlayerLabel->setObjectName("currentPlayerLabel");
@@ -1821,36 +1819,32 @@ public:
 
         turnLayout->addWidget(positionLabel);
 
+        turnButtonsLayout = new QHBoxLayout();
+        turnButtonsLayout->setSpacing(6);
+        turnButtonsLayout->setObjectName("turnButtonsLayout");
         rollDiceButton = new QPushButton(turnPanel);
         rollDiceButton->setObjectName("rollDiceButton");
         rollDiceButton->setEnabled(false);
 
-        turnLayout->addWidget(rollDiceButton);
+        turnButtonsLayout->addWidget(rollDiceButton);
 
         endTurnButton = new QPushButton(turnPanel);
         endTurnButton->setObjectName("endTurnButton");
         endTurnButton->setEnabled(false);
 
-        turnLayout->addWidget(endTurnButton);
-
-        buyButton = new QPushButton(turnPanel);
-        buyButton->setObjectName("buyButton");
-
-        turnLayout->addWidget(buyButton);
-
-        MortgageField = new QLineEdit(turnPanel);
-        MortgageField->setObjectName("MortgageField");
-
-        turnLayout->addWidget(MortgageField);
-
-        ToggleMortgageButton = new QPushButton(turnPanel);
-        ToggleMortgageButton->setObjectName("ToggleMortgageButton");
-
-        turnLayout->addWidget(ToggleMortgageButton);
+        turnButtonsLayout->addWidget(endTurnButton);
 
 
-        propertyLayout->addWidget(turnPanel);
+        turnLayout->addLayout(turnButtonsLayout);
 
+
+        sidebarLayout->addWidget(turnPanel);
+
+        propertyPanel = new QGroupBox(centralwidget);
+        propertyPanel->setObjectName("propertyPanel");
+        propertyLayout = new QVBoxLayout(propertyPanel);
+        propertyLayout->setSpacing(8);
+        propertyLayout->setObjectName("propertyLayout");
         propertyDetails = new QLabel(propertyPanel);
         propertyDetails->setObjectName("propertyDetails");
         propertyDetails->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -1858,10 +1852,37 @@ public:
 
         propertyLayout->addWidget(propertyDetails);
 
+        buyPropertyButton = new QPushButton(propertyPanel);
+        buyPropertyButton->setObjectName("buyPropertyButton");
+
+        propertyLayout->addWidget(buyPropertyButton);
+
+        MortgageField = new QLineEdit(propertyPanel);
+        MortgageField->setObjectName("MortgageField");
+
+        propertyLayout->addWidget(MortgageField);
+
+        propertyActionsLayout = new QHBoxLayout();
+        propertyActionsLayout->setSpacing(6);
+        propertyActionsLayout->setObjectName("propertyActionsLayout");
+        ToggleMortgageButton = new QPushButton(propertyPanel);
+        ToggleMortgageButton->setObjectName("ToggleMortgageButton");
+
+        propertyActionsLayout->addWidget(ToggleMortgageButton);
+
+        BuyHouseButton = new QPushButton(propertyPanel);
+        BuyHouseButton->setObjectName("BuyHouseButton");
+        BuyHouseButton->setEnabled(false);
+
+        propertyActionsLayout->addWidget(BuyHouseButton);
+
+
+        propertyLayout->addLayout(propertyActionsLayout);
+
 
         sidebarLayout->addWidget(propertyPanel);
 
-        sidebarSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+        sidebarSpacer = new QSpacerItem(20, 12, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         sidebarLayout->addItem(sidebarSpacer);
 
@@ -1884,18 +1905,20 @@ public:
 "QMainWindow, QWidget#centralwidget { background: #202625; }\n"
 "QWidget { color: #e0e3dc; font-family: \"Segoe UI\"; font-size: 12px; }\n"
 "QLabel { background: transparent; }\n"
+"QLineEdit { background: #202625; color: #e0e3dc; border: 1px solid #788f80; border-radius: 4px; padding: 6px 8px; }\n"
+"QLineEdit:focus { border: 1px solid #a4bda8; }\n"
 "QFrame[tile=\"true\"] { background: #3c4540; border: 1px solid #758279; }\n"
 "QFrame#boardCenter { background: #255c32; border: 1px solid #758279; }\n"
-"QGroupBox { background: #303936; border: 1px solid #59675f; border-radius: 8px; margin-top: 16px; padding: 16px 10px 10px; font-weight: bold; }\n"
+"QGroupBox { background: #303936; border: 1px solid #59675f; border-radius: 8px; margin-top: 12px; padding: 8px 6px 6px; font-weight: bold; }\n"
 "QGroupBox::title { subcontrol-origin: margin; left: 12px; color: #e0e3dc; }\n"
-"QPushButton { color: #e0e3dc; background: #40554a; padding: 12px; border: 1px solid #788f80; border-radius: 5px; }\n"
+"QPushButton { color: #e0e3dc; background: #40554a; padding: 7px 9px; border: 1px solid #788f80; border-radius: 5px; }\n"
 "QPushButton:hover { background: #4b6356; }\n"
 "QPushButton:pressed { background: #34473e; }\n"
 "QPushButton:focus { border: 2px solid #a4bda8; }\n"
-"QPushButton:disabled { color: #a4ada5; background: #343d38; border: 1px solid #59675f; }\n"
-"QLabel#diceLabel { font-size: 26px; font-weight: bold; }\n"
-"QLabel#boardTitle { color: #d2dfd2; f"
-                        "ont-size: 34px; font-weight: bold; }\n"
+"QPushButton:disabled"
+                        " { color: #a4ada5; background: #343d38; border: 1px solid #59675f; }\n"
+"QLabel#diceLabel { font-size: 24px; font-weight: bold; }\n"
+"QLabel#boardTitle { color: #d2dfd2; font-size: 30px; font-weight: bold; }\n"
 "", nullptr));
         Pawn1->setText(QCoreApplication::translate("MainWindow", "P1", nullptr));
         Pawn2->setText(QCoreApplication::translate("MainWindow", "P2", nullptr));
@@ -2045,16 +2068,17 @@ public:
         player2->setText(QCoreApplication::translate("MainWindow", "Player 2   |   \342\202\254 \342\200\224", nullptr));
         player3->setText(QCoreApplication::translate("MainWindow", "Player 3   |   \342\202\254 \342\200\224", nullptr));
         player4->setText(QCoreApplication::translate("MainWindow", "Player 4   |   \342\202\254 \342\200\224", nullptr));
-        propertyPanel->setTitle(QCoreApplication::translate("MainWindow", "Selected property", nullptr));
         turnPanel->setTitle(QCoreApplication::translate("MainWindow", "Current turn", nullptr));
         currentPlayerLabel->setText(QCoreApplication::translate("MainWindow", "Waiting for players", nullptr));
         positionLabel->setText(QCoreApplication::translate("MainWindow", "Position: \342\200\224", nullptr));
         rollDiceButton->setText(QCoreApplication::translate("MainWindow", "Roll Dice", nullptr));
         endTurnButton->setText(QCoreApplication::translate("MainWindow", "End Turn", nullptr));
-        buyButton->setText(QCoreApplication::translate("MainWindow", "Buy Property", nullptr));
-        MortgageField->setText(QCoreApplication::translate("MainWindow", "Mortgage-index", nullptr));
-        ToggleMortgageButton->setText(QCoreApplication::translate("MainWindow", "Mortgage", nullptr));
+        propertyPanel->setTitle(QCoreApplication::translate("MainWindow", "Property management", nullptr));
         propertyDetails->setText(QCoreApplication::translate("MainWindow", "Property details will appear here.", nullptr));
+        buyPropertyButton->setText(QCoreApplication::translate("MainWindow", "Buy Property", nullptr));
+        MortgageField->setPlaceholderText(QCoreApplication::translate("MainWindow", "Property index", nullptr));
+        ToggleMortgageButton->setText(QCoreApplication::translate("MainWindow", "Mortgage", nullptr));
+        BuyHouseButton->setText(QCoreApplication::translate("MainWindow", "Buy House", nullptr));
     } // retranslateUi
 
 };

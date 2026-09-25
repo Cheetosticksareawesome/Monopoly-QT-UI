@@ -58,9 +58,9 @@ int main(int argc, char** argv)
             auto& player=game.Players[index];
             auto& tile=game.board.Spaces[player.Position];
             std::string purchase="-";
-            if(ui.buyButton->isEnabled() && tile.OwnerIndex==-1 && player.Money>=tile.Price)
+            if(ui.buyPropertyButton->isEnabled() && tile.OwnerIndex==-1 && player.Money>=tile.Price)
             {
-                ui.buyButton->click();
+                ui.buyPropertyButton->click();
                 app.processEvents();
                 purchase=tile.Name;
                 auto* frame=window.findChild<QFrame*>("tile"+QString::number(player.Position));

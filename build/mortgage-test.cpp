@@ -29,7 +29,7 @@ int main(int argc,char**argv) {
         check("Button disabled at start of next player's turn",!f.ui.ToggleMortgageButton->isEnabled());
     }
     {
-        Fixture f; f.ui.rollDiceButton->click(); f.ui.buyButton->click();
+        Fixture f; f.ui.rollDiceButton->click(); f.ui.buyPropertyButton->click();
         check("Button available immediately after buying property",f.game.board.Spaces[3].OwnerIndex==0 && f.ui.ToggleMortgageButton->isEnabled());
     }
     {
