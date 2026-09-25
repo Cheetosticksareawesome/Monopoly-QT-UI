@@ -136,13 +136,11 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
     ui.BuyHouseButton->setEnabled(false);
     QObject::connect(ui.BuyHouseButton, &QPushButton::clicked, [&ui, &game]()
     {
-        if(game.CurrentPlayerIndex == game.board.Spaces[ui.MortgageField->text().toInt()].OwnerIndex && /*has enuf moneys*/)
+        if(game.CurrentPlayerIndex == game.board.Spaces[ui.MortgageField->text().toInt()].OwnerIndex && DoubleRentCheck(game, game.board.Spaces[ui.MortgageField->text().toInt()]))
         {
-            game.board.Spaces[ui.MortgageField->text().toInt()].HouseCount++;
-            QLabel *HouseIconLabel = ui.centralwidget->findChild<QLabel *>("HouseIcon" + ui.MortgageField->text().toInt());
-            HouseIconLabel.show();
+            buyHouse(game, ui);
             UpdatePlayerLabels(game, ui);
-        }
+        } 
     });
 }
 

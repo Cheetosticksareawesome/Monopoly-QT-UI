@@ -97,3 +97,17 @@
 41	196	8120476565862518	UIApp_autogen/mocs_compilation.cpp	298709c20b5ec741
 41	196	8120476565862518	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/timestamp	298709c20b5ec741
 41	196	8120476565862518	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	298709c20b5ec741
+6	41	8120497836474501	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/CMakeFiles/cmake.verify_globs	31c5ee201ec45767
+50	157	8120497836913811	UIApp_autogen/timestamp	298709c20b5ec741
+50	157	8120497836913811	UIApp_autogen/mocs_compilation.cpp	298709c20b5ec741
+50	157	8120497836913811	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/timestamp	298709c20b5ec741
+50	157	8120497836913811	C:/Users/woutk/source/repos/C++/Monopoly-QT-UI/build/qt-debug/UIApp_autogen/mocs_compilation.cpp	298709c20b5ec741
+182	3700	8120497838239679	CMakeFiles/UIApp.dir/GAME/Player/Player.cpp.obj	e831044cbb65550a
+170	3846	8120497838119729	CMakeFiles/UIApp.dir/GAME/GameState/jail.cpp.obj	b7dd5e9ef38e6401
+193	3926	8120497838339674	CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Helpers/UI-Helpers.cpp.obj	e4ce72600a61983a
+187	3954	8120497838279676	CMakeFiles/UIApp.dir/GAME/QT_UI/UI-Connections/UI-Connections.cpp.obj	c4cfe291ce3aeda9
+166	4083	8120497838069975	CMakeFiles/UIApp.dir/GAME/GameState/GameState.cpp.obj	85e204309e5875dc
+176	4197	8120497838180258	CMakeFiles/UIApp.dir/GAME/Main/main.cpp.obj	656bc6e20925c55
+158	4373	8120497837990407	CMakeFiles/UIApp.dir/GAME/Board/board.cpp.obj	12417af3e4debe15
+162	4419	8120497838030111	CMakeFiles/UIApp.dir/GAME/Cards/DrawableCards.cpp.obj	59cbf941564df819
+4419	4819	8120497880612466	UIApp.exe	fed7140893df9743
