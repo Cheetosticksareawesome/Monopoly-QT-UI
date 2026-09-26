@@ -42,6 +42,8 @@ public:
     QFrame *tile1;
     QVBoxLayout *tileLayout1;
     QFrame *propertyColor1;
+    QHBoxLayout *houseBadgeLayout1;
+    QLabel *HouseIcon1;
     QLabel *tileName1;
     QLabel *mortgageLabel1;
     QWidget *tokenArea1;
@@ -52,6 +54,8 @@ public:
     QFrame *tile3;
     QVBoxLayout *tileLayout3;
     QFrame *propertyColor3;
+    QHBoxLayout *houseBadgeLayout3;
+    QLabel *HouseIcon3;
     QLabel *tileName3;
     QLabel *mortgageLabel3;
     QWidget *tokenArea3;
@@ -67,6 +71,8 @@ public:
     QFrame *tile6;
     QVBoxLayout *tileLayout6;
     QFrame *propertyColor6;
+    QHBoxLayout *houseBadgeLayout6;
+    QLabel *HouseIcon6;
     QLabel *tileName6;
     QLabel *mortgageLabel6;
     QWidget *tokenArea6;
@@ -77,12 +83,16 @@ public:
     QFrame *tile8;
     QVBoxLayout *tileLayout8;
     QFrame *propertyColor8;
+    QHBoxLayout *houseBadgeLayout8;
+    QLabel *HouseIcon8;
     QLabel *tileName8;
     QLabel *mortgageLabel8;
     QWidget *tokenArea8;
     QFrame *tile9;
     QVBoxLayout *tileLayout9;
     QFrame *propertyColor9;
+    QHBoxLayout *houseBadgeLayout9;
+    QLabel *HouseIcon9;
     QLabel *tileName9;
     QLabel *mortgageLabel9;
     QWidget *tokenArea9;
@@ -93,6 +103,8 @@ public:
     QFrame *tile11;
     QVBoxLayout *tileLayout11;
     QFrame *propertyColor11;
+    QHBoxLayout *houseBadgeLayout11;
+    QLabel *HouseIcon11;
     QLabel *tileName11;
     QLabel *mortgageLabel11;
     QWidget *tokenArea11;
@@ -104,12 +116,16 @@ public:
     QFrame *tile13;
     QVBoxLayout *tileLayout13;
     QFrame *propertyColor13;
+    QHBoxLayout *houseBadgeLayout13;
+    QLabel *HouseIcon13;
     QLabel *tileName13;
     QLabel *mortgageLabel13;
     QWidget *tokenArea13;
     QFrame *tile14;
     QVBoxLayout *tileLayout14;
     QFrame *propertyColor14;
+    QHBoxLayout *houseBadgeLayout14;
+    QLabel *HouseIcon14;
     QLabel *tileName14;
     QLabel *mortgageLabel14;
     QWidget *tokenArea14;
@@ -121,22 +137,28 @@ public:
     QFrame *tile16;
     QVBoxLayout *tileLayout16;
     QFrame *propertyColor16;
+    QHBoxLayout *houseBadgeLayout16;
+    QLabel *HouseIcon16;
     QLabel *tileName16;
     QLabel *mortgageLabel16;
     QWidget *tokenArea16;
     QFrame *tile17;
     QVBoxLayout *tileLayout17;
+    QFrame *propertyColor17;
+    QHBoxLayout *houseBadgeLayout17;
+    QLabel *HouseIcon17;
     QLabel *tileName17;
     QLabel *mortgageLabel17;
     QWidget *tokenArea17;
     QFrame *tile18;
     QVBoxLayout *tileLayout18;
-    QFrame *propertyColor18;
     QLabel *tileName18;
     QWidget *tokenArea18;
     QFrame *tile19;
     QVBoxLayout *tileLayout19;
     QFrame *propertyColor19;
+    QHBoxLayout *houseBadgeLayout19;
+    QLabel *HouseIcon19;
     QLabel *tileName19;
     QLabel *mortgageLabel19;
     QWidget *tokenArea19;
@@ -147,6 +169,8 @@ public:
     QFrame *tile21;
     QVBoxLayout *tileLayout21;
     QFrame *propertyColor21;
+    QHBoxLayout *houseBadgeLayout21;
+    QLabel *HouseIcon21;
     QLabel *tileName21;
     QLabel *mortgageLabel21;
     QWidget *tokenArea21;
@@ -157,12 +181,16 @@ public:
     QFrame *tile23;
     QVBoxLayout *tileLayout23;
     QFrame *propertyColor23;
+    QHBoxLayout *houseBadgeLayout23;
+    QLabel *HouseIcon23;
     QLabel *tileName23;
     QLabel *mortgageLabel23;
     QWidget *tokenArea23;
     QFrame *tile24;
     QVBoxLayout *tileLayout24;
     QFrame *propertyColor24;
+    QHBoxLayout *houseBadgeLayout24;
+    QLabel *HouseIcon24;
     QLabel *tileName24;
     QLabel *mortgageLabel24;
     QWidget *tokenArea24;
@@ -174,12 +202,16 @@ public:
     QFrame *tile26;
     QVBoxLayout *tileLayout26;
     QFrame *propertyColor26;
+    QHBoxLayout *houseBadgeLayout26;
+    QLabel *HouseIcon26;
     QLabel *tileName26;
     QLabel *mortgageLabel26;
     QWidget *tokenArea26;
     QFrame *tile27;
     QVBoxLayout *tileLayout27;
     QFrame *propertyColor27;
+    QHBoxLayout *houseBadgeLayout27;
+    QLabel *HouseIcon27;
     QLabel *tileName27;
     QLabel *mortgageLabel27;
     QWidget *tokenArea27;
@@ -191,6 +223,8 @@ public:
     QFrame *tile29;
     QVBoxLayout *tileLayout29;
     QFrame *propertyColor29;
+    QHBoxLayout *houseBadgeLayout29;
+    QLabel *HouseIcon29;
     QLabel *tileName29;
     QLabel *mortgageLabel29;
     QWidget *tokenArea29;
@@ -201,12 +235,16 @@ public:
     QFrame *tile31;
     QVBoxLayout *tileLayout31;
     QFrame *propertyColor31;
+    QHBoxLayout *houseBadgeLayout31;
+    QLabel *HouseIcon31;
     QLabel *tileName31;
     QLabel *mortgageLabel31;
     QWidget *tokenArea31;
     QFrame *tile32;
     QVBoxLayout *tileLayout32;
     QFrame *propertyColor32;
+    QHBoxLayout *houseBadgeLayout32;
+    QLabel *HouseIcon32;
     QLabel *tileName32;
     QLabel *mortgageLabel32;
     QWidget *tokenArea32;
@@ -217,6 +255,8 @@ public:
     QFrame *tile34;
     QVBoxLayout *tileLayout34;
     QFrame *propertyColor34;
+    QHBoxLayout *houseBadgeLayout34;
+    QLabel *HouseIcon34;
     QLabel *tileName34;
     QLabel *mortgageLabel34;
     QWidget *tokenArea34;
@@ -232,6 +272,8 @@ public:
     QFrame *tile37;
     QVBoxLayout *tileLayout37;
     QFrame *propertyColor37;
+    QHBoxLayout *houseBadgeLayout37;
+    QLabel *HouseIcon37;
     QLabel *tileName37;
     QLabel *mortgageLabel37;
     QWidget *tokenArea37;
@@ -242,6 +284,8 @@ public:
     QFrame *tile39;
     QVBoxLayout *tileLayout39;
     QFrame *propertyColor39;
+    QHBoxLayout *houseBadgeLayout39;
+    QLabel *HouseIcon39;
     QLabel *tileName39;
     QLabel *mortgageLabel39;
     QWidget *tokenArea39;
@@ -279,6 +323,7 @@ public:
     QHBoxLayout *propertyActionsLayout;
     QPushButton *ToggleMortgageButton;
     QPushButton *BuyHouseButton;
+    QPushButton *SellHouseButton;
     QSpacerItem *sidebarSpacer;
 
     void setupUi(QMainWindow *MainWindow)
@@ -366,8 +411,19 @@ public:
         tileLayout1->setContentsMargins(3, 3, 3, 3);
         propertyColor1 = new QFrame(tile1);
         propertyColor1->setObjectName("propertyColor1");
-        propertyColor1->setMinimumSize(QSize(0, 10));
-        propertyColor1->setMaximumSize(QSize(16777215, 10));
+        propertyColor1->setMinimumSize(QSize(0, 16));
+        propertyColor1->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout1 = new QHBoxLayout(propertyColor1);
+        houseBadgeLayout1->setObjectName("houseBadgeLayout1");
+        houseBadgeLayout1->setContentsMargins(0, 0, 1, 0);
+        HouseIcon1 = new QLabel(propertyColor1);
+        HouseIcon1->setObjectName("HouseIcon1");
+        HouseIcon1->setVisible(false);
+        HouseIcon1->setAlignment(Qt::AlignCenter);
+        HouseIcon1->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout1->addWidget(HouseIcon1, 0, Qt::AlignRight);
+
 
         tileLayout1->addWidget(propertyColor1);
 
@@ -429,8 +485,19 @@ public:
         tileLayout3->setContentsMargins(3, 3, 3, 3);
         propertyColor3 = new QFrame(tile3);
         propertyColor3->setObjectName("propertyColor3");
-        propertyColor3->setMinimumSize(QSize(0, 10));
-        propertyColor3->setMaximumSize(QSize(16777215, 10));
+        propertyColor3->setMinimumSize(QSize(0, 16));
+        propertyColor3->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout3 = new QHBoxLayout(propertyColor3);
+        houseBadgeLayout3->setObjectName("houseBadgeLayout3");
+        houseBadgeLayout3->setContentsMargins(0, 0, 1, 0);
+        HouseIcon3 = new QLabel(propertyColor3);
+        HouseIcon3->setObjectName("HouseIcon3");
+        HouseIcon3->setVisible(false);
+        HouseIcon3->setAlignment(Qt::AlignCenter);
+        HouseIcon3->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout3->addWidget(HouseIcon3, 0, Qt::AlignRight);
+
 
         tileLayout3->addWidget(propertyColor3);
 
@@ -524,8 +591,19 @@ public:
         tileLayout6->setContentsMargins(3, 3, 3, 3);
         propertyColor6 = new QFrame(tile6);
         propertyColor6->setObjectName("propertyColor6");
-        propertyColor6->setMinimumSize(QSize(0, 10));
-        propertyColor6->setMaximumSize(QSize(16777215, 10));
+        propertyColor6->setMinimumSize(QSize(0, 16));
+        propertyColor6->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout6 = new QHBoxLayout(propertyColor6);
+        houseBadgeLayout6->setObjectName("houseBadgeLayout6");
+        houseBadgeLayout6->setContentsMargins(0, 0, 1, 0);
+        HouseIcon6 = new QLabel(propertyColor6);
+        HouseIcon6->setObjectName("HouseIcon6");
+        HouseIcon6->setVisible(false);
+        HouseIcon6->setAlignment(Qt::AlignCenter);
+        HouseIcon6->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout6->addWidget(HouseIcon6, 0, Qt::AlignRight);
+
 
         tileLayout6->addWidget(propertyColor6);
 
@@ -587,8 +665,19 @@ public:
         tileLayout8->setContentsMargins(3, 3, 3, 3);
         propertyColor8 = new QFrame(tile8);
         propertyColor8->setObjectName("propertyColor8");
-        propertyColor8->setMinimumSize(QSize(0, 10));
-        propertyColor8->setMaximumSize(QSize(16777215, 10));
+        propertyColor8->setMinimumSize(QSize(0, 16));
+        propertyColor8->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout8 = new QHBoxLayout(propertyColor8);
+        houseBadgeLayout8->setObjectName("houseBadgeLayout8");
+        houseBadgeLayout8->setContentsMargins(0, 0, 1, 0);
+        HouseIcon8 = new QLabel(propertyColor8);
+        HouseIcon8->setObjectName("HouseIcon8");
+        HouseIcon8->setVisible(false);
+        HouseIcon8->setAlignment(Qt::AlignCenter);
+        HouseIcon8->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout8->addWidget(HouseIcon8, 0, Qt::AlignRight);
+
 
         tileLayout8->addWidget(propertyColor8);
 
@@ -626,8 +715,19 @@ public:
         tileLayout9->setContentsMargins(3, 3, 3, 3);
         propertyColor9 = new QFrame(tile9);
         propertyColor9->setObjectName("propertyColor9");
-        propertyColor9->setMinimumSize(QSize(0, 10));
-        propertyColor9->setMaximumSize(QSize(16777215, 10));
+        propertyColor9->setMinimumSize(QSize(0, 16));
+        propertyColor9->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout9 = new QHBoxLayout(propertyColor9);
+        houseBadgeLayout9->setObjectName("houseBadgeLayout9");
+        houseBadgeLayout9->setContentsMargins(0, 0, 1, 0);
+        HouseIcon9 = new QLabel(propertyColor9);
+        HouseIcon9->setObjectName("HouseIcon9");
+        HouseIcon9->setVisible(false);
+        HouseIcon9->setAlignment(Qt::AlignCenter);
+        HouseIcon9->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout9->addWidget(HouseIcon9, 0, Qt::AlignRight);
+
 
         tileLayout9->addWidget(propertyColor9);
 
@@ -689,8 +789,19 @@ public:
         tileLayout11->setContentsMargins(3, 3, 3, 3);
         propertyColor11 = new QFrame(tile11);
         propertyColor11->setObjectName("propertyColor11");
-        propertyColor11->setMinimumSize(QSize(0, 10));
-        propertyColor11->setMaximumSize(QSize(16777215, 10));
+        propertyColor11->setMinimumSize(QSize(0, 16));
+        propertyColor11->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout11 = new QHBoxLayout(propertyColor11);
+        houseBadgeLayout11->setObjectName("houseBadgeLayout11");
+        houseBadgeLayout11->setContentsMargins(0, 0, 1, 0);
+        HouseIcon11 = new QLabel(propertyColor11);
+        HouseIcon11->setObjectName("HouseIcon11");
+        HouseIcon11->setVisible(false);
+        HouseIcon11->setAlignment(Qt::AlignCenter);
+        HouseIcon11->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout11->addWidget(HouseIcon11, 0, Qt::AlignRight);
+
 
         tileLayout11->addWidget(propertyColor11);
 
@@ -760,8 +871,19 @@ public:
         tileLayout13->setContentsMargins(3, 3, 3, 3);
         propertyColor13 = new QFrame(tile13);
         propertyColor13->setObjectName("propertyColor13");
-        propertyColor13->setMinimumSize(QSize(0, 10));
-        propertyColor13->setMaximumSize(QSize(16777215, 10));
+        propertyColor13->setMinimumSize(QSize(0, 16));
+        propertyColor13->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout13 = new QHBoxLayout(propertyColor13);
+        houseBadgeLayout13->setObjectName("houseBadgeLayout13");
+        houseBadgeLayout13->setContentsMargins(0, 0, 1, 0);
+        HouseIcon13 = new QLabel(propertyColor13);
+        HouseIcon13->setObjectName("HouseIcon13");
+        HouseIcon13->setVisible(false);
+        HouseIcon13->setAlignment(Qt::AlignCenter);
+        HouseIcon13->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout13->addWidget(HouseIcon13, 0, Qt::AlignRight);
+
 
         tileLayout13->addWidget(propertyColor13);
 
@@ -799,8 +921,19 @@ public:
         tileLayout14->setContentsMargins(3, 3, 3, 3);
         propertyColor14 = new QFrame(tile14);
         propertyColor14->setObjectName("propertyColor14");
-        propertyColor14->setMinimumSize(QSize(0, 10));
-        propertyColor14->setMaximumSize(QSize(16777215, 10));
+        propertyColor14->setMinimumSize(QSize(0, 16));
+        propertyColor14->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout14 = new QHBoxLayout(propertyColor14);
+        houseBadgeLayout14->setObjectName("houseBadgeLayout14");
+        houseBadgeLayout14->setContentsMargins(0, 0, 1, 0);
+        HouseIcon14 = new QLabel(propertyColor14);
+        HouseIcon14->setObjectName("HouseIcon14");
+        HouseIcon14->setVisible(false);
+        HouseIcon14->setAlignment(Qt::AlignCenter);
+        HouseIcon14->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout14->addWidget(HouseIcon14, 0, Qt::AlignRight);
+
 
         tileLayout14->addWidget(propertyColor14);
 
@@ -870,8 +1003,19 @@ public:
         tileLayout16->setContentsMargins(3, 3, 3, 3);
         propertyColor16 = new QFrame(tile16);
         propertyColor16->setObjectName("propertyColor16");
-        propertyColor16->setMinimumSize(QSize(0, 10));
-        propertyColor16->setMaximumSize(QSize(16777215, 10));
+        propertyColor16->setMinimumSize(QSize(0, 16));
+        propertyColor16->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout16 = new QHBoxLayout(propertyColor16);
+        houseBadgeLayout16->setObjectName("houseBadgeLayout16");
+        houseBadgeLayout16->setContentsMargins(0, 0, 1, 0);
+        HouseIcon16 = new QLabel(propertyColor16);
+        HouseIcon16->setObjectName("HouseIcon16");
+        HouseIcon16->setVisible(false);
+        HouseIcon16->setAlignment(Qt::AlignCenter);
+        HouseIcon16->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout16->addWidget(HouseIcon16, 0, Qt::AlignRight);
+
 
         tileLayout16->addWidget(propertyColor16);
 
@@ -907,6 +1051,24 @@ public:
         tileLayout17->setSpacing(2);
         tileLayout17->setObjectName("tileLayout17");
         tileLayout17->setContentsMargins(3, 3, 3, 3);
+        propertyColor17 = new QFrame(tile17);
+        propertyColor17->setObjectName("propertyColor17");
+        propertyColor17->setMinimumSize(QSize(0, 16));
+        propertyColor17->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout17 = new QHBoxLayout(propertyColor17);
+        houseBadgeLayout17->setObjectName("houseBadgeLayout17");
+        houseBadgeLayout17->setContentsMargins(0, 0, 1, 0);
+        HouseIcon17 = new QLabel(propertyColor17);
+        HouseIcon17->setObjectName("HouseIcon17");
+        HouseIcon17->setVisible(false);
+        HouseIcon17->setAlignment(Qt::AlignCenter);
+        HouseIcon17->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout17->addWidget(HouseIcon17, 0, Qt::AlignRight);
+
+
+        tileLayout17->addWidget(propertyColor17);
+
         tileName17 = new QLabel(tile17);
         tileName17->setObjectName("tileName17");
         tileName17->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -939,13 +1101,6 @@ public:
         tileLayout18->setSpacing(2);
         tileLayout18->setObjectName("tileLayout18");
         tileLayout18->setContentsMargins(3, 3, 3, 3);
-        propertyColor18 = new QFrame(tile18);
-        propertyColor18->setObjectName("propertyColor18");
-        propertyColor18->setMinimumSize(QSize(0, 10));
-        propertyColor18->setMaximumSize(QSize(16777215, 10));
-
-        tileLayout18->addWidget(propertyColor18);
-
         tileName18 = new QLabel(tile18);
         tileName18->setObjectName("tileName18");
         tileName18->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -972,8 +1127,19 @@ public:
         tileLayout19->setContentsMargins(3, 3, 3, 3);
         propertyColor19 = new QFrame(tile19);
         propertyColor19->setObjectName("propertyColor19");
-        propertyColor19->setMinimumSize(QSize(0, 10));
-        propertyColor19->setMaximumSize(QSize(16777215, 10));
+        propertyColor19->setMinimumSize(QSize(0, 16));
+        propertyColor19->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout19 = new QHBoxLayout(propertyColor19);
+        houseBadgeLayout19->setObjectName("houseBadgeLayout19");
+        houseBadgeLayout19->setContentsMargins(0, 0, 1, 0);
+        HouseIcon19 = new QLabel(propertyColor19);
+        HouseIcon19->setObjectName("HouseIcon19");
+        HouseIcon19->setVisible(false);
+        HouseIcon19->setAlignment(Qt::AlignCenter);
+        HouseIcon19->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout19->addWidget(HouseIcon19, 0, Qt::AlignRight);
+
 
         tileLayout19->addWidget(propertyColor19);
 
@@ -1035,8 +1201,19 @@ public:
         tileLayout21->setContentsMargins(3, 3, 3, 3);
         propertyColor21 = new QFrame(tile21);
         propertyColor21->setObjectName("propertyColor21");
-        propertyColor21->setMinimumSize(QSize(0, 10));
-        propertyColor21->setMaximumSize(QSize(16777215, 10));
+        propertyColor21->setMinimumSize(QSize(0, 16));
+        propertyColor21->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout21 = new QHBoxLayout(propertyColor21);
+        houseBadgeLayout21->setObjectName("houseBadgeLayout21");
+        houseBadgeLayout21->setContentsMargins(0, 0, 1, 0);
+        HouseIcon21 = new QLabel(propertyColor21);
+        HouseIcon21->setObjectName("HouseIcon21");
+        HouseIcon21->setVisible(false);
+        HouseIcon21->setAlignment(Qt::AlignCenter);
+        HouseIcon21->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout21->addWidget(HouseIcon21, 0, Qt::AlignRight);
+
 
         tileLayout21->addWidget(propertyColor21);
 
@@ -1098,8 +1275,19 @@ public:
         tileLayout23->setContentsMargins(3, 3, 3, 3);
         propertyColor23 = new QFrame(tile23);
         propertyColor23->setObjectName("propertyColor23");
-        propertyColor23->setMinimumSize(QSize(0, 10));
-        propertyColor23->setMaximumSize(QSize(16777215, 10));
+        propertyColor23->setMinimumSize(QSize(0, 16));
+        propertyColor23->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout23 = new QHBoxLayout(propertyColor23);
+        houseBadgeLayout23->setObjectName("houseBadgeLayout23");
+        houseBadgeLayout23->setContentsMargins(0, 0, 1, 0);
+        HouseIcon23 = new QLabel(propertyColor23);
+        HouseIcon23->setObjectName("HouseIcon23");
+        HouseIcon23->setVisible(false);
+        HouseIcon23->setAlignment(Qt::AlignCenter);
+        HouseIcon23->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout23->addWidget(HouseIcon23, 0, Qt::AlignRight);
+
 
         tileLayout23->addWidget(propertyColor23);
 
@@ -1137,8 +1325,19 @@ public:
         tileLayout24->setContentsMargins(3, 3, 3, 3);
         propertyColor24 = new QFrame(tile24);
         propertyColor24->setObjectName("propertyColor24");
-        propertyColor24->setMinimumSize(QSize(0, 10));
-        propertyColor24->setMaximumSize(QSize(16777215, 10));
+        propertyColor24->setMinimumSize(QSize(0, 16));
+        propertyColor24->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout24 = new QHBoxLayout(propertyColor24);
+        houseBadgeLayout24->setObjectName("houseBadgeLayout24");
+        houseBadgeLayout24->setContentsMargins(0, 0, 1, 0);
+        HouseIcon24 = new QLabel(propertyColor24);
+        HouseIcon24->setObjectName("HouseIcon24");
+        HouseIcon24->setVisible(false);
+        HouseIcon24->setAlignment(Qt::AlignCenter);
+        HouseIcon24->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout24->addWidget(HouseIcon24, 0, Qt::AlignRight);
+
 
         tileLayout24->addWidget(propertyColor24);
 
@@ -1208,8 +1407,19 @@ public:
         tileLayout26->setContentsMargins(3, 3, 3, 3);
         propertyColor26 = new QFrame(tile26);
         propertyColor26->setObjectName("propertyColor26");
-        propertyColor26->setMinimumSize(QSize(0, 10));
-        propertyColor26->setMaximumSize(QSize(16777215, 10));
+        propertyColor26->setMinimumSize(QSize(0, 16));
+        propertyColor26->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout26 = new QHBoxLayout(propertyColor26);
+        houseBadgeLayout26->setObjectName("houseBadgeLayout26");
+        houseBadgeLayout26->setContentsMargins(0, 0, 1, 0);
+        HouseIcon26 = new QLabel(propertyColor26);
+        HouseIcon26->setObjectName("HouseIcon26");
+        HouseIcon26->setVisible(false);
+        HouseIcon26->setAlignment(Qt::AlignCenter);
+        HouseIcon26->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout26->addWidget(HouseIcon26, 0, Qt::AlignRight);
+
 
         tileLayout26->addWidget(propertyColor26);
 
@@ -1247,8 +1457,19 @@ public:
         tileLayout27->setContentsMargins(3, 3, 3, 3);
         propertyColor27 = new QFrame(tile27);
         propertyColor27->setObjectName("propertyColor27");
-        propertyColor27->setMinimumSize(QSize(0, 10));
-        propertyColor27->setMaximumSize(QSize(16777215, 10));
+        propertyColor27->setMinimumSize(QSize(0, 16));
+        propertyColor27->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout27 = new QHBoxLayout(propertyColor27);
+        houseBadgeLayout27->setObjectName("houseBadgeLayout27");
+        houseBadgeLayout27->setContentsMargins(0, 0, 1, 0);
+        HouseIcon27 = new QLabel(propertyColor27);
+        HouseIcon27->setObjectName("HouseIcon27");
+        HouseIcon27->setVisible(false);
+        HouseIcon27->setAlignment(Qt::AlignCenter);
+        HouseIcon27->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout27->addWidget(HouseIcon27, 0, Qt::AlignRight);
+
 
         tileLayout27->addWidget(propertyColor27);
 
@@ -1318,8 +1539,19 @@ public:
         tileLayout29->setContentsMargins(3, 3, 3, 3);
         propertyColor29 = new QFrame(tile29);
         propertyColor29->setObjectName("propertyColor29");
-        propertyColor29->setMinimumSize(QSize(0, 10));
-        propertyColor29->setMaximumSize(QSize(16777215, 10));
+        propertyColor29->setMinimumSize(QSize(0, 16));
+        propertyColor29->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout29 = new QHBoxLayout(propertyColor29);
+        houseBadgeLayout29->setObjectName("houseBadgeLayout29");
+        houseBadgeLayout29->setContentsMargins(0, 0, 1, 0);
+        HouseIcon29 = new QLabel(propertyColor29);
+        HouseIcon29->setObjectName("HouseIcon29");
+        HouseIcon29->setVisible(false);
+        HouseIcon29->setAlignment(Qt::AlignCenter);
+        HouseIcon29->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout29->addWidget(HouseIcon29, 0, Qt::AlignRight);
+
 
         tileLayout29->addWidget(propertyColor29);
 
@@ -1381,8 +1613,19 @@ public:
         tileLayout31->setContentsMargins(3, 3, 3, 3);
         propertyColor31 = new QFrame(tile31);
         propertyColor31->setObjectName("propertyColor31");
-        propertyColor31->setMinimumSize(QSize(0, 10));
-        propertyColor31->setMaximumSize(QSize(16777215, 10));
+        propertyColor31->setMinimumSize(QSize(0, 16));
+        propertyColor31->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout31 = new QHBoxLayout(propertyColor31);
+        houseBadgeLayout31->setObjectName("houseBadgeLayout31");
+        houseBadgeLayout31->setContentsMargins(0, 0, 1, 0);
+        HouseIcon31 = new QLabel(propertyColor31);
+        HouseIcon31->setObjectName("HouseIcon31");
+        HouseIcon31->setVisible(false);
+        HouseIcon31->setAlignment(Qt::AlignCenter);
+        HouseIcon31->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout31->addWidget(HouseIcon31, 0, Qt::AlignRight);
+
 
         tileLayout31->addWidget(propertyColor31);
 
@@ -1420,8 +1663,19 @@ public:
         tileLayout32->setContentsMargins(3, 3, 3, 3);
         propertyColor32 = new QFrame(tile32);
         propertyColor32->setObjectName("propertyColor32");
-        propertyColor32->setMinimumSize(QSize(0, 10));
-        propertyColor32->setMaximumSize(QSize(16777215, 10));
+        propertyColor32->setMinimumSize(QSize(0, 16));
+        propertyColor32->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout32 = new QHBoxLayout(propertyColor32);
+        houseBadgeLayout32->setObjectName("houseBadgeLayout32");
+        houseBadgeLayout32->setContentsMargins(0, 0, 1, 0);
+        HouseIcon32 = new QLabel(propertyColor32);
+        HouseIcon32->setObjectName("HouseIcon32");
+        HouseIcon32->setVisible(false);
+        HouseIcon32->setAlignment(Qt::AlignCenter);
+        HouseIcon32->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout32->addWidget(HouseIcon32, 0, Qt::AlignRight);
+
 
         tileLayout32->addWidget(propertyColor32);
 
@@ -1483,8 +1737,19 @@ public:
         tileLayout34->setContentsMargins(3, 3, 3, 3);
         propertyColor34 = new QFrame(tile34);
         propertyColor34->setObjectName("propertyColor34");
-        propertyColor34->setMinimumSize(QSize(0, 10));
-        propertyColor34->setMaximumSize(QSize(16777215, 10));
+        propertyColor34->setMinimumSize(QSize(0, 16));
+        propertyColor34->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout34 = new QHBoxLayout(propertyColor34);
+        houseBadgeLayout34->setObjectName("houseBadgeLayout34");
+        houseBadgeLayout34->setContentsMargins(0, 0, 1, 0);
+        HouseIcon34 = new QLabel(propertyColor34);
+        HouseIcon34->setObjectName("HouseIcon34");
+        HouseIcon34->setVisible(false);
+        HouseIcon34->setAlignment(Qt::AlignCenter);
+        HouseIcon34->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout34->addWidget(HouseIcon34, 0, Qt::AlignRight);
+
 
         tileLayout34->addWidget(propertyColor34);
 
@@ -1578,8 +1843,19 @@ public:
         tileLayout37->setContentsMargins(3, 3, 3, 3);
         propertyColor37 = new QFrame(tile37);
         propertyColor37->setObjectName("propertyColor37");
-        propertyColor37->setMinimumSize(QSize(0, 10));
-        propertyColor37->setMaximumSize(QSize(16777215, 10));
+        propertyColor37->setMinimumSize(QSize(0, 16));
+        propertyColor37->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout37 = new QHBoxLayout(propertyColor37);
+        houseBadgeLayout37->setObjectName("houseBadgeLayout37");
+        houseBadgeLayout37->setContentsMargins(0, 0, 1, 0);
+        HouseIcon37 = new QLabel(propertyColor37);
+        HouseIcon37->setObjectName("HouseIcon37");
+        HouseIcon37->setVisible(false);
+        HouseIcon37->setAlignment(Qt::AlignCenter);
+        HouseIcon37->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout37->addWidget(HouseIcon37, 0, Qt::AlignRight);
+
 
         tileLayout37->addWidget(propertyColor37);
 
@@ -1641,8 +1917,19 @@ public:
         tileLayout39->setContentsMargins(3, 3, 3, 3);
         propertyColor39 = new QFrame(tile39);
         propertyColor39->setObjectName("propertyColor39");
-        propertyColor39->setMinimumSize(QSize(0, 10));
-        propertyColor39->setMaximumSize(QSize(16777215, 10));
+        propertyColor39->setMinimumSize(QSize(0, 16));
+        propertyColor39->setMaximumSize(QSize(16777215, 16));
+        houseBadgeLayout39 = new QHBoxLayout(propertyColor39);
+        houseBadgeLayout39->setObjectName("houseBadgeLayout39");
+        houseBadgeLayout39->setContentsMargins(0, 0, 1, 0);
+        HouseIcon39 = new QLabel(propertyColor39);
+        HouseIcon39->setObjectName("HouseIcon39");
+        HouseIcon39->setVisible(false);
+        HouseIcon39->setAlignment(Qt::AlignCenter);
+        HouseIcon39->setStyleSheet(QString::fromUtf8("background: #202625; color: #ffffff; border: none; border-radius: 2px; padding: 0px 3px; font-size: 10px; font-weight: bold;"));
+
+        houseBadgeLayout39->addWidget(HouseIcon39, 0, Qt::AlignRight);
+
 
         tileLayout39->addWidget(propertyColor39);
 
@@ -1876,6 +2163,12 @@ public:
 
         propertyActionsLayout->addWidget(BuyHouseButton);
 
+        SellHouseButton = new QPushButton(propertyPanel);
+        SellHouseButton->setObjectName("SellHouseButton");
+        SellHouseButton->setEnabled(false);
+
+        propertyActionsLayout->addWidget(SellHouseButton);
+
 
         propertyLayout->addLayout(propertyActionsLayout);
 
@@ -1927,12 +2220,14 @@ public:
         Pawn4->setText(QCoreApplication::translate("MainWindow", "P4", nullptr));
         Pawn3->setText(QCoreApplication::translate("MainWindow", "P3", nullptr));
         propertyColor1->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
+        HouseIcon1->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName1->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName1->setText(QCoreApplication::translate("MainWindow", "Oak Street", nullptr));
         mortgageLabel1->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName2->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName2->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor3->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #996c53; border: none;", nullptr));
+        HouseIcon3->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName3->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName3->setText(QCoreApplication::translate("MainWindow", "Pine Street", nullptr));
         mortgageLabel3->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -1942,22 +2237,26 @@ public:
         tileName5->setText(QCoreApplication::translate("MainWindow", "South Station", nullptr));
         mortgageLabel5->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor6->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        HouseIcon6->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName6->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName6->setText(QCoreApplication::translate("MainWindow", "Birch Street", nullptr));
         mortgageLabel6->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName7->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName7->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor8->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        HouseIcon8->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName8->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName8->setText(QCoreApplication::translate("MainWindow", "Maple Street", nullptr));
         mortgageLabel8->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor9->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #78a7b7; border: none;", nullptr));
+        HouseIcon9->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName9->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName9->setText(QCoreApplication::translate("MainWindow", "Cedar Street", nullptr));
         mortgageLabel9->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName10->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName10->setText(QCoreApplication::translate("MainWindow", "JAIL / VISITING", nullptr));
         propertyColor11->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        HouseIcon11->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName11->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName11->setText(QCoreApplication::translate("MainWindow", "Rose Street", nullptr));
         mortgageLabel11->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -1965,10 +2264,12 @@ public:
         tileName12->setText(QCoreApplication::translate("MainWindow", "Electric Company", nullptr));
         mortgageLabel12->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor13->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        HouseIcon13->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName13->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName13->setText(QCoreApplication::translate("MainWindow", "Tulip Street", nullptr));
         mortgageLabel13->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor14->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b17d9e; border: none;", nullptr));
+        HouseIcon14->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName14->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName14->setText(QCoreApplication::translate("MainWindow", "Lily Street", nullptr));
         mortgageLabel14->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -1976,32 +2277,38 @@ public:
         tileName15->setText(QCoreApplication::translate("MainWindow", "West Station", nullptr));
         mortgageLabel15->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor16->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        HouseIcon16->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName16->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName16->setText(QCoreApplication::translate("MainWindow", "Orange Street", nullptr));
         mortgageLabel16->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
+        propertyColor17->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        HouseIcon17->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName17->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName17->setText(QCoreApplication::translate("MainWindow", "Peach Street", nullptr));
         mortgageLabel17->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
-        propertyColor18->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
         tileName18->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName18->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor19->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #c19360; border: none;", nullptr));
+        HouseIcon19->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName19->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName19->setText(QCoreApplication::translate("MainWindow", "Apricot Street", nullptr));
         mortgageLabel19->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName20->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName20->setText(QCoreApplication::translate("MainWindow", "FREE PARKING", nullptr));
         propertyColor21->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        HouseIcon21->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName21->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName21->setText(QCoreApplication::translate("MainWindow", "Ruby Street", nullptr));
         mortgageLabel21->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName22->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName22->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor23->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        HouseIcon23->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName23->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName23->setText(QCoreApplication::translate("MainWindow", "Scarlet Street", nullptr));
         mortgageLabel23->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor24->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #bc7771; border: none;", nullptr));
+        HouseIcon24->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName24->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName24->setText(QCoreApplication::translate("MainWindow", "Crimson Street", nullptr));
         mortgageLabel24->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -2009,10 +2316,12 @@ public:
         tileName25->setText(QCoreApplication::translate("MainWindow", "North Station", nullptr));
         mortgageLabel25->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor26->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        HouseIcon26->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName26->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName26->setText(QCoreApplication::translate("MainWindow", "Sunflower Street", nullptr));
         mortgageLabel26->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor27->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        HouseIcon27->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName27->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName27->setText(QCoreApplication::translate("MainWindow", "Daffodil Street", nullptr));
         mortgageLabel27->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -2020,22 +2329,26 @@ public:
         tileName28->setText(QCoreApplication::translate("MainWindow", "Water Works", nullptr));
         mortgageLabel28->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor29->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #b9a85e; border: none;", nullptr));
+        HouseIcon29->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName29->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName29->setText(QCoreApplication::translate("MainWindow", "Marigold Street", nullptr));
         mortgageLabel29->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName30->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName30->setText(QCoreApplication::translate("MainWindow", "GO TO JAIL", nullptr));
         propertyColor31->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        HouseIcon31->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName31->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName31->setText(QCoreApplication::translate("MainWindow", "Forest Street", nullptr));
         mortgageLabel31->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         propertyColor32->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        HouseIcon32->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName32->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName32->setText(QCoreApplication::translate("MainWindow", "Willow Street", nullptr));
         mortgageLabel32->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName33->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName33->setText(QCoreApplication::translate("MainWindow", "Community Chest", nullptr));
         propertyColor34->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #79a087; border: none;", nullptr));
+        HouseIcon34->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName34->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName34->setText(QCoreApplication::translate("MainWindow", "Meadow Street", nullptr));
         mortgageLabel34->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -2045,12 +2358,14 @@ public:
         tileName36->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName36->setText(QCoreApplication::translate("MainWindow", "Chance", nullptr));
         propertyColor37->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
+        HouseIcon37->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName37->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName37->setText(QCoreApplication::translate("MainWindow", "Ocean Avenue", nullptr));
         mortgageLabel37->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
         tileName38->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName38->setText(QCoreApplication::translate("MainWindow", "Luxury Tax", nullptr));
         propertyColor39->setStyleSheet(QCoreApplication::translate("MainWindow", "background: #7795b8; border: none;", nullptr));
+        HouseIcon39->setText(QCoreApplication::translate("MainWindow", "H1", nullptr));
         tileName39->setStyleSheet(QCoreApplication::translate("MainWindow", "font-size: 12px;", nullptr));
         tileName39->setText(QCoreApplication::translate("MainWindow", "Royal Avenue", nullptr));
         mortgageLabel39->setText(QCoreApplication::translate("MainWindow", "MORTGAGED", nullptr));
@@ -2079,6 +2394,7 @@ public:
         MortgageField->setPlaceholderText(QCoreApplication::translate("MainWindow", "Property index", nullptr));
         ToggleMortgageButton->setText(QCoreApplication::translate("MainWindow", "Mortgage", nullptr));
         BuyHouseButton->setText(QCoreApplication::translate("MainWindow", "Buy House", nullptr));
+        SellHouseButton->setText(QCoreApplication::translate("MainWindow", "Sell House", nullptr));
     } // retranslateUi
 
 };

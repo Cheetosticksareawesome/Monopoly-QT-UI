@@ -115,6 +115,12 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
 
     for (int index : indices)
     {
+        if (auto* badge = tiles[index]->findChild<QLabel *>("HouseIcon" + QString::number(index)))
+        {
+            int houses = game.board.Spaces[index].HouseCount;
+            badge->setText(houses >= 5 ? "HOTEL" : "H" + QString::number(houses));
+            badge->setVisible(houses > 0);
+        }
         std::string Mortgaged = game.board.Spaces[index].isMortgaged ? "true" : "false";
 
         tiles[index]->setToolTip(
@@ -141,7 +147,14 @@ void UpdatePlayerLabels(GameState& game, Ui::MainWindow& ui)
 
 void UpdateCard(GameState& game, Ui::MainWindow& ui, Card card)
 {
-    ui.chanceText->setText(QString::fromStdString(card.Name + "\n\n" + card.Description));
+    if(card.IsCommunityChest)
+    {
+        ui.communityText->setText(QString::fromStdString(card.Name + "\n\n" + card.Description));
+    }
+    if(card.IsChanceCard)
+    {
+        ui.chanceText->setText(QString::fromStdString(card.Name + "\n\n" + card.Description));
+    }
 }
 
 void MovePawn(GameState& game, Ui::MainWindow& ui)

@@ -33,6 +33,7 @@ struct BoardSpace
     std::string ColorGroup;
     int HouseCount{0};
     int HousePrice{0};
+    std::vector<int> RentTable{0,1,2,3,4,5};
 };
 
 struct Board
@@ -47,3 +48,4 @@ std::string ToStdStringSpaceType(SpaceType type);
 void ToggleMortgage(GameState &game, Ui::MainWindow &ui);
 bool DoubleRentCheck(GameState &game, BoardSpace &current);
 void buyHouse(GameState &game, Ui::MainWindow &ui);
+void sellHouse(GameState &game, Ui::MainWindow &ui);

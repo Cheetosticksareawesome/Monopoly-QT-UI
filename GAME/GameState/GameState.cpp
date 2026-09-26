@@ -64,21 +64,21 @@ void MovePlayer(GameState& game, Ui::MainWindow& ui, int steps)
     case SpaceType::Property:
     case SpaceType::Utility:
     case SpaceType::TrainStation:
-        if (game.board.Spaces[CurrentPlayer.Position].OwnerIndex == -1 || game.board.Spaces[CurrentPlayer.Position].OwnerIndex == game.CurrentPlayerIndex || game.board.Spaces[CurrentPlayer.Position].isMortgaged)
+        if (CurrentSpace.OwnerIndex == -1 || CurrentSpace.OwnerIndex == game.CurrentPlayerIndex || CurrentSpace.isMortgaged)
         {
             break;
         }
         else
         {
-            if(CurrentSpace.Type == SpaceType::Property && DoubleRentCheck(game, CurrentSpace))
+            if(CurrentSpace.Type == SpaceType::Property && DoubleRentCheck(game, CurrentSpace) && CurrentSpace.HouseCount < 1)
             {
                 CurrentPlayer.Money -= (CurrentSpace.Rent *2);
-                game.Players[game.board.Spaces[CurrentPlayer.Position].OwnerIndex].Money += (CurrentSpace.Rent *2);
+                game.Players[CurrentSpace.OwnerIndex].Money += (CurrentSpace.Rent *2);
             }
             else
             {
-                CurrentPlayer.Money -= game.board.Spaces[CurrentPlayer.Position].Rent;
-                game.Players[game.board.Spaces[CurrentPlayer.Position].OwnerIndex].Money += game.board.Spaces[CurrentPlayer.Position].Rent;
+                CurrentPlayer.Money -= CurrentSpace.RentTable[CurrentSpace.HouseCount];
+                game.Players[CurrentSpace.OwnerIndex].Money += CurrentSpace.RentTable[CurrentSpace.HouseCount];
             }
             
         }

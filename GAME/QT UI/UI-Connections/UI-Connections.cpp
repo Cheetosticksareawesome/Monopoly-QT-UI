@@ -75,6 +75,8 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
                 ui.buyPropertyButton->setEnabled(true);
             }
         }
+        ui.BuyHouseButton->setEnabled(true);
+        ui.SellHouseButton->setEnabled(true);
 
         ui.rollDiceButton->setEnabled(double_dice && !player.InJail);
         ui.endTurnButton->setEnabled(!double_dice || player.InJail);
@@ -110,6 +112,9 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
         ui.chanceText->setText(QString::fromStdString(""));
         ui.communityText->setText(QString::fromStdString(""));
 
+        ui.SellHouseButton->setEnabled(false);
+        ui.BuyHouseButton->setEnabled(false);
+
         game.HasRolled = false;
         ui.rollDiceButton->setEnabled(!game.HasRolled);
         ui.endTurnButton->setEnabled(game.HasRolled);
@@ -141,6 +146,12 @@ void Connect_UI(GameState &game, Ui::MainWindow &ui)
             buyHouse(game, ui);
             UpdatePlayerLabels(game, ui);
         } 
+    });
+
+    ui.SellHouseButton->setEnabled(false);
+    QObject::connect(ui.SellHouseButton, &QPushButton::clicked, [&ui, &game]()
+    { 
+        sellHouse(game, ui);
     });
 }
 
